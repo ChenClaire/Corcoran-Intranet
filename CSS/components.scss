@@ -1,0 +1,214 @@
+$item-type-width: 38px;
+@mixin box-shadow($shadow) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    -o-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+.section-title {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $primary-color;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.logo {
+    padding-top: 17px;
+    img {
+        height: 16px;
+    }
+}
+
+.sm-buttons {
+    padding: 5px 10px;
+    text-align: center;
+    width: 100px; // will be overrided case by case
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.item-label {
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #eee;
+    padding: 2px 5px;
+    width: $item-type-width;
+    text-align: center;
+}
+
+.item-doc {
+    @extend .item-label;
+    background-color: $blue;
+}
+
+.item-xls {
+    @extend .item-label;
+    background-color: $green;
+}
+
+.item-pdf {
+    @extend .item-label;
+    background-color: $red;
+}
+
+.item-link {
+    @extend .item-label;
+    background-color: $purple;
+    display: none;
+}
+
+.item-name {
+    color: $blue;
+    text-transform: capitalize;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.top-header {
+    width: 100%;
+    height: 50px;
+    background-color: $primary-color;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    @media only screen and (max-width: $breakpoint-ipad-portrait) {
+        z-index: 500;
+        text-align: center;
+    }
+    .logo {
+        display: inline-block;
+        padding-left: 75px;
+        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+            padding-left: 0px;
+        }
+    }
+}
+
+.search-toggle {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    color: white;
+    padding: 16px 20px;
+    visibility: hidden;
+    z-index: 200;
+    @media only screen and (max-width: $breakpoint-ipad-portrait) {
+        z-index: 500;
+        visibility: visible;
+    }
+    &:hover {
+        background-color: rgba(white, 0.2);
+        cursor: pointer;
+    }
+    &.isVisible {
+        @media only screen and (max-width: $breakpoint-ipad-landscape) {
+            visibility: visible;
+        }
+    }
+    i {
+        font-size: 18px;
+    }
+}
+
+.search-popup {
+    position: fixed;
+    display: none;
+    top: 50px;
+    z-index: 300;
+    width: 100%;
+    background: $primary-color;
+    padding: 25px;
+    left: 0px;
+    text-align: center;
+    border-top: 1px solid $light-gray;
+    .search-wrapper {
+        position: relative;
+        width: 250px;
+        margin: auto;
+        .search-input {
+            width: 250px;
+            height: 50px;
+            padding-left: 37px;
+            border: 1px solid $light-gray;
+            background-color: $primary-color;
+            border-radius: 3px 3px 0px 0px;
+            outline: none;
+            color: white;
+        }
+        label {
+            position: absolute;
+            top: 15px;
+            left: 12px;
+            i {
+                color: $light-gray;
+                font-size: 20px;
+            }
+        }
+    }
+    .category-btn {
+        width: 250px;
+        margin: auto;
+        position: relative;
+        .dropdown-toggle {
+            width: 250px;
+            height: 50px;
+            background-color: $primary-color;
+            color: white;
+            border: 1px solid $light-gray;
+            border-radius: 0px 0px 3px 3px;
+            outline: none;
+            text-align: left;
+            padding-left: 10px;
+            i {
+                float: right;
+                margin-top: 3px;
+                margin-right: 7px;
+            }
+        }
+        .dropdown-menu {}
+        .category-list {
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            width: 250px;
+            margin: -1px 0px 0px 0px;
+            border-radius: 0px 0px 3px 3px;
+            padding: 10px 15px;
+            border: 1px solid $light-gray;
+            @include box-shadow(none);
+            li {
+                margin: 5px auto;
+            }
+        }
+    }
+    .search-btn {
+        width: 250px;
+        height: 50px;
+        background-color: white;
+        text-transform: uppercase;
+        color: $primary-color;
+        border: 1px solid $light-gray;
+        margin-top: 20px;
+        border-radius: 3px;
+        outline: none;
+        font-size: 16px;
+        letter-spacing: 1;
+        &:hover {
+            background-color: rgba(white, 0.9);
+        }
+    }
+}
+
+.footer {
+        height: 50px;
+        background-color: $primary-color;
+    }
