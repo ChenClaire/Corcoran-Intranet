@@ -1,0 +1,604 @@
+    $primary-font: 'Roboto',
+    sans-serif;
+    $primary-color: #000;
+    $blue:#0064b1;
+    // $darker-blue:hsla(205,85%,40%,1);
+    $darker-blue:darken($blue, 30%);
+    $green:#18a344;
+    $red:#df3d3d;
+    $purple:rgb(173, 76, 255);
+    $light-gray:#d4d4d4;
+    $item-type-width: 38px;
+    $breakpoint-ipad-landscape: 1024px;
+    $breakpoint-ipad-portrait:768px;
+    $breakpoint-iphone6:375px;
+    $breakpoint-iphone6pluse:414px;
+    $breakpoint-iphone5:320px;
+    $bootstrap-md:992px;
+    $bootstrap-sm:750px;
+    @mixin box-shadow($shadow) {
+        -webkit-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        -o-box-shadow: $shadow;
+        box-shadow: $shadow;
+    }
+    
+    * {
+        font-family: $primary-font;
+    }
+    
+    .section-title {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $primary-color;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    .logo {
+        padding-top: 17px;
+        img {
+            height: 16px;
+        }
+    }
+    
+    .sm-buttons {
+        padding: 5px 10px;
+        text-align: center;
+        width: 100px; // will be overrided case by case
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    .item-label {
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: white;
+        background-color: #eee;
+        padding: 2px 5px;
+        width: $item-type-width;
+        text-align: center;
+    }
+    
+    .item-doc {
+        @extend .item-label;
+        background-color: $blue;
+    }
+    
+    .item-xls {
+        @extend .item-label;
+        background-color: $green;
+    }
+    
+    .item-pdf {
+        @extend .item-label;
+        background-color: $red;
+    }
+    
+    .item-link {
+        @extend .item-label;
+        background-color: $purple;
+        display: none;
+    }
+    
+    .item-name {
+        color: $blue;
+        text-transform: capitalize;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    .top-header {
+        width: 100%;
+        height: 50px;
+        background-color: $primary-color;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 100;
+        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+            z-index: 500;
+            text-align: center;
+        }
+        .logo {
+            display: inline-block;
+            padding-left: 75px;
+            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+            padding-left: 0px;
+        }
+        }
+    }
+    
+    .search-toggle {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        color: white;
+        padding: 16px 20px;
+        visibility: hidden;
+        z-index: 200;
+        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+            z-index: 500;
+            visibility: visible;
+        }
+        @media only screen and (max-width: 580px) {}
+        &:hover {
+            background-color: rgba(white, 0.2);
+            cursor: pointer;
+        }
+        &.isVisible {
+            // visibility: visible;
+            @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                visibility: visible;
+            }
+        }
+        i {
+            font-size: 18px;
+        }
+    }
+    
+    .main-search {
+        background-color: $primary-color;
+        position: relative;
+        width: 100%;
+        height: 220px;
+        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+            height: 330px;
+        }
+        .content-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            z-index: 100;
+            padding: 100px 90px 70px 90px;
+            @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                padding: 100px 50px 70px 50px;
+            }
+            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                padding: 100px 30px 70px 30px;
+            }
+            // @media only screen and (max-width: 750px) {
+            //     padding: 100px 10px 70px 10px;
+            // }
+            // @media only screen and (max-width: 550px) {
+            //     padding: 90px 15px;
+            // }
+            .make-it-center {
+                margin: auto;
+                .page-title {
+                    font-weight: 300;
+                    font-size: 35px;
+                    color: white;
+                    z-index: 1;
+                    margin: auto;
+                    margin-bottom: 30px;
+                    // @media only screen and (max-width: 550px) {
+                    //     font-size: 35px;
+                    //     margin-top: 0px;
+                    //     margin-left: -15px;
+                    //     margin-right: -15px;
+                    //     padding: 40px 14%;
+                    //     background-color: rgba($primary-color, 0.6);
+                    // }
+                }
+                .search-bar {
+                    height: 50px;
+                    position: relative;
+                    margin: auto;
+                    width: 77%;
+                    @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                        width: 73%;
+                    }
+                    @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                        // display: none;
+                        width: 250px;
+                        text-align: center;
+                    }
+                    // @media only screen and (max-width: 550px) {
+                    // width: 250px;
+                    // display: none;
+                    // }
+                    &.stick {
+                        margin-right: -20px;
+                        margin-top: 0px;
+                        position: fixed;
+                        top: 0px;
+                        right: 0px;
+                        .search-input {
+                            border-radius: 0px !important;
+                            background-color: rgba($primary-color, 1);
+                            border-top: none !important;
+                            border-bottom: none !important;
+                            border-left: 1px solid white !important;
+                            color: white;
+                        }
+                        .dropdown-toggle {
+                            border-radius: 0px !important;
+                            background-color: rgba($primary-color, 1) !important;
+                            border: 1px solid transparent !important;
+                            border-right: 1px solid white !important;
+                            border-left: 1px solid white !important;
+                            color: white !important;
+                            &:hover {
+                                background-color: rgba($primary-color, 0.8) !important;
+                            }
+                        }
+                        .search-btn {
+                            background-color: rgba(white, 1);
+                            color: $primary-color;
+                            // border-radius: 0px;
+                            height: 36px;
+                            &:hover {
+                                background-color: rgba(white, 0.9);
+                            }
+                        }
+                    }
+                    .search-wrapper {
+                        height: 100%;
+                        width: 40%;
+                        display: inline-block;
+                        position: relative;
+                        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                            width: 250px;
+                            margin: auto;
+                        }
+                        label {
+                            position: absolute;
+                            top: 15px;
+                            left: 12px;
+                            i {
+                                color: $light-gray;
+                                font-size: 20px;
+                            }
+                        }
+                        .search-input {
+                            width: 100%;
+                            height: 100%;
+                            // width: 400px;
+                            vertical-align: middle;
+                            border-radius: 3px 0px 0px 3px;
+                            border: 1px solid $light-gray;
+                            min-width: 250px;
+                            outline: none;
+                            padding-left: 37px;
+                            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                                width: 250px;
+                                margin: auto;
+                            }
+                        }
+                    }
+                    .category-btn {
+                        width: 13%;
+                        height: 100%;
+                        display: inline-block;
+                        vertical-align: middle;
+                        position: relative;
+                        min-width: 160px;
+                        margin-left: -4px;
+                        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                            width: 250px;
+                            margin: auto;
+                        }
+                        .dropdown-toggle {
+                            color: $primary-color;
+                            background-color: white;
+                            height: 100%;
+                            width: 100%;
+                            border: 1px solid $light-gray;
+                            border-radius: 0px 3px 3px 0px;
+                            text-align: left;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                                width: 250px;
+                                // margin:auto;
+                            }
+                            i {
+                                position: absolute;
+                                right: 15px;
+                                top: 18px;
+                            }
+                        }
+                        .category-list {
+                            margin: -1px 0px 0px 0px;
+                            border-radius: 0px 0px 3px 3px;
+                            padding: 10px 15px;
+                            border: 1px solid $light-gray;
+                            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                                width: 250px;
+                            }
+                            @include box-shadow(none);
+                            li {
+                                margin: 5px auto;
+                            }
+                        }
+                    }
+                    .search-btn {
+                        width: 18%;
+                        min-width: 100px;
+                        height: 100%;
+                        border: none;
+                        background-color: $primary-color;
+                        color: white;
+                        border-radius: 3px;
+                        text-align: center;
+                        outline: none;
+                        text-transform: uppercase;
+                        margin-left: 15px;
+                        vertical-align: middle;
+                        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                            width: 250px;
+                            margin: auto;
+                            margin-top: 20px;
+                        }
+                        &:hover {
+                            background-color: darken($primary-color, 20%);
+                        }
+                    }
+                }
+            }
+        }
+        .img-fill {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0.8;
+            z-index: 0;
+            img {
+                width: 100%;
+                @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+        }
+    }
+    
+    .item-card {
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        background-color: white;
+        // height: 125px;
+        padding: 30px;
+        font-size: 22px;
+        border-radius: 0px;
+        border-bottom: 1px solid $light-gray;
+        font-weight: 300;
+        .item-name-wrapper {
+            display: inline-block;
+            width: 85%;
+        }
+        .item-label-wrapper {
+            float: right;
+            display: inline-block;
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: rgba($light-gray, 0.2);
+        }
+        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+            height: auto;
+            padding: 30px 0px;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+    
+    .footer {
+        height: 50px;
+        background-color: $primary-color;
+    }
+    
+    .result-list {
+        padding: 60px 80px;
+        @media only screen and (max-width: $bootstrap-md) {
+            padding: 30px 15px 50px 15px;
+        }
+        .section-list-wrapper {
+            .section-list {
+                @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                    display: none;
+                }
+                .section-list-item {
+                    position: relative;
+                    text-transform: capitalize;
+                    padding: 15px;
+                    width: 80%;
+                    background: none;
+                    border: none;
+                    text-align: left;
+                    outline: none;
+                    &:hover {
+                        cursor: pointer;
+                        // background-color: rgba($primary-color, 0.1);
+                        // &:after {
+                        //     border-left: 20px solid rgba($primary-color, 0.1);
+                        //     border-bottom: 25px solid transparent;
+                        //     border-top: 25px solid transparent;
+                        //     content: "";
+                        //     height: 0;
+                        //     left: 100%;
+                        //     position: absolute;
+                        //     top: 0px;
+                        // }
+                    }
+                    &.active {
+                        background-color: $primary-color;
+                        color: white;
+                        outline: none;
+                        &:after {
+                            border-left: 20px solid $primary-color;
+                            border-bottom: 25px solid transparent;
+                            border-top: 25px solid transparent;
+                            content: "";
+                            height: 0;
+                            left: 100%;
+                            position: absolute;
+                            top: 0px;
+                            // width: 0;
+                        }
+                    }
+                }
+            }
+            .section-list-dropdown {
+                display: none;
+                margin-bottom: 20px;
+                width: 100%;
+                @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                    display: block;
+                }
+                .dropdown-toggle {
+                    width: 100%;
+                    height: 50px;
+                    background: none;
+                    border: 1px solid $light-gray;
+                    text-align: left;
+                    // border-radius: 3px 3px 0px 0px;
+                    i {
+                        float: right;
+                        margin-top: 3px;
+                    }
+                }
+                .dropdown-menu {
+                    margin-top: -1px;
+                    padding: 0px;
+                    width: 100%;
+                    // border-radius: 0px 0px 3px 3px ;
+                    .section-list-item {
+                        background: none;
+                        border: none;
+                        padding: 15px;
+                        width: 100%;
+                        text-align: left;
+                        &:hover {
+                            background-color: rgba($primary-color, 0.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .resource-more-btn {
+        @extend .sm-buttons;
+        height: 32px;
+        width: 123px;
+        text-transform: uppercase;
+        color: white;
+        background-color: $primary-color;
+        font-weight: 500;
+        margin: auto;
+        margin-bottom: 60px;
+        width: 130px;
+        i {
+            display: inline-block;
+            color: white;
+            // vertical-align: middle;
+            margin-left: 5px;
+            margin-top: -1px;
+        }
+        &:hover {
+            background-color: darken($primary-color, 20%);
+        }
+    }
+    
+    .search-popup {
+        position: fixed;
+        display: none;
+        top: 50px;
+        z-index: 300;
+        width: 100%;
+        background: $primary-color;
+        padding: 25px;
+        left: 0px;
+        text-align: center;
+        border-top: 1px solid $light-gray;
+        .search-wrapper {
+            position: relative;
+            width: 250px;
+            margin: auto;
+            .search-input {
+                width: 250px;
+                height: 50px;
+                padding-left: 37px;
+                border: 1px solid $light-gray;
+                background-color: $primary-color;
+                border-radius: 3px 3px 0px 0px;
+                outline: none;
+                color: white;
+            }
+            label {
+                position: absolute;
+                top: 15px;
+                left: 12px;
+                i {
+                    color: $light-gray;
+                    font-size: 20px;
+                }
+            }
+        }
+        .category-btn {
+            width: 250px;
+            margin: auto;
+            position: relative;
+            .dropdown-toggle {
+                width: 250px;
+                height: 50px;
+                background-color: $primary-color;
+                color: white;
+                border: 1px solid $light-gray;
+                border-radius: 0px 0px 3px 3px;
+                outline: none;
+                text-align: left;
+                padding-left: 10px;
+                i {
+                    float: right;
+                    margin-top: 3px;
+                    margin-right: 7px;
+                }
+            }
+            .dropdown-menu {}
+            .category-list {
+                position: absolute;
+                top: 50px;
+                left: 0px;
+                width: 250px;
+                margin: -1px 0px 0px 0px;
+                border-radius: 0px 0px 3px 3px;
+                padding: 10px 15px;
+                border: 1px solid $light-gray;
+                @include box-shadow(none);
+                li {
+                    margin: 5px auto;
+                }
+            }
+        }
+        .search-btn {
+            width: 250px;
+            height: 50px;
+            background-color: white;
+            text-transform: uppercase;
+            color: $primary-color;
+            border: 1px solid $light-gray;
+            margin-top: 20px;
+            border-radius: 3px;
+            outline: none;
+            font-size: 16px;
+            letter-spacing: 1;
+            &:hover {
+                background-color: rgba(white, 0.9);
+            }
+        }
+    }

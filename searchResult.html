@@ -1,0 +1,205 @@
+<html>
+
+<head>
+    <title>search result</title>
+    <!-- jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <!-- jQuery UI lib -->
+    <script type="text/javascript" src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <!-- bootstrap cdn-->
+    <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
+    <script type="text/javascript" src="JS/bootstrap.js"></script>
+    <!-- my css  -->
+    <link rel="stylesheet" type="text/css" href="CSS/searchResult.css">
+    <!-- google font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,400italic,300italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="container-fluid">
+    <div class="search-popup">
+        <!-- <div class="search-bar-wrapper"> -->
+        <div class="search-bar">
+            <div class="search-wrapper">
+                <label for="search-input">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </label>
+                <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
+            </div>
+            <div class="category-btn">
+                <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Everything &nbsp; <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                <ul class="dropdown-menu category-list">
+                    <li>Action</li>
+                    <li>Another action</li>
+                    <li>Something else here</li>
+                    <li role="separator" class="divider"></li>
+                    <li>Separated link</li>
+                </ul>
+            </div>
+            <button class="search-btn">Search</button>
+        </div>
+        <!-- </div> -->
+    </div>
+    <div class="main-section row">
+        <div class="top-header">
+            <div class="logo"><img id="change-bkg-img" src="img/ecorcoran.png" alt=""></div>
+        </div>
+        <div class="search-toggle">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+        <div class="main-search text-center">
+            <div class="img-fill">
+                <img src="img/hampton.jpg" alt="">
+            </div>
+            <div class="content-wrapper">
+                <div class="make-it-center">
+                    <div id="page-title-top"></div>
+                    <div id="search-bar-top"></div>
+                    <div class="search-bar-wrapper">
+                        <div class="search-bar">
+                            <div class="search-wrapper">
+                                <label for="search-input">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </label>
+                                <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
+                            </div>
+                            <div class="category-btn">
+                                <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Everything &nbsp; <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
+                                <ul class="dropdown-menu category-list">
+                                    <li>Action</li>
+                                    <li>Another action</li>
+                                    <li>Something else here</li>
+                                    <li role="separator" class="divider"></li>
+                                    <li>Separated link</li>
+                                </ul>
+                            </div>
+                            <button class="search-btn">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="result-list row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+            <div class="section-list-wrapper">
+                <div class="section-list">
+                    <button class="section-list-item active">all documents</button>
+                    <button class="section-list-item">buying</button>
+                    <button class="section-list-item">selling</button>
+                    <button class="section-list-item">renting</button>
+                    <button class="section-list-item">market research</button>
+                    <button class="section-list-item">Pitches/presentation</button>
+                </div>
+                <div class="dropdown section-list-dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        All Documents
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li>
+                            <button class="section-list-item">market research</button>
+                        </li>
+                        <li>
+                            <button class="section-list-item">market research</button>
+                        </li>
+                        <li>
+                            <button class="section-list-item">market research</button>
+                        </li>
+                        <li>
+                            <button class="section-list-item">market research</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+            <div class="item-card">
+                <div class="item-name-wrapper">
+                    <a class="item-name" target="_blank" id="link5">
+                            Agency Disclosure Buyer & Seller Form 2016
+                        </a>
+                </div>
+                <div class="item-label-wrapper">
+                    <div class="item-pdf">pdf</div>
+                </div>
+            </div>
+            <div class="item-card">
+                <div class="item-name-wrapper">
+                    <a class="item-name" target="_blank" id="link5">
+                            Agency Disclosure Buyer & Seller Form 2016
+                        </a>
+                </div>
+                <div class="item-label-wrapper">
+                    <div class="item-pdf">pdf</div>
+                </div>
+            </div>
+            <div class="item-card">
+                <div class="item-name-wrapper">
+                    <a class="item-name" target="_blank" id="link5">
+                            Agency Disclosure Buyer & Seller Form 2016
+                        </a>
+                </div>
+                <div class="item-label-wrapper">
+                    <div class="item-pdf">pdf</div>
+                </div>
+            </div>
+            <div class="item-card">
+                <div class="item-name-wrapper">
+                    <a class="item-name" target="_blank" id="link5">
+                            Agency Disclosure Buyer & Seller Form 2016
+                        </a>
+                </div>
+                <div class="item-label-wrapper">
+                    <div class="item-pdf">pdf</div>
+                </div>
+            </div>
+            <div class="item-card">
+                <div class="item-name-wrapper">
+                    <a class="item-name" target="_blank" id="link5">
+                            Agency Disclosure Buyer & Seller Form 2016
+                        </a>
+                </div>
+                <div class="item-label-wrapper">
+                    <div class="item-pdf">pdf</div>
+                </div>
+            </div>
+            <div class="item-card">
+                <div class="item-name-wrapper">
+                    <a class="item-name" target="_blank" id="link5">
+                            Agency Disclosure Buyer & Seller Form 2016
+                        </a>
+                </div>
+                <div class="item-label-wrapper">
+                    <div class="item-pdf">pdf</div>
+                </div>
+            </div>
+            <div class="item-card">
+                <div class="item-name-wrapper">
+                    <a class="item-name" target="_blank" id="link5">
+                            Agency Disclosure Buyer & Seller Form 2016
+                        </a>
+                </div>
+                <div class="item-label-wrapper">
+                    <div class="item-pdf">pdf</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9 col-md-offset-3 col-sm-8 col-sm-offset-4 col-xs-12">
+            <div class="resource-more-btn">LOAD More <i class="fa fa-chevron-down" aria-hidden="true"></i> </div>
+        </div>
+    </div>
+    <div class="row footer">
+        <div class="col-md-12">
+            <div class="logo text-center">
+                <img src="img/ecorcoran.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="JS/C_style.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1018 @@
+    $primary-font: 'Roboto',
+    sans-serif;
+    $primary-color: #000;
+    $gray:#6b6b6b; //for section-description on mobile
+    $blue:#0064b1;
+    $darker-blue:darken($blue, 30%);
+    $green:#18a344;
+    $red:#df3d3d;
+    $purple:rgb(173, 76, 255);
+    $light-gray:#d4d4d4;
+    $item-type-width: 38px;
+    $breakpoint-ipad-landscape: 1024px;
+    $breakpoint-ipad-portrait:768px;
+    $breakpoint-iphone6:375px;
+    $breakpoint-iphone6plus:414px;
+    $breakpoint-iphone5:320px;
+    $bootstrap-md:992px;
+    $bootstrap-sm:750px;
+    @mixin transition($transition) {
+        transition: $transition;
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+        -o-transition: $transition;
+    }
+    
+    @mixin transform($transform) {
+        -webkit-transform: $transform;
+        -moz-transform: $transform;
+        -o-transform: $transform;
+        transform: $transform;
+    }
+    
+    @mixin backdrop-filter($effect) {
+        backdrop-filter: $effect;
+        -moz-backdrop-filter: $effect;
+        -ms-backdrop-filter: $effect;
+        -webkit-backdrop-filter: $effect;
+        -o-backdrop-filter: $effect;
+    }
+    
+    @mixin box-shadow($shadow) {
+        -webkit-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        -o-box-shadow: $shadow;
+        box-shadow: $shadow;
+    }
+    
+    * {
+        font-family: $primary-font;
+    }
+    
+    .section-title {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $primary-color;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    .logo {
+        padding-top: 17px;
+        img {
+            height: 16px;
+        }
+    }
+    
+    .sm-buttons {
+        padding: 5px 10px;
+        text-align: center;
+        width: 100px; // will be overrided case by case
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    .item-label {
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 1px;
+        color: white;
+        background-color: #eee;
+        padding: 2px 5px;
+        width: $item-type-width;
+        text-align: center;
+    }
+    
+    .item-doc {
+        @extend .item-label;
+        background-color: $blue;
+    }
+    
+    .item-xls {
+        @extend .item-label;
+        background-color: $green;
+    }
+    
+    .item-pdf {
+        @extend .item-label;
+        background-color: $red;
+    }
+    
+    .item-link {
+        @extend .item-label;
+        background-color: $purple;
+        display: none;
+    }
+    
+    .item-name {
+        color: $blue;
+        text-transform: capitalize;
+        text-decoration: none;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    .title-left {
+        @extend .default-section;
+        @media only screen and (min-width: $bootstrap-md) {
+            .section-header-wrapper {
+                padding-left: 0px;
+            }
+            .section-content-wrapper {
+                padding-right: 60px !important;
+            }
+        }
+    }
+    
+    .title-right {
+        @extend .default-section;
+        @media only screen and (min-width: $bootstrap-md) {
+            .section-header-wrapper {
+                float: right;
+                padding-right: 0px;
+                .section-header {
+                    text-align: right;
+                }
+            }
+            .section-content-wrapper {
+                padding-left: 60px !important;
+            }
+        }
+    }
+    
+    .ecorcoran-navbar {
+        .navbar-toggle {
+            color: white;
+            float: left;
+            z-index: 200;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            padding: 15px 18px;
+            margin: 0px;
+            border-radius: 0px;
+            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                z-index: 600;
+            }
+            &:hover {
+                background-color: rgba(white, 0.1);
+            }
+            span {
+                text-transform: uppercase;
+                font-size: 13px;
+            }
+        }
+        .ecorcoran-nav-list {
+            padding: 0px;
+            position: fixed;
+            left: 0;
+            top: 200px;
+            z-index: 160;
+            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                top: 49px;
+                // z-index: 700;
+            }
+            .close-nav {
+                display: none;
+                @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                    display: block;
+                    color: white;
+                    font-size: 16px;
+                    position: absolute;
+                    top: 26px;
+                    right: 20px;
+                    z-index: 700;
+                    color: rgba(white, 0.5);
+                    &:hover {
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+            ul {
+                background-color: rgba($primary-color, 0.9);
+                list-style-type: none;
+                padding: 16px 0px 16px 0px;
+                @include backdrop-filter(blur(8px));
+                @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                    padding-right: 0px;
+                }
+                &:hover {
+                    .menu-item-wrapper {
+                        display: inline-block;
+                        // border-left: 1px solid rgba(white, 0.5);
+                        @include transition(all 0.3s ease);
+                    }
+                    .menu-item-wrapper {
+                        @media only screen and (min-width: $breakpoint-ipad-portrait) {
+                            border-left: 1px solid rgba(white, 0.5);
+                        }
+                    }
+                }
+                li {
+                    padding: 0px 25px;
+                    height: 38px;
+                    &.active {
+                        .indicator {
+                            @include transition(all 0.3s ease);
+                            background-color: rgba(white, 0) !important;
+                            border: 2px solid rgba(white, 1);
+                            @include transform(scale(1.45));
+                        }
+                        .menu-item {
+                            @include transition(color 0.3s ease);
+                            color: rgba(white, 1) !important;
+                        }
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        .indicator {
+                            @include transition(background-color 0.3s ease);
+                            background-color: rgba(white, 0.8);
+                        }
+                        .menu-item {
+                            @include transition(color 0.3s ease);
+                            color: rgba(white, 0.8);
+                        }
+                    }
+                    .indicator-wrapper {
+                        display: inline-block;
+                        height: 38px;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                        vertical-align: middle;
+                        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                            display: none;
+                        }
+                    }
+                    .menu-item-wrapper {
+                        display: none;
+                        height: 38px;
+                        margin-left: 20px;
+                        border-left: 1px solid transparent;
+                        vertical-align: middle;
+                        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                            display: inline-block;
+                            // padding-left: 0px;
+                            margin-left: 0px;
+                        }
+                    }
+                    .indicator {
+                        width: 10px;
+                        height: 10px;
+                        // border: 2px solid rgba(white, 0.5);
+                        background-color: rgba(white, 0.5);
+                        display: inline-block;
+                        border-radius: 100%;
+                        vertical-align: middle;
+                        margin-top:8px;
+                        // margin-bottom: 8px;
+                    }
+                    .add-line {
+                        display: inline-block;
+                        margin-left: 20px;
+                        // height:38px;
+                    }
+                    .menu-item {
+                        // display: none;
+                        // opacity: 0;
+                        // margin-left: 20px;
+                        // padding-top:8px;
+                        // padding-bottom: 8px;
+                        color: rgba(white, 0.5);
+                        font-size: 16px;
+                        vertical-align: middle;
+                        padding-left: 20px;
+                        margin-top: 8px;
+                        // border-left: 1px solid transparent;
+                        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                            // display: inline-block;
+                            padding-left: 0px;
+                            // margin-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .top-header {
+        width: 100%;
+        height: 50px;
+        background-color: $primary-color;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 100;
+        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+            z-index: 500;
+            text-align: center;
+        }
+        .logo {
+            display: inline-block;
+            padding-left: 75px;
+            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                padding-left: 0px;
+            }
+        }
+    }
+    
+    .search-toggle {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        color: white;
+        padding: 16px 20px;
+        visibility: hidden;
+        z-index: 200;
+        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+            visibility: visible;
+            z-index: 500;
+        }
+        &:hover {
+            background-color: rgba(white, 0.1);
+            cursor: pointer;
+        }
+        i {
+            font-size: 18px;
+        }
+    }
+    
+    .corcoran-bar {
+        margin-top: 50px;
+        width: 100%;
+        height: 5px;
+        position: relative;
+        display: block;
+        .bar-segment {
+            position: relative;
+            vertical-align: top;
+            width: 20%;
+            height: 100%;
+            display: inline-block;
+        }
+        #bar-light-blue {
+            background-color: #acc3de;
+        }
+        #bar-dark-blue {
+            background-color: #0060b5;
+        }
+        #bar-orange {
+            background-color: #f76600;
+        }
+        #bar-green {
+            background-color: #00a53c;
+        }
+        #bar-yellow {
+            background-color: #ffe975;
+        }
+    }
+    
+    .main-search {
+        background-color: $primary-color;
+        position: relative;
+        width: 100%;
+        height: 380px;
+        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+            height: 400px;
+        }
+        .content-wrapper {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            z-index: 100;
+            padding: 120px 90px;
+            @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                padding: 120px 50px;
+            }
+            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                padding: 120px 0px;
+            }
+            // @media only screen and (max-width: 750px) {
+            //     padding: 120px 10px;
+            // }
+            // @media only screen and (max-width: 550px) {
+            //     padding: 90px 15px;
+            // }
+            .make-it-center {
+                margin: auto;
+                .page-title {
+                    font-weight: 300;
+                    font-size: 35px;
+                    color: white;
+                    z-index: 1;
+                    margin: auto;
+                    margin-bottom: 30px;
+                    @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                        font-size: 35px;
+                        margin-top: 0px;
+                        margin-left: -15px;
+                        margin-right: -15px;
+                        padding: 40px 14%;
+                        background-color: rgba($primary-color, 0.6);
+                    }
+                }
+                .search-bar {
+                    height: 50px;
+                    position: relative;
+                    margin: auto;
+                    width: 75%;
+                    @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                        width: 73%;
+                    }
+                    @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                        display: none;
+                    }
+                    &.stick {
+                        // margin-right: -35px;
+                        margin-top: 0px;
+                        position: fixed;
+                        top: 0px;
+                        right: 0px;
+                        .search-input {
+                            border-radius: 0px !important;
+                            background-color: rgba($primary-color, 1);
+                            border-top: none !important;
+                            border-bottom: none !important;
+                            border-left: 1px solid white !important;
+                            color: white;
+                        }
+                        .dropdown-toggle {
+                            border-radius: 0px !important;
+                            background-color: rgba($primary-color, 1) !important;
+                            border: 1px solid transparent !important;
+                            border-right: 1px solid white !important;
+                            border-left: 1px solid white !important;
+                            color: white !important;
+                            &:hover {
+                                background-color: rgba($primary-color, 0.8) !important;
+                            }
+                        }
+                        .search-btn {
+                            background-color: rgba(white, 1);
+                            color: $primary-color;
+                            height: 36px;
+                            &:hover {
+                                background-color: rgba(white, 0.9);
+                            }
+                        }
+                    }
+                    .search-wrapper {
+                        height: 100%;
+                        width: 40%;
+                        display: inline-block;
+                        position: relative;
+                        label {
+                            position: absolute;
+                            top: 15px;
+                            left: 12px;
+                            i {
+                                color: $light-gray;
+                                font-size: 20px;
+                            }
+                        }
+                        .search-input {
+                            width: 100%;
+                            height: 100%;
+                            vertical-align: middle;
+                            border-radius: 3px 0px 0px 3px;
+                            border: 1px solid $light-gray;
+                            min-width: 250px;
+                            outline: none;
+                            padding-left: 37px;
+                            // @media only screen and (max-width: 580px) {
+                            //     border-radius: 3px 3px 0px 0px;
+                            // }
+                        }
+                    }
+                    .category-btn {
+                        width: 13%;
+                        height: 100%;
+                        display: inline-block;
+                        vertical-align: middle;
+                        position: relative;
+                        min-width: 160px;
+                        margin-left: -4px;
+                        // @media only screen and (max-width: 580px) {
+                        //     min-width: 250px;
+                        //     display: block;
+                        //     margin-left: 0px;
+                        // }
+                        .dropdown-toggle {
+                            color: $primary-color;
+                            background-color: white;
+                            height: 100%;
+                            width: 100%;
+                            border: 1px solid $light-gray;
+                            border-radius: 0px 3px 3px 0px;
+                            text-align: left;
+                            padding-left: 15px;
+                            padding-right: 15px;
+                            // @media only screen and (max-width: 580px) {
+                            //     border-radius: 0px 0px 3px 3px;
+                            // }
+                            i {
+                                position: absolute;
+                                right: 15px;
+                                top: 18px;
+                            }
+                        }
+                        .category-list {
+                            margin: -1px 0px 0px 0px;
+                            border-radius: 0px 0px 3px 3px;
+                            padding: 10px 15px;
+                            border: 1px solid $light-gray;
+                            @include box-shadow(none);
+                            // @media only screen and (max-width: 580px) {
+                            //     min-width: 250px;
+                            // }
+                            li {
+                                margin: 5px auto;
+                            }
+                        }
+                    }
+                    .search-btn {
+                        width: 18%;
+                        min-width: 100px;
+                        height: 100%;
+                        border: none;
+                        background-color: $primary-color;
+                        color: white;
+                        border-radius: 3px;
+                        text-align: center;
+                        outline: none;
+                        text-transform: uppercase;
+                        margin-left: 15px;
+                        vertical-align: middle;
+                        // @media only screen and (max-width: 580px) {
+                        //     min-width: 250px;
+                        //     display: block;
+                        //     margin-top: 10px;
+                        //     margin-left: 0px;
+                        // }
+                        &:hover {
+                            background-color: darken($primary-color, 20%);
+                        }
+                    }
+                }
+            }
+        }
+        .img-fill {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0.8;
+            z-index: 0;
+            img {
+                width: 100%;
+                @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                    height: 100%;
+                    width: auto;
+                }
+            }
+        }
+    }
+    
+    .resource-section {
+        &.mobile {
+            display: none;
+            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                display: block;
+            }
+        }
+        &.desktop {
+            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                display: none;
+            }
+        }
+        margin-bottom: 40px;
+        .resource-container {
+            margin: auto;
+        }
+        .section-header {
+            width: 100%;
+            margin-top: 6px;
+            .resources-section-title {
+                @extend .section-title;
+                text-align: center;
+                padding-top: 40px;
+                padding-bottom: 20px;
+            }
+        }
+        .resource-list {
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                width: 100%;
+            }
+            &.notVisible {
+                display: none;
+            }
+            .resource-item-wrapper {
+                display: inline-block;
+                width: 16%;
+                vertical-align: top;
+                @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                    width: 45%;
+                    margin: auto;
+                }
+                @media only screen and (max-width: 560px) {
+                    width: 100%;
+                    margin: auto;
+                }
+            }
+            .make-it-center {
+                margin: auto
+            }
+            .resource-item {
+                display: block;
+                text-align: center;
+                width: 100%;
+                padding: 0px 0px 30px 0px;
+                text-decoration: none;
+                @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                    width: 200px;
+                    text-align: left;
+                    margin: auto;
+                }
+                .sprite-wrapper {
+                    height: 70px;
+                    width: 70px;
+                    overflow: hidden;
+                    position: relative;
+                    margin: auto;
+                    border-radius: 100%;
+                    @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                        display: inline-block;
+                        vertical-align: middle;
+                    }
+                    img {
+                        position: absolute;
+                        width: 68px !important;
+                        height: 136px !important;
+                        left: 0px;
+                        top: -68px;
+                    }
+                }
+                &:hover {
+                    cursor: pointer;
+                    .resource-name {
+                        color: $primary-color;
+                    }
+                    .sprite-wrapper img {
+                        top: 0px;
+                    }
+                }
+                .resource-name {
+                    margin-top: 10px;
+                    text-transform: capitalize;
+                    color: $blue;
+                    font-size: 18px;
+                    font-weight: 500;
+                    @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                        display: inline-block;
+                        margin-left: 10px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .carousel-control {
+            position: absolute;
+            top: 33%;
+            background-image: none;
+            text-shadow: none;
+            color: white;
+            background-color: rgba($primary-color, 0.2);
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            opacity: 1;
+            @media only screen and (min-width: 550px) {
+                top: 20%;
+            }
+            &.right {
+                right: -50px;
+                .control-arrow {
+                    margin-right: 20px;
+                }
+            }
+            &.left {
+                left: -50px;
+                .control-arrow {
+                    margin-left: 20px;
+                }
+            }
+            .control-arrow {
+                position: relative;
+                top: 40%;
+                z-index: 5;
+                display: inline-block;
+            }
+        }
+    }
+    
+    .default-section {
+        background-color: rgba($primary-color, 1);
+        position: relative;
+        height: 600px;
+        border-bottom: 5px solid $primary-color;
+        @media only screen and (max-width: $bootstrap-md) {
+            height: auto;
+            background-color: rgba($primary-color, 0);
+            border: none;
+        }
+        @media only screen and (max-width: $breakpoint-ipad-portrait) {}
+        .section-bkg {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            @media only screen and (max-width: $bootstrap-md) {
+                height: auto;
+                height: 150px;
+                opacity: 1;
+            }
+            img {
+                width: 100%;
+            }
+        }
+        .section-body {
+            position: absolute;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            @media only screen and (max-width: $bootstrap-md) {
+                position: relative;
+                padding-top: 0px;
+                padding-bottom: 40px;
+            }
+            .section-header-wrapper {
+                @media only screen and (max-width: $bootstrap-md) {
+                    padding: 0px;
+                }
+                .section-header {
+                    position: relative;
+                    background-color: rgba($primary-color, 0.6);
+                    padding: 40px 60px;
+                    margin-top: 10px; //same as item-card.margin
+                    margin-bottom: 10px;
+                    height: 380px;
+                    border-top: 5px solid $primary-color;
+                    @media only screen and (max-width: $bootstrap-md) {
+                        height: auto;
+                        text-align: left !important;
+                        padding: 20px 35px 0px 35px;
+                        background-color: transparent;
+                        margin: 0px;
+                    }
+                    @media only screen and (max-width: $breakpoint-ipad-portrait) {}
+                    .section-title {
+                        color: white;
+                        margin-bottom: 14px;
+                        @media only screen and (max-width: $bootstrap-md) {
+                            margin-bottom: 10px;
+                            color: $primary-color;
+                        }
+                        @media only screen and (max-width: $bootstrap-sm) {
+                            margin-top: 18px;
+                        }
+                    }
+                    .section-description {
+                        color: white;
+                        font-weight: 400;
+                        margin-bottom: 23px;
+                        line-height: 1.6;
+                        @media only screen and (max-width: $bootstrap-md) {
+                            margin-bottom: 15px;
+                            color: $gray;
+                        }
+                        @media only screen and (max-width: $bootstrap-sm) {
+                            margin-bottom: 20px;
+                        }
+                    }
+                    .view-all-btn {
+                        @media only screen and (max-width: $bootstrap-md) {
+                            background-color: $primary-color;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .section-content-wrapper > div {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+        }
+    }
+    
+    .item-card {
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        background-color: white;
+        height: 130px;
+        padding: 30px 0px;
+        font-size: 22px;
+        // border-radius: 0px;
+        border-bottom: 1px solid $light-gray;
+        margin: 0px 15px;
+        font-weight: 300;
+        .item-name-wrapper {
+            display: inline-block;
+            width: 85%;
+        }
+        .item-label-wrapper {
+            float: right;
+            display: inline-block;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+            height: auto;
+            padding: 30px 0px;
+        }
+        &.dark-item-card {
+            @media only screen and (min-width: $bootstrap-md) {
+                border-radius: 3px;
+                font-weight: 400;
+                height: 80px;
+                padding: 24px;
+                border: none;
+                margin: 10px 0px;
+                font-size: 14px;
+                &:hover {
+                    background-color: $primary-color;
+                    .item-name {
+                        color: white;
+                    }
+                    .item-label-wrapper {
+                        .item-xls {
+                            background-color: white;
+                            color: $green;
+                        }
+                        .item-pdf {
+                            background-color: white;
+                            color: $red;
+                        }
+                        .item-doc {
+                            background-color: white;
+                            color: $blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .resource-more-btn,
+    .resource-less-btn {
+        @extend .sm-buttons;
+        height: 32px;
+        width: 87px;
+        text-transform: uppercase;
+        color: white;
+        background-color: $primary-color;
+        font-weight: 500;
+        margin: auto;
+        margin-bottom: 10px;
+        i {
+            margin-left: 5px;
+        }
+        &:hover {
+            background-color: darken($primary-color, 20%);
+        }
+    }
+    
+    .resource-less-btn {
+        display: none;
+    }
+    
+    .view-all-btn {
+        @extend .sm-buttons;
+        width: 102px;
+        height: 32px;
+        outline: none;
+        border: none;
+        text-transform: uppercase;
+        color: $blue;
+        background-color: white;
+        &:hover {
+            color: $primary-color;
+        }
+        @media only screen and (max-width: $bootstrap-md) {
+            // .bouncing-left {
+            //     opacity: 1 !important;
+            // }
+        }
+        i {
+            margin-left: 3px;
+            vertical-align: middle;
+        }
+    }
+    
+    .footer {
+        height: 50px;
+        background-color: $primary-color;
+    }
+    
+    .search-popup {
+        position: fixed;
+        display: none;
+        top: 50px;
+        z-index: 300;
+        width: 100%;
+        background: $primary-color;
+        padding: 25px;
+        left: 0px;
+        text-align: center;
+        border-top: 1px solid $light-gray;
+        .search-wrapper {
+            position: relative;
+            width: 250px;
+            margin: auto;
+            .search-input {
+                width: 250px;
+                height: 50px;
+                padding-left: 37px;
+                border: 1px solid $light-gray;
+                background-color: $primary-color;
+                border-radius: 3px 3px 0px 0px;
+                outline: none;
+                color: white;
+            }
+            label {
+                position: absolute;
+                top: 15px;
+                left: 12px;
+                i {
+                    color: $light-gray;
+                    font-size: 20px;
+                }
+            }
+        }
+        .category-btn {
+            width: 250px;
+            margin: auto;
+            position: relative;
+            .dropdown-toggle {
+                width: 250px;
+                height: 50px;
+                background-color: $primary-color;
+                color: white;
+                border: 1px solid $light-gray;
+                border-radius: 0px 0px 3px 3px;
+                outline: none;
+                text-align: left;
+                padding-left: 10px;
+                i {
+                    float: right;
+                    margin-top: 3px;
+                    margin-right: 7px;
+                }
+            }
+            .dropdown-menu {}
+            .category-list {
+                position: absolute;
+                top: 50px;
+                left: 0px;
+                width: 250px;
+                margin: -1px 0px 0px 0px;
+                border-radius: 0px 0px 3px 3px;
+                padding: 10px 15px;
+                border: 1px solid $light-gray;
+                @include box-shadow(none);
+                li {
+                    margin: 5px auto;
+                }
+            }
+        }
+        .search-btn {
+            width: 250px;
+            height: 50px;
+            background-color: white;
+            text-transform: uppercase;
+            color: $primary-color;
+            border: 1px solid $light-gray;
+            margin-top: 20px;
+            border-radius: 3px;
+            outline: none;
+            font-size: 16px;
+            letter-spacing: 1;
+            &:hover {
+                background-color: rgba(white, 0.9);
+            }
+        }
+    }
