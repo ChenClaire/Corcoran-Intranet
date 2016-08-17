@@ -91,6 +91,9 @@ $(window).scroll(function() {
 });
 
 
-
+//goto search result page
+$(".view-all-btn").click(function(){
+    window.location.href = "searchResult.html";
+});
 
 

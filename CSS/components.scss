@@ -51,6 +51,10 @@ $item-type-width: 38px;
     @extend .item-label;
     background-color: $green;
 }
+.item-ppt {
+    @extend .item-label;
+    background-color: $orange;
+}
 
 .item-pdf {
     @extend .item-label;

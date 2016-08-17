@@ -19,7 +19,7 @@
   .resource-less-btn:hover, .view-all-btn:hover {
     cursor: pointer; }
 
-.item-label, .item-doc, .item-xls, .item-pdf, .item-link {
+.item-label, .item-doc, .item-xls, .item-ppt, .item-pdf, .item-link {
   border-radius: 3px;
   text-transform: uppercase;
   font-size: 13px;
@@ -35,6 +35,9 @@
 
 .item-xls {
   background-color: #18a344; }
+
+.item-ppt {
+  background-color: #F26522; }
 
 .item-pdf {
   background-color: #df3d3d; }
@@ -564,8 +567,8 @@
           text-align: left;
           margin: auto; } }
       .resource-section .resource-list .resource-item .sprite-wrapper {
-        height: 70px;
-        width: 70px;
+        height: 68px;
+        width: 68px;
         overflow: hidden;
         position: relative;
         margin: auto;

@@ -17,7 +17,7 @@
   .sm-buttons:hover, .resource-more-btn:hover {
     cursor: pointer; }
 
-.item-label, .item-doc, .item-xls, .item-pdf, .item-link {
+.item-label, .item-doc, .item-xls, .item-ppt, .item-pdf, .item-link {
   border-radius: 3px;
   text-transform: uppercase;
   font-size: 13px;
@@ -33,6 +33,9 @@
 
 .item-xls {
   background-color: #18a344; }
+
+.item-ppt {
+  background-color: #F26522; }
 
 .item-pdf {
   background-color: #df3d3d; }
@@ -181,7 +184,7 @@
   height: 220px; }
   @media only screen and (max-width: 768px) {
     .main-search {
-      height: 330px; } }
+      display: none; } }
   .main-search .content-wrapper {
     position: absolute;
     width: 100%;
@@ -384,6 +387,9 @@
   @media only screen and (max-width: 992px) {
     .result-list {
       padding: 30px 15px 50px 15px; } }
+  @media only screen and (max-width: 768px) {
+    .result-list {
+      padding: 100px 15px 50px 15px; } }
   @media only screen and (max-width: 768px) {
     .result-list .section-list-wrapper .section-list {
       display: none; } }
