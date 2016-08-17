@@ -757,7 +757,10 @@
           color: #df3d3d; }
         .item-card.dark-item-card:hover .item-label-wrapper .item-doc {
           background-color: white;
-          color: #0064b1; } }
+          color: #0064b1; }
+        .item-card.dark-item-card:hover .item-label-wrapper .item-ppt {
+          background-color: white;
+          color: #F26522; } }
 
 .resource-more-btn,
 .resource-less-btn {
