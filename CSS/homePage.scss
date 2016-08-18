@@ -296,27 +296,26 @@
                         -webkit-align-items: center;
                         -webkit-box-align: center;
                         align-items: center;
-                        
                         background-color: rgba($primary-color, 0.6);
                     }
-                }
-                .page-title {
-                    font-weight: 300;
-                    font-size: 40px;
-                    color: white;
-                    z-index: 1;
-                    margin: auto;
-                    margin-bottom: 24px;
-                    @media only screen and (max-width: $breakpoint-ipad-portrait) {
-                        vertical-align: middle;
-                        font-size: 32px;
-                        line-height: 1.1;
+                    .page-title {
                         font-weight: 300;
-                        margin-bottom: 0px;
+                        font-size: 40px;
+                        color: white;
+                        z-index: 1;
                         margin: auto;
-                    }
-                    @media only screen and (max-width: $breakpoint-iphone6plus) {
-                        width:60%;
+                        margin-bottom: 24px;
+                        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                            vertical-align: middle;
+                            font-size: 32px;
+                            line-height: 1.1;
+                            font-weight: 300;
+                            margin-bottom: 0px;
+                            margin: auto;
+                        }
+                        @media only screen and (max-width: 500px) {
+                            width: 60%;
+                        }
                     }
                 }
                 .search-bar {

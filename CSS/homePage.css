@@ -391,24 +391,24 @@
             -webkit-box-align: center;
             align-items: center;
             background-color: rgba(0, 0, 0, 0.6); } }
-      .main-search .content-wrapper .make-it-center .page-title {
-        font-weight: 300;
-        font-size: 40px;
-        color: white;
-        z-index: 1;
-        margin: auto;
-        margin-bottom: 24px; }
-        @media only screen and (max-width: 768px) {
-          .main-search .content-wrapper .make-it-center .page-title {
-            vertical-align: middle;
-            font-size: 32px;
-            line-height: 1.1;
-            font-weight: 300;
-            margin-bottom: 0px;
-            margin: auto; } }
-        @media only screen and (max-width: 414px) {
-          .main-search .content-wrapper .make-it-center .page-title {
-            width: 60%; } }
+        .main-search .content-wrapper .make-it-center .page-title-wrapper .page-title {
+          font-weight: 300;
+          font-size: 40px;
+          color: white;
+          z-index: 1;
+          margin: auto;
+          margin-bottom: 24px; }
+          @media only screen and (max-width: 768px) {
+            .main-search .content-wrapper .make-it-center .page-title-wrapper .page-title {
+              vertical-align: middle;
+              font-size: 32px;
+              line-height: 1.1;
+              font-weight: 300;
+              margin-bottom: 0px;
+              margin: auto; } }
+          @media only screen and (max-width: 500px) {
+            .main-search .content-wrapper .make-it-center .page-title-wrapper .page-title {
+              width: 60%; } }
       .main-search .content-wrapper .make-it-center .search-bar {
         height: 50px;
         position: relative;
