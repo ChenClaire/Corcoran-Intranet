@@ -15,7 +15,7 @@ $item-type-width: 38px;
 }
 
 .logo {
-    padding-top: 17px;
+    padding-top: 16px;
     img {
         height: 16px;
     }
@@ -73,6 +73,7 @@ $item-type-width: 38px;
     text-decoration: none;
     &:hover {
         text-decoration: none;
+        color:$primary-color;
     }
 }
 

@@ -39,17 +39,20 @@
             </div>
             <button class="search-btn">Search</button>
         </div>
-        <!-- </div> -->
     </div>
     <div class="main-section row" id="home">
         <div class="ecorcoran-navbar" role="navigation">
-            <div class="">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ecorcoran-nav"> <span class="sr-only">Toggle navigation</span>
+            <div class="navbar-toggle-wrapper">
+                <button type="button" class="navbar-toggle collapsed" data-target="#ecorcoran-nav">
+                    <span class="sr-only">Toggle navigation</span>
                     <span>menu</span>
+                </button>
             </div>
             <div class="ecorcoran-nav-list collapse navbar-collapse" id="ecorcoran-nav">
-                
                 <ul class="">
+                    <div class="close-nav">
+                        <i class="fa fa-times" aria-hidden="true"></i>
+                    </div>
                     <li class="active" onclick="goTo('home',this)">
                         <div class="indicator-wrapper">
                             <div class="indicator"></div>
@@ -116,7 +119,7 @@
             <i class="fa fa-search" aria-hidden="true"></i>
         </div>
         <div class="corcoran-bar">
-            <span class="bar-segment" id="bar-light-blue"></span><span class="bar-segment" id="bar-orange"></span><span class="bar-segment" id="bar-green"></span><span class="bar-segment" id="bar-dark-blue"></span><span class="bar-segment" id="bar-yellow"></span>
+            <span class="bar-segment" id="bar-light-blue"></span><span class="bar-segment" id="bar-orange"></span><span class="bar-segment" id="bar-green"></span><span class="bar-segment" id="bar-pink"></span><span class="bar-segment" id="bar-dark-blue"></span><span class="bar-segment" id="bar-yellow"></span>
         </div>
         <div class="main-search text-center">
             <div class="img-fill">
@@ -163,7 +166,7 @@
         </div>
         <div class="row carousel slide" data-ride="carousel" id="section-resource-mobile">
             <div class="row resource-container carousel-inner" role="listbox">
-                <div class=" resource-list item active">
+                <div class="resource-list item active" id="item-1">
                     <div class="resource-item-wrapper png-sprite">
                         <a class="resource-item" target="_blank">
                             <div class="sprite-wrapper">
@@ -197,7 +200,7 @@
                         </a>
                     </div>
                 </div>
-                <div class=" resource-list item">
+                <div class="resource-list item" id="item-2">
                     <div class="resource-item-wrapper png-sprite">
                         <a class="resource-item" target="_blank">
                             <div class="sprite-wrapper">
@@ -231,8 +234,7 @@
                         </a>
                     </div>
                 </div>
-               
-                <div class=" resource-list item">
+                <div class=" resource-list item" id="item-3">
                     <div class="resource-item-wrapper png-sprite">
                         <a class="resource-item" target="_blank">
                             <div class="sprite-wrapper">
@@ -266,7 +268,7 @@
                         </a>
                     </div>
                 </div>
-                <div class=" resource-list item">
+                <div class=" resource-list item" id="item-4">
                     <div class="resource-item-wrapper png-sprite">
                         <a class="resource-item" target="_blank">
                             <div class="sprite-wrapper">

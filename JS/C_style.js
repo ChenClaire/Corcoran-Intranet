@@ -1,9 +1,47 @@
 $(".search-input").focus();
 
-$(".carousel").carousel();
+$(".carousel").carousel({
+    interval: false
+});
+
+//menu toggel on mobile
+$(".close-nav").click(function() {
+    // console.log('hi from close nav');
+    $(".ecorcoran-nav-list").toggle();
+});
+$(".navbar-toggle").click(function() {
+    // console.log('hi from navbar toggle');
+    $(".ecorcoran-nav-list").toggle();
+});
+
+
+//show or hide carousel conditionally
+$(".carousel-control.left").hide();
+var Index_Of_Active = 1;
+$(".carousel-control.left").click(function(){
+    Index_Of_Active --;
+});
+$(".carousel-control.right").click(function(){
+    Index_Of_Active ++;
+});
+$('#section-resource-mobile').on('slide.bs.carousel', function() {
+    var carousel_Length = $('#section-resource-mobile .item').length;
+    if(Index_Of_Active > 1 && Index_Of_Active < carousel_Length){
+        $(".carousel-control.left").show();
+        $(".carousel-control.right").show();
+    } else if (Index_Of_Active == 1) {
+        $(".carousel-control.left").hide();
+        $(".carousel-control.right").show();
+    } else if (Index_Of_Active == carousel_Length) {
+        $(".carousel-control.left").show();
+        $(".carousel-control.right").hide();
+    }
+   console.log("Index_Of_Active="+Index_Of_Active);
+});
+
+
 
 // more & less controller for resrouce-section
-
 $(".desktop .resource-more-btn").click(function() {
     $(".desktop .resource-list").slice(1, 3).removeClass("notVisible");
     $(this).toggle();
@@ -30,20 +68,6 @@ $(document).click(function(e) {
     }
 });
 
-// $(".close-nav").click(function(){
-//     $(".ecorcoran-nav-list").toggle();
-// });
-$(".navbar-toggle").click(function(){
-    $(".ecorcoran-nav-list").toggle();
-});
-
-// $(document).click(function(e) {
-//     var target = e.target;
-//     if (!$(target).is(".ecorcoran-nav-list") && !$(target).parents().is(".ecorcoran-nav-list")) {
-//         $(".ecorcoran-nav-list ").hide();
-//     }
-// });
-
 
 // if ($(window).width() >= 992) {
 $(".default-section:nth-child(even)").addClass('title-left');
@@ -58,6 +82,7 @@ function goTo(target_ID, el) {
     $('body, html').animate({ scrollTop: destination }, '700');
     $(el).toggleClass('active');
     $(el).siblings('li').removeClass('active');
+    console.log('hi from goTo')
     $(".ecorcoran-nav-list").hide();
 }
 
@@ -92,8 +117,6 @@ $(window).scroll(function() {
 
 
 //goto search result page
-$(".view-all-btn").click(function(){
-    window.location.href = "searchResult.html";
-});
-
-
+// $(".view-all-btn").click(function() {
+//     window.location.href = "searchResult.html";
+// });
