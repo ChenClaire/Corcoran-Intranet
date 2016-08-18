@@ -12,6 +12,16 @@
     <!-- bootstrap cdn-->
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
     <script type="text/javascript" src="JS/bootstrap.js"></script>
+    <!-- Include the multiselect-dropdown plugin's CSS and JS: -->
+    <script type="text/javascript" src="JS/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="CSS/bootstrap-multiselect.css" type="text/css" />
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css"> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.0/css/bootstrap-select.min.css"> -->
+    <!-- Latest compiled and minified JavaScript -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.0/js/bootstrap-select.min.js"></script> -->
+    <!-- (Optional) Latest compiled and minified JavaScript translation files -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.11.0/js/i18n/defaults-*.min.js"></script> -->
     <!-- my css  -->
     <link rel="stylesheet" type="text/css" href="CSS/homePage.css">
     <!-- google font -->
@@ -28,7 +38,7 @@
                 </label>
                 <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
             </div>
-            <div class="category-btn">
+            <!-- <div class="category-btn">
                 <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Everything &nbsp; <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
                 <ul class="dropdown-menu category-list">
                     <li>Action</li>
@@ -37,6 +47,16 @@
                     <li role="separator" class="divider"></li>
                     <li>Separated link</li>
                 </ul>
+            </div> -->
+            <div class="category-btn">
+                <select class="multi-select-dropdown" id="" multiple="multiple">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                </select>
             </div>
             <button class="search-btn">Search</button>
         </div>
@@ -94,20 +114,20 @@
                             <div class="menu-item" data-toggle="collapse" data-target=".in">Renting</div>
                         </div>
                     </li>
+                    <li onclick="goTo('section_5',this)">
+                        <div class="indicator-wrapper">
+                            <div class="indicator"></div>
+                        </div>
+                        <div class="menu-item-wrapper">
+                            <div class="menu-item" data-toggle="collapse" data-target=".in">Digial Marketing</div>
+                        </div>
+                    </li>
                     <li onclick="goTo('section_4',this)">
                         <div class="indicator-wrapper">
                             <div class="indicator"></div>
                         </div>
                         <div class="menu-item-wrapper">
                             <div class="menu-item" data-toggle="collapse" data-target=".in">Market Research</div>
-                        </div>
-                    </li>
-                    <li onclick="goTo('section_5',this)">
-                        <div class="indicator-wrapper">
-                            <div class="indicator"></div>
-                        </div>
-                        <div class="menu-item-wrapper">
-                            <div class="menu-item" data-toggle="collapse" data-target=".in">Digital Marketing</div>
                         </div>
                     </li>
                 </ul>
@@ -142,14 +162,14 @@
                                 <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
                             </div>
                             <div class="category-btn">
-                                <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Everything &nbsp; <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
-                                <ul class="dropdown-menu category-list">
-                                    <li>Action</li>
-                                    <li>Another action</li>
-                                    <li>Something else here</li>
-                                    <li role="separator" class="divider"></li>
-                                    <li>Separated link</li>
-                                </ul>
+                                <select class="multi-select-dropdown" id="" multiple="multiple">
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                    <option value="6">Option 6</option>
+                                </select>
                             </div>
                             <button class="search-btn">Search</button>
                         </div>

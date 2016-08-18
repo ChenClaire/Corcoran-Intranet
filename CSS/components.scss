@@ -51,6 +51,7 @@ $item-type-width: 38px;
     @extend .item-label;
     background-color: $green;
 }
+
 .item-ppt {
     @extend .item-label;
     background-color: $orange;
@@ -73,7 +74,7 @@ $item-type-width: 38px;
     text-decoration: none;
     &:hover {
         text-decoration: none;
-        color:$primary-color;
+        color: $primary-color;
     }
 }
 
@@ -136,6 +137,7 @@ $item-type-width: 38px;
     text-align: center;
     border-top: 1px solid $light-gray;
     .search-wrapper {
+        font-size: 16px;
         position: relative;
         width: 250px;
         margin: auto;
@@ -163,34 +165,71 @@ $item-type-width: 38px;
         width: 250px;
         margin: auto;
         position: relative;
-        .dropdown-toggle {
-            width: 250px;
-            height: 50px;
-            background-color: $primary-color;
-            color: white;
-            border: 1px solid $light-gray;
-            border-radius: 0px 0px 3px 3px;
-            outline: none;
-            text-align: left;
-            padding-left: 10px;
-            i {
-                float: right;
-                margin-top: 3px;
-                margin-right: 7px;
+        // .dropdown-toggle {
+        //     width: 250px;
+        //     height: 50px;
+        //     background-color: $primary-color;
+        //     color: white;
+        //     border: 1px solid $light-gray;
+        //     border-radius: 0px 0px 3px 3px;
+        //     outline: none;
+        //     text-align: left;
+        //     padding-left: 10px;
+        //     i {
+        //         float: right;
+        //         margin-top: 3px;
+        //         margin-right: 7px;
+        //     }
+        // }
+        // .category-list {
+        //     position: absolute;
+        //     top: 50px;
+        //     left: 0px;
+        //     width: 250px;
+        //     margin: -1px 0px 0px 0px;
+        //     border-radius: 0px 0px 3px 3px;
+        //     padding: 10px 15px;
+        //     border: 1px solid $light-gray;
+        //     @include box-shadow(none);
+        //     li {
+        //         margin: 5px auto;
+        //     }
+        // }
+        .dropdown-trigger {
+            // height: 50px;
+            .multiselect {
+                width: 250px;
+                height: 50px;
+                border-radius: 0px 0px 3px 3px;
+                text-align: left;
+                border-color: $light-gray;
+                background-color: $primary-color;
+                color:white;
+                &:hover{
+                    background-color: $primary-color;
+                }
+                &:focus {
+                    background-color: $primary-color;
+                    outline: none;
+                    border-color: $light-gray;
+                }
+                &:active {
+                    border-color: $light-gray;
+                    box-shadow: none;
+                    outline: none;
+                    background-color: $primary-color;
+                }
+                span {
+                    font-size: 16px;
+                    padding-bottom: 4px;
+                }
+                i {
+                    float: right;
+                    margin-top: 3px;
+                }
             }
-        }
-        .category-list {
-            position: absolute;
-            top: 50px;
-            left: 0px;
-            width: 250px;
-            margin: -1px 0px 0px 0px;
-            border-radius: 0px 0px 3px 3px;
-            padding: 10px 15px;
-            border: 1px solid $light-gray;
-            @include box-shadow(none);
-            li {
-                margin: 5px auto;
+            .multiselect-container {
+                width: 250px;
             }
         }
     }
@@ -213,6 +252,6 @@ $item-type-width: 38px;
 }
 
 .footer {
-        height: 50px;
-        background-color: $primary-color;
-    }
+    height: 50px;
+    background-color: $primary-color;
+}

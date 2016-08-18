@@ -12,6 +12,9 @@
     <!-- bootstrap cdn-->
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css">
     <script type="text/javascript" src="JS/bootstrap.js"></script>
+    <!-- Include the multiselect-dropdown plugin's CSS and JS: -->
+    <script type="text/javascript" src="JS/bootstrap-multiselect.js"></script>
+    <link rel="stylesheet" href="CSS/bootstrap-multiselect.css" type="text/css" />
     <!-- my css  -->
     <link rel="stylesheet" type="text/css" href="CSS/searchResult.css">
     <!-- google font -->
@@ -29,14 +32,14 @@
                 <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
             </div>
             <div class="category-btn">
-                <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Everything &nbsp; <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
-                <ul class="dropdown-menu category-list">
-                    <li>Action</li>
-                    <li>Another action</li>
-                    <li>Something else here</li>
-                    <li role="separator" class="divider"></li>
-                    <li>Separated link</li>
-                </ul>
+                <select class="multi-select-dropdown" id="" multiple="multiple">
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                    <option value="6">Option 6</option>
+                </select>
             </div>
             <button class="search-btn">Search</button>
         </div>
@@ -66,14 +69,14 @@
                                 <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
                             </div>
                             <div class="category-btn">
-                                <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Everything &nbsp; <i class="fa fa-chevron-down" aria-hidden="true"></i></button>
-                                <ul class="dropdown-menu category-list">
-                                    <li>Action</li>
-                                    <li>Another action</li>
-                                    <li>Something else here</li>
-                                    <li role="separator" class="divider"></li>
-                                    <li>Separated link</li>
-                                </ul>
+                                <select class="multi-select-dropdown" id="" multiple="multiple">
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3" >Option 3</option>
+                                    <option value="4">Option 4</option>
+                                    <option value="5">Option 5</option>
+                                    <option value="6">Option 6</option>
+                                </select>
                             </div>
                             <button class="search-btn">Search</button>
                         </div>
