@@ -1,8 +1,10 @@
 <html>
 
 <head>
-    <title>eCorcoran Homepage</title>
+    <title>eCorcoran</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
     <!-- jquery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
     <!-- jQuery UI lib -->
@@ -22,165 +24,314 @@
 </head>
 
 <body class="container-fluid">
-    <div class="menu-dimmer"></div>
-    <div class="search-popup">
-        <div class="search-bar">
-            <div class="search-wrapper">
-                <label for="search-input">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </label>
-                <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
-            </div>
-            <div class="category-btn">
-                <select class="multi-select-dropdown" id="">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
-                    <option value="5">Market Material</option>
-                    <option value="6">Digital Marketing</option>
-                </select>
-            </div>
-            <button class="search-btn">Search</button>
-        </div>
-    </div>
-    <div class="main-section row" id="home">
-        <div class="ecorcoran-navbar" role="navigation">
-            <div class="navbar-toggle-wrapper">
-                <button type="button" class="navbar-toggle collapsed" data-target="#ecorcoran-nav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span>menu</span>
-                </button>
-            </div>
-            <div class="ecorcoran-nav-list collapse navbar-collapse" id="ecorcoran-nav">
-                <ul class="">
-                    <div class="close-nav">
-                        <i class="fa fa-times" aria-hidden="true"></i>
-                    </div>
-                    <li class="active" onclick="goTo('home',this)">
-                        <div class="indicator-wrapper">
-                            <div class="indicator"></div>
-                        </div>
-                        <div class="menu-item-wrapper">
-                            <div class="menu-item" data-toggle="collapse" data-target=".in">Homepage</div>
-                        </div>
-                    </li>
-                    <li onclick="goTo('section_resource',this)">
-                        <div class="indicator-wrapper">
-                            <div class="indicator"></div>
-                        </div>
-                        <div class="menu-item-wrapper">
-                            <div class="menu-item" data-toggle="collapse" data-target=".in">Resources</div>
-                        </div>
-                    </li>
-                    <li onclick="goTo('section_1',this)">
-                        <div class="indicator-wrapper">
-                            <div class="indicator"></div>
-                        </div>
-                        <div class="menu-item-wrapper">
-                            <div class="menu-item" data-toggle="collapse" data-target=".in">Buying</div>
-                        </div>
-                    </li>
-                    <li onclick="goTo('section_2',this)">
-                        <div class="indicator-wrapper">
-                            <div class="indicator"></div>
-                        </div>
-                        <div class="menu-item-wrapper">
-                            <div class="menu-item" data-toggle="collapse" data-target=".in">Selling</div>
-                        </div>
-                    </li>
-                    <li onclick="goTo('section_3',this)">
-                        <div class="indicator-wrapper">
-                            <div class="indicator"></div>
-                        </div>
-                        <div class="menu-item-wrapper">
-                            <div class="menu-item" data-toggle="collapse" data-target=".in">Renting</div>
-                        </div>
-                    </li>
-                    <li onclick="goTo('section_5',this)">
-                        <div class="indicator-wrapper">
-                            <div class="indicator"></div>
-                        </div>
-                        <div class="menu-item-wrapper">
-                            <div class="menu-item" data-toggle="collapse" data-target=".in">Digial Marketing</div>
-                        </div>
-                    </li>
-                    <li onclick="goTo('section_4',this)">
-                        <div class="indicator-wrapper">
-                            <div class="indicator"></div>
-                        </div>
-                        <div class="menu-item-wrapper">
-                            <div class="menu-item" data-toggle="collapse" data-target=".in">Market Research</div>
-                        </div>
-                    </li>
-                </ul>
+    <div class="max-width-wrapper">
+        <div class="menu-dimmer"></div>
+        <div class="search-popup">
+            <div class="search-bar">
+                <div class="search-wrapper">
+                    <label for="search-input">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+                    <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
+                </div>
+                <div class="category-btn">
+                    <select class="multi-select-dropdown" id="">
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                        <option value="5">Market Material</option>
+                        <option value="6">Digital Marketing</option>
+                    </select>
+                </div>
+                <button class="search-btn">Search</button>
             </div>
         </div>
-        <div class="top-header">
-            <div class="logo"><img id="change-bkg-img" src="img/ecorcoran.png" alt=""></div>
-        </div>
-        <div class="search-toggle">
-            <i class="fa fa-search open-search" aria-hidden="true"></i>
-            <i class="fa fa-times close-search" aria-hidden="true"></i>
-        </div>
-        <div class="corcoran-bar">
-            <span class="bar-segment" id="bar-light-blue"></span><span class="bar-segment" id="bar-orange"></span><span class="bar-segment" id="bar-green"></span><span class="bar-segment" id="bar-pink"></span><span class="bar-segment" id="bar-dark-blue"></span><span class="bar-segment" id="bar-yellow"></span>
-        </div>
-        <div class="main-search text-center">
-            <div class="img-fill">
-                <img src="img/nyc.png" alt="">
-            </div>
-            <div class="content-wrapper">
-                <div class="make-it-center">
-                    <div id="page-title-top"></div>
-                    <div class="page-title-wrapper">
-                        <div class="page-title">Welcome to the new eCorcoran</div>
-                    </div>
-                    <div id="search-bar-top"></div>
-                    <div class="search-bar-wrapper">
-                        <div class="search-bar">
-                            <div class="search-wrapper">
-                                <label for="search-input">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </label>
-                                <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
+        <div class="main-section row" id="home">
+            <div class="ecorcoran-navbar" role="navigation">
+                <div class="navbar-toggle-wrapper">
+                    <button type="button" class="navbar-toggle collapsed" data-target="#ecorcoran-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span>menu</span>
+                    </button>
+                </div>
+                <div class="ecorcoran-nav-list collapse navbar-collapse" id="ecorcoran-nav">
+                    <ul class="">
+                        <div class="close-nav">
+                            <i class="fa fa-times" aria-hidden="true"></i>
+                        </div>
+                        <li class="active" onclick="goTo('home',this)">
+                            <div class="indicator-wrapper">
+                                <div class="indicator"></div>
                             </div>
-                            <div class="category-btn">
-                                <select class="multi-select-dropdown" id="">
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                    <option value="4">Option 4</option>
-                                    <option value="5">Option 5</option>
-                                    <option value="6">Option 6</option>
-                                </select>
+                            <div class="menu-item-wrapper">
+                                <div class="menu-item" data-toggle="collapse" data-target=".in">Homepage</div>
                             </div>
-                            <button class="search-btn">Search</button>
+                        </li>
+                        <li onclick="goTo('section_resource',this)">
+                            <div class="indicator-wrapper">
+                                <div class="indicator"></div>
+                            </div>
+                            <div class="menu-item-wrapper">
+                                <div class="menu-item" data-toggle="collapse" data-target=".in">Resources</div>
+                            </div>
+                        </li>
+                        <li onclick="goTo('section_1',this)">
+                            <div class="indicator-wrapper">
+                                <div class="indicator"></div>
+                            </div>
+                            <div class="menu-item-wrapper">
+                                <div class="menu-item" data-toggle="collapse" data-target=".in">Buying</div>
+                            </div>
+                        </li>
+                        <li onclick="goTo('section_2',this)">
+                            <div class="indicator-wrapper">
+                                <div class="indicator"></div>
+                            </div>
+                            <div class="menu-item-wrapper">
+                                <div class="menu-item" data-toggle="collapse" data-target=".in">Selling</div>
+                            </div>
+                        </li>
+                        <li onclick="goTo('section_3',this)">
+                            <div class="indicator-wrapper">
+                                <div class="indicator"></div>
+                            </div>
+                            <div class="menu-item-wrapper">
+                                <div class="menu-item" data-toggle="collapse" data-target=".in">Renting</div>
+                            </div>
+                        </li>
+                        <li onclick="goTo('section_5',this)">
+                            <div class="indicator-wrapper">
+                                <div class="indicator"></div>
+                            </div>
+                            <div class="menu-item-wrapper">
+                                <div class="menu-item" data-toggle="collapse" data-target=".in">Digial Marketing</div>
+                            </div>
+                        </li>
+                        <li onclick="goTo('section_4',this)">
+                            <div class="indicator-wrapper">
+                                <div class="indicator"></div>
+                            </div>
+                            <div class="menu-item-wrapper">
+                                <div class="menu-item" data-toggle="collapse" data-target=".in">Market Research</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="top-header">
+                <div class="logo"><input type="image" src="img/ecorcoran.png" alt=""></div>
+            </div>
+            <div class="search-toggle">
+                <i class="fa fa-search open-search" aria-hidden="true"></i>
+                <i class="fa fa-times close-search" aria-hidden="true"></i>
+            </div>
+            <div class="corcoran-bar">
+                <span class="bar-segment" id="bar-light-blue"></span><span class="bar-segment" id="bar-orange"></span><span class="bar-segment" id="bar-green"></span><span class="bar-segment" id="bar-pink"></span><span class="bar-segment" id="bar-dark-blue"></span><span class="bar-segment" id="bar-yellow"></span>
+            </div>
+            <div class="main-search text-center">
+                <div class="img-fill">
+                    <img src="img/nyc.png" alt="">
+                </div>
+                <div class="content-wrapper">
+                    <div class="make-it-center">
+                        <div id="page-title-top"></div>
+                        <div class="page-title-wrapper">
+                            <div class="page-title">Welcome to the new eCorcoran</div>
                         </div>
+                        <div id="search-bar-top"></div>
+                        <div class="search-bar-wrapper">
+                            <div class="search-bar">
+                                <div class="search-wrapper">
+                                    <label for="search-input">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </label>
+                                    <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
+                                </div>
+                                <div class="category-btn">
+                                    <select class="multi-select-dropdown" id="">
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                        <option value="5">Option 5</option>
+                                        <option value="6">Option 6</option>
+                                    </select>
+                                </div>
+                                <button class="search-btn">Search</button>
+                            </div>
+                        </div>
+                        <!-- </div> -->
                     </div>
-                    <!-- </div> -->
                 </div>
             </div>
         </div>
-    </div>
-    <a id="section_resource"></a>
-    <div class="resource-section mobile">
-        <div class="row">
-            <div class="section-header col-md-12">
-                <div class="resources-section-title">Agent Suite</div>
+        <a id="section_resource"></a>
+        <div class="resource-section mobile">
+            <div class="row">
+                <div class="section-header col-md-12">
+                    <div class="resources-section-title">Agent Suite</div>
+                </div>
+            </div>
+            <div class="row carousel slide" data-ride="carousel" id="section-resource-mobile">
+                <div class="row resource-container carousel-inner" role="listbox">
+                    <div class="resource-list item active" id="item-1">
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/contactually.png" alt="">
+                                </div>
+                                <div class="resource-name">Contactually</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/erfc.png" alt="">
+                                </div>
+                                <div class="resource-name">erfc</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/property_shark.png" alt="">
+                                </div>
+                                <div class="resource-name">Property shark</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/lear.png" alt="">
+                                </div>
+                                <div class="resource-name">lear</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="resource-list item" id="item-2">
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/taxi.png" alt="">
+                                </div>
+                                <div class="resource-name">taxi</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/property_shark.png" alt="">
+                                </div>
+                                <div class="resource-name">Property shark</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/property_shark.png" alt="">
+                                </div>
+                                <div class="resource-name">Property shark</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/online_help.png" alt="">
+                                </div>
+                                <div class="resource-name">online help</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class=" resource-list item" id="item-3">
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/xpress_docs.png" alt="">
+                                </div>
+                                <div class="resource-name">xpress_doc</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/imprev.png" alt="">
+                                </div>
+                                <div class="resource-name">imprev</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/my_profile.png" alt="">
+                                </div>
+                                <div class="resource-name">my profile</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/spacio.png" alt="">
+                                </div>
+                                <div class="resource-name">spacio</div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class=" resource-list item" id="item-4">
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/corcoran.png" alt="">
+                                </div>
+                                <div class="resource-name">corcoran</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/outlook.png" alt="">
+                                </div>
+                                <div class="resource-name">outlook</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/quick_stats.png" alt="">
+                                </div>
+                                <div class="resource-name">quick stats</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/property_shark.png" alt="">
+                                </div>
+                                <div class="resource-name">Property shark</div>
+                            </a>
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#section-resource-mobile" role="button" data-slide="prev">
+                        <span class="control-arrow"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#section-resource-mobile" role="button" data-slide="next">
+                        <span class="control-arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="row carousel slide" data-ride="carousel" id="section-resource-mobile">
-            <div class="row resource-container carousel-inner" role="listbox">
-                <div class="resource-list item active" id="item-1">
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/contactually.png" alt="">
-                            </div>
-                            <div class="resource-name">Contactually</div>
-                        </a>
+        <div class="resource-section desktop">
+            <div class="row">
+                <div class="section-header col-md-12">
+                    <div class="section-title-wrapper">
+                        <div class="resources-section-title">Resources</div>
                     </div>
+                </div>
+            </div>
+            <div class="row resource-container">
+                <div class=" resource-list  text-center ">
                     <div class="resource-item-wrapper png-sprite">
                         <a class="resource-item" target="_blank">
                             <div class="sprite-wrapper">
@@ -192,9 +343,17 @@
                     <div class="resource-item-wrapper png-sprite">
                         <a class="resource-item" target="_blank">
                             <div class="sprite-wrapper">
-                                <img src="img/property_shark.png" alt="">
+                                <img src="img/taxi.png" alt="">
                             </div>
-                            <div class="resource-name">Property shark</div>
+                            <div class="resource-name">taxi</div>
+                        </a>
+                    </div>
+                    <div class="resource-item-wrapper png-sprite">
+                        <a class="resource-item" target="_blank">
+                            <div class="sprite-wrapper">
+                                <img src="img/one_drive.png" alt="">
+                            </div>
+                            <div class="resource-name">One Drive</div>
                         </a>
                     </div>
                     <div class="resource-item-wrapper png-sprite">
@@ -205,90 +364,30 @@
                             <div class="resource-name">lear</div>
                         </a>
                     </div>
+                    <div class="resource-item-wrapper png-sprite">
+                        <a class="resource-item" target="_blank">
+                            <div class="sprite-wrapper">
+                                <img src="img/outlook.png" alt="">
+                            </div>
+                            <div class="resource-name">Outlook</div>
+                        </a>
+                    </div>
+                    <div class="resource-item-wrapper png-sprite">
+                        <a class="resource-item" target="_blank">
+                            <div class="sprite-wrapper">
+                                <img src="img/property_shark.png" alt="">
+                            </div>
+                            <div class="resource-name">Property shark</div>
+                        </a>
+                    </div>
                 </div>
-                <div class="resource-list item" id="item-2">
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/taxi.png" alt="">
-                            </div>
-                            <div class="resource-name">taxi</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/property_shark.png" alt="">
-                            </div>
-                            <div class="resource-name">Property shark</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/property_shark.png" alt="">
-                            </div>
-                            <div class="resource-name">Property shark</div>
-                        </a>
-                    </div>
+                <div class=" resource-list text-center notVisible">
                     <div class="resource-item-wrapper png-sprite">
                         <a class="resource-item" target="_blank">
                             <div class="sprite-wrapper">
                                 <img src="img/online_help.png" alt="">
                             </div>
                             <div class="resource-name">online help</div>
-                        </a>
-                    </div>
-                </div>
-                <div class=" resource-list item" id="item-3">
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/xpress_docs.png" alt="">
-                            </div>
-                            <div class="resource-name">xpress_doc</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/imprev.png" alt="">
-                            </div>
-                            <div class="resource-name">imprev</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/my_profile.png" alt="">
-                            </div>
-                            <div class="resource-name">my profile</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/spacio.png" alt="">
-                            </div>
-                            <div class="resource-name">spacio</div>
-                        </a>
-                    </div>
-                </div>
-                <div class=" resource-list item" id="item-4">
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/corcoran.png" alt="">
-                            </div>
-                            <div class="resource-name">corcoran</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/outlook.png" alt="">
-                            </div>
-                            <div class="resource-name">outlook</div>
                         </a>
                     </div>
                     <div class="resource-item-wrapper png-sprite">
@@ -302,767 +401,672 @@
                     <div class="resource-item-wrapper png-sprite">
                         <a class="resource-item" target="_blank">
                             <div class="sprite-wrapper">
+                                <img src="img/corcoran.png" alt="">
+                            </div>
+                            <div class="resource-name">corcoran</div>
+                        </a>
+                    </div>
+                    <div class="resource-item-wrapper png-sprite">
+                        <a class="resource-item" target="_blank">
+                            <div class="sprite-wrapper">
                                 <img src="img/property_shark.png" alt="">
                             </div>
                             <div class="resource-name">Property shark</div>
                         </a>
                     </div>
-                </div>
-                <a class="left carousel-control" href="#section-resource-mobile" role="button" data-slide="prev">
-                    <span class="control-arrow"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#section-resource-mobile" role="button" data-slide="next">
-                    <span class="control-arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="resource-section desktop">
-        <div class="row">
-            <div class="section-header col-md-12">
-                <div class="section-title-wrapper">
-                    <div class="resources-section-title">Resources</div>
-                </div>
-            </div>
-        </div>
-        <div class="row resource-container">
-            <div class=" resource-list  text-center ">
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/erfc.png" alt="">
-                        </div>
-                        <div class="resource-name">erfc</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/taxi.png" alt="">
-                        </div>
-                        <div class="resource-name">taxi</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/one_drive.png" alt="">
-                        </div>
-                        <div class="resource-name">One Drive</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/lear.png" alt="">
-                        </div>
-                        <div class="resource-name">lear</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/outlook.png" alt="">
-                        </div>
-                        <div class="resource-name">Outlook</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/property_shark.png" alt="">
-                        </div>
-                        <div class="resource-name">Property shark</div>
-                    </a>
-                </div>
-            </div>
-            <div class=" resource-list text-center notVisible">
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/online_help.png" alt="">
-                        </div>
-                        <div class="resource-name">online help</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/quick_stats.png" alt="">
-                        </div>
-                        <div class="resource-name">quick stats</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/corcoran.png" alt="">
-                        </div>
-                        <div class="resource-name">corcoran</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/property_shark.png" alt="">
-                        </div>
-                        <div class="resource-name">Property shark</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/xpress_docs.png" alt="">
-                        </div>
-                        <div class="resource-name">xpress docs</div>
-                    </a>
-                </div>
-            </div>
-            <div class="resource-list text-center notVisible ">
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/property_shark.png" alt="">
-                        </div>
-                        <div class="resource-name">Property shark</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/my_profile.png" alt="">
-                        </div>
-                        <div class="resource-name">my profile</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/imprev.png" alt="">
-                        </div>
-                        <div class="resource-name">imprev</div>
-                    </a>
-                </div>
-                <div class="resource-item-wrapper png-sprite">
-                    <a class="resource-item" target="_blank">
-                        <div class="sprite-wrapper">
-                            <img src="img/online_help.png" alt="">
-                        </div>
-                        <div class="resource-name">online help</div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-12 col-xs-12">
-                <div class="resource-less-btn">Less <i class="fa fa-chevron-up" aria-hidden="true"></i></div>
-            </div>
-            <div class="col-md-12 col-xs-12">
-                <div class="resource-more-btn">More <i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-            </div>
-        </div>
-    </div>
-    <div class="row default-section" id="section_1">
-        <div class="section-bkg">
-            <img src="img/bkg-1.png" alt="">
-        </div>
-        <div class="section-body">
-            <div class="col-md-3 col-sm-12 section-header-wrapper">
-                <div class="section-header">
-                    <div class="section-title" id="section-header">
-                        Buying
+                    <div class="resource-item-wrapper png-sprite">
+                        <a class="resource-item" target="_blank">
+                            <div class="sprite-wrapper">
+                                <img src="img/xpress_docs.png" alt="">
+                            </div>
+                            <div class="resource-name">xpress docs</div>
+                        </a>
                     </div>
-                    <div class="section-description" id="section-content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid eligendi, iure nostrum illo sint ducimus. Recusandae vel voluptatibus sit fuga
+                </div>
+                <div class="resource-list text-center notVisible ">
+                    <div class="resource-item-wrapper png-sprite">
+                        <a class="resource-item" target="_blank">
+                            <div class="sprite-wrapper">
+                                <img src="img/property_shark.png" alt="">
+                            </div>
+                            <div class="resource-name">Property shark</div>
+                        </a>
                     </div>
-                    <form action="">
+                    <div class="resource-item-wrapper png-sprite">
+                        <a class="resource-item" target="_blank">
+                            <div class="sprite-wrapper">
+                                <img src="img/my_profile.png" alt="">
+                            </div>
+                            <div class="resource-name">my profile</div>
+                        </a>
+                    </div>
+                    <div class="resource-item-wrapper png-sprite">
+                        <a class="resource-item" target="_blank">
+                            <div class="sprite-wrapper">
+                                <img src="img/imprev.png" alt="">
+                            </div>
+                            <div class="resource-name">imprev</div>
+                        </a>
+                    </div>
+                    <div class="resource-item-wrapper png-sprite">
+                        <a class="resource-item" target="_blank">
+                            <div class="sprite-wrapper">
+                                <img src="img/online_help.png" alt="">
+                            </div>
+                            <div class="resource-name">online help</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12 col-xs-12">
+                    <div class="resource-less-btn">Less <i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+                </div>
+                <div class="col-md-12 col-xs-12">
+                    <div class="resource-more-btn">More <i class="fa fa-chevron-down" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="row default-section" id="section_1">
+            <div class="section-bkg">
+                <img src="img/bkg-1.png" alt="">
+            </div>
+            <div class="section-body">
+                <div class="col-md-4 col-sm-12 section-header-wrapper">
+                    <div class="section-header">
+                        <div class="section-title" id="section-header">
+                            Buying
+                        </div>
+                        <div class="section-description" id="section-content">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid eligendi, iure nostrum illo sint ducimus. Recusandae vel voluptatibus sit fuga
+                        </div>
+                        <form action="">
+                            <button class="view-all-btn">
+                                view all
+                                <i class="fa fa-chevron-right " aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12 section-content-wrapper">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name" target="_blank" id="link1">
+                            Agency Disclosure Buyer & Seller Form 2016
+                            </a>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-ppt">ppt</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name" target="_blank" id="link2">
+                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
+                        </a>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-link">link</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name" target="_blank" id="link3">
+                            Agency Disclosure Buyer & Seller Form 2016
+                        </a>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name" target="_blank" id="link4">
+                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
+                        </a>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name" target="_blank" id="link5">
+                            Agency Disclosure Buyer & Seller Form 2016
+                        </a>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name" target="_blank" id="link6">
+                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
+                        </a>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name" target="_blank" id="link7">
+                            Agency Disclosure Buyer & Seller Form 2016
+                        </a>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name" target="_blank" id="link8">
+                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
+                        </a>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row default-section" id="section_2">
+            <div class="section-bkg">
+                <img src="img/bkg-4.png" alt="">
+            </div>
+            <div class="section-body">
+                <div class="col-md-4 col-sm-12 section-header-wrapper">
+                    <div class="section-header">
+                        <div class="section-title">
+                            Selling
+                        </div>
+                        <div class="section-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid eligendi, iure nostrum illo sint ducimus. Recusandae vel voluptatibus sit.
+                        </div>
                         <button class="view-all-btn">
                             view all
-                            <i class="fa fa-chevron-right " aria-hidden="true"></i>
+                            <i class=" fa fa-chevron-right bouncing-left" aria-hidden="true"></i>
                         </button>
-                    </form>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-9 col-sm-12 section-content-wrapper">
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name" target="_blank" id="link1">
+                <div class="col-md-8 col-sm-12 section-content-wrapper">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                             </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-ppt">ppt</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-doc">DOC</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name" target="_blank" id="link2">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-link">link</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-link">link</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name" target="_blank" id="link3">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name" target="_blank" id="link4">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a href="" class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name" target="_blank" id="link5">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a href="" class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name" target="_blank" id="link6">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a href="" class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name" target="_blank" id="link7">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a href="" class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name" target="_blank" id="link8">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a href="" class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row default-section" id="section_2">
-        <div class="section-bkg">
-            <img src="img/bkg-4.png" alt="">
-        </div>
-        <div class="section-body">
-            <div class="col-md-3 col-sm-12 section-header-wrapper">
-                <div class="section-header">
-                    <div class="section-title">
-                        Selling
-                    </div>
-                    <div class="section-description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid eligendi, iure nostrum illo sint ducimus. Recusandae vel voluptatibus sit.
-                    </div>
-                    <button class="view-all-btn">
-                        view all
-                        <i class=" fa fa-chevron-right bouncing-left" aria-hidden="true"></i>
-                    </button>
-                </div>
+        <div class="row default-section" id="section_3">
+            <div class="section-bkg">
+                <img src="img/bkg-2.png" alt="">
             </div>
-            <div class="col-md-9 col-sm-12 section-content-wrapper">
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+            <div class="section-body">
+                <div class="col-md-4 col-sm-12 section-header-wrapper">
+                    <div class="section-header">
+                        <div class="section-title">
+                            Renting
+                        </div>
+                        <div class="section-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid eligendi, fuga numquam omnis, minus doloribus, delectus, iste iure adipisci qui!
+                        </div>
+                        <button class="view-all-btn">
+                            view all
+                            <i class=" fa fa-chevron-right bouncing-left" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12 section-content-wrapper">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                             </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-doc">DOC</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-doc">DOC</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-link">link</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-link">link</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a href="" class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a href="" class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a href="" class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a href="" class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a href="" class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row default-section" id="section_3">
-        <div class="section-bkg">
-            <img src="img/bkg-2.png" alt="">
-        </div>
-        <div class="section-body">
-            <div class="col-md-3 col-sm-12 section-header-wrapper">
-                <div class="section-header">
-                    <div class="section-title">
-                        Renting
-                    </div>
-                    <div class="section-description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid eligendi, fuga numquam omnis, minus doloribus, delectus, iste iure adipisci qui!
-                    </div>
-                    <button class="view-all-btn">
-                        view all
-                        <i class=" fa fa-chevron-right bouncing-left" aria-hidden="true"></i>
-                    </button>
-                </div>
+        <div class="row default-section" id="section_4">
+            <div class="section-bkg">
+                <img src="img/bkg-3.png" alt="">
             </div>
-            <div class="col-md-9 col-sm-12 section-content-wrapper">
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+            <div class="section-body">
+                <div class="col-md-4 col-sm-12 section-header-wrapper">
+                    <div class="section-header">
+                        <div class="section-title">
+                            Market Research
+                        </div>
+                        <div class="section-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid eligendi, fuga numquam omnis, minus doloribus, delectus, iste iure adipisci qui!
+                        </div>
+                        <button class="view-all-btn">
+                            view all
+                            <i class=" fa fa-chevron-right bouncing-left" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12 section-content-wrapper">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                             </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-doc">DOC</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-doc">DOC</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-link">link</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-link">link</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row default-section" id="section_4">
-        <div class="section-bkg">
-            <img src="img/bkg-3.png" alt="">
-        </div>
-        <div class="section-body">
-            <div class="col-md-3 col-sm-12 section-header-wrapper">
-                <div class="section-header">
-                    <div class="section-title">
-                        Market Research
-                    </div>
-                    <div class="section-description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid eligendi, fuga numquam omnis, minus doloribus, delectus, iste iure adipisci qui!
-                    </div>
-                    <button class="view-all-btn">
-                        view all
-                        <i class=" fa fa-chevron-right bouncing-left" aria-hidden="true"></i>
-                    </button>
-                </div>
+        <div class="row default-section" id="section_5">
+            <div class="section-bkg">
+                <img src="img/bkg-5.png" alt="">
             </div>
-            <div class="col-md-9 col-sm-12 section-content-wrapper">
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+            <div class="section-body">
+                <div class="col-md-4 col-sm-12 section-header-wrapper">
+                    <div class="section-header">
+                        <div class="section-title">
+                            Digital Marketing
+                        </div>
+                        <div class="section-description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid eligendi fuga numquam omnis, minus doloribus, delectus, iste iure adipisci qui!
+                        </div>
+                        <button class="view-all-btn">
+                            view all
+                            <i class=" fa fa-chevron-right bouncing-left" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12 section-content-wrapper">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                             </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-doc">DOC</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-doc">DOC</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-link">link</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-link">link</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Agency Disclosure Buyer & Seller Form 2016
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-pdf">pdf</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="item-card dark-item-card">
+                            <div class="item-name-wrapper">
+                                <a class="item-name">
                             Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
                         </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
+                            </div>
+                            <div class="item-label-wrapper">
+                                <div class="item-xls">xls</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row default-section" id="section_5">
-        <div class="section-bkg">
-            <img src="img/bkg-5.png" alt="">
-        </div>
-        <div class="section-body">
-            <div class="col-md-3 col-sm-12 section-header-wrapper">
-                <div class="section-header">
-                    <div class="section-title">
-                        Digital Marketing
-                    </div>
-                    <div class="section-description">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid eligendi fuga numquam omnis, minus doloribus, delectus, iste iure adipisci qui!
-                    </div>
-                    <button class="view-all-btn">
-                        view all
-                        <i class=" fa fa-chevron-right bouncing-left" aria-hidden="true"></i>
-                    </button>
+        <div class="row footer">
+            <div class="col-md-12">
+                <div class="logo text-center">
+                    <input type="image" src="img/ecorcoran.png" alt="">
                 </div>
-            </div>
-            <div class="col-md-9 col-sm-12 section-content-wrapper">
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
-                            Agency Disclosure Buyer & Seller Form 2016
-                            </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-doc">DOC</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
-                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
-                        </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-link">link</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
-                            Agency Disclosure Buyer & Seller Form 2016
-                        </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
-                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
-                        </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
-                            Agency Disclosure Buyer & Seller Form 2016
-                        </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
-                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
-                        </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
-                            Agency Disclosure Buyer & Seller Form 2016
-                        </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-pdf">pdf</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="item-card dark-item-card">
-                        <div class="item-name-wrapper">
-                            <a class="item-name">
-                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
-                        </a>
-                        </div>
-                        <div class="item-label-wrapper">
-                            <div class="item-xls">xls</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row footer">
-        <div class="col-md-12">
-            <div class="logo text-center">
-                <img src="img/ecorcoran.png" alt="">
             </div>
         </div>
     </div>

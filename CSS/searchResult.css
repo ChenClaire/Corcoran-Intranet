@@ -1,3 +1,13 @@
+.container-fluid {
+  margin: auto;
+  max-width: 1440px;
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important; }
+
 .section-title {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -7,7 +17,7 @@
 
 .logo {
   padding-top: 16px; }
-  .logo img {
+  .logo input {
     height: 16px; }
 
 .sm-buttons, .resource-more-btn {
@@ -58,8 +68,8 @@
   background-color: #000;
   position: fixed;
   top: 0px;
-  left: 0px;
-  z-index: 100; }
+  z-index: 100;
+  max-width: 1440px; }
   @media only screen and (max-width: 768px) {
     .top-header {
       z-index: 500;
@@ -160,7 +170,15 @@
         margin-top: 4px;
         margin-right: 4px; }
     .search-popup .category-btn .dropdown-trigger .multiselect-container {
-      width: 100%; }
+      width: 100%;
+      padding: 0px; }
+      .search-popup .category-btn .dropdown-trigger .multiselect-container .active a {
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #000; }
+      .search-popup .category-btn .dropdown-trigger .multiselect-container li a {
+        padding: 12px; }
+      .search-popup .category-btn .dropdown-trigger .multiselect-container li label {
+        padding-left: 0px; }
       .search-popup .category-btn .dropdown-trigger .multiselect-container input {
         visibility: hidden; }
   .search-popup .search-btn {
@@ -327,7 +345,15 @@
                 float: right;
                 margin-top: 3px; }
             .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container {
-              width: 100%; }
+              width: 100%;
+              padding: 0px; }
+              .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container .active a {
+                background-color: rgba(0, 0, 0, 0.1);
+                color: #000; }
+              .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container li a {
+                padding: 12px; }
+              .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container li label {
+                padding-left: 0px; }
               .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container input {
                 visibility: hidden; }
         .main-search .content-wrapper .make-it-center .search-bar .search-btn {
@@ -408,16 +434,18 @@
     .result-list {
       padding: 80px 15px 50px 15px; } }
   .result-list .section-list-wrapper {
-    width: 250px; }
+    width: 300px;
+    max-height: 70%;
+    overflow: scroll; }
     @media only screen and (max-width: 1280px) {
       .result-list .section-list-wrapper {
-        width: 190px; } }
+        width: 230px; } }
     @media only screen and (max-width: 768px) {
       .result-list .section-list-wrapper {
         width: auto; } }
     .result-list .section-list-wrapper.fixedPosition {
       position: fixed;
-      top: 110px; }
+      top: 90px; }
       @media only screen and (max-width: 992px) {
         .result-list .section-list-wrapper.fixedPosition {
           top: 80px; } }
@@ -433,6 +461,9 @@
       border: none;
       text-align: left;
       outline: none; }
+      @media only screen and (max-width: 768px) {
+        .result-list .section-list-wrapper .section-list .section-list-item {
+          padding: 12px; } }
       .result-list .section-list-wrapper .section-list .section-list-item:hover {
         cursor: pointer; }
       .result-list .section-list-wrapper .section-list .section-list-item.active {
@@ -476,6 +507,8 @@
           text-align: left; }
           .result-list .section-list-wrapper .section-list-dropdown .dropdown-menu .section-list-item:hover {
             background-color: #f7f7f7; }
+  .result-list .docs-wrapper {
+    min-height: 100%; }
 
 .resource-more-btn {
   height: 32px;

@@ -6,6 +6,18 @@ $item-type-width: 38px;
     box-shadow: $shadow;
 }
 
+.container-fluid {
+    margin: auto;
+    max-width: 1440px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
 .section-title {
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -16,7 +28,7 @@ $item-type-width: 38px;
 
 .logo {
     padding-top: 16px;
-    img {
+    input {
         height: 16px;
     }
 }
@@ -84,8 +96,9 @@ $item-type-width: 38px;
     background-color: $primary-color;
     position: fixed;
     top: 0px;
-    left: 0px;
+    // left: 0px;
     z-index: 100;
+    max-width: 1440px;
     @media only screen and (max-width: $breakpoint-ipad-portrait) {
         z-index: 500;
         text-align: center;
@@ -123,7 +136,7 @@ $item-type-width: 38px;
     i {
         font-size: 18px;
     }
-    .close-search{
+    .close-search {
         display: none;
     }
 }
@@ -238,7 +251,22 @@ $item-type-width: 38px;
             }
             .multiselect-container {
                 width: 100%;
-                input{
+                padding: 0px;
+                .active {
+                    a {
+                        background-color: rgba($primary-color, 0.1);
+                        color: $primary-color;
+                    }
+                }
+                li {
+                    a {
+                        padding: 12px;
+                    }
+                    label {
+                        padding-left: 0px;
+                    }
+                }
+                input {
                     visibility: hidden;
                 }
             }

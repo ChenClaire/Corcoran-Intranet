@@ -1,3 +1,13 @@
+.container-fluid {
+  margin: auto;
+  max-width: 1440px;
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important; }
+
 .section-title, .resource-section .section-header .resources-section-title {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -7,7 +17,7 @@
 
 .logo {
   padding-top: 16px; }
-  .logo img {
+  .logo input {
     height: 16px; }
 
 .sm-buttons, .resource-more-btn,
@@ -60,8 +70,8 @@
   background-color: #000;
   position: fixed;
   top: 0px;
-  left: 0px;
-  z-index: 100; }
+  z-index: 100;
+  max-width: 1440px; }
   @media only screen and (max-width: 768px) {
     .top-header {
       z-index: 500;
@@ -162,7 +172,15 @@
         margin-top: 4px;
         margin-right: 4px; }
     .search-popup .category-btn .dropdown-trigger .multiselect-container {
-      width: 100%; }
+      width: 100%;
+      padding: 0px; }
+      .search-popup .category-btn .dropdown-trigger .multiselect-container .active a {
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #000; }
+      .search-popup .category-btn .dropdown-trigger .multiselect-container li a {
+        padding: 12px; }
+      .search-popup .category-btn .dropdown-trigger .multiselect-container li label {
+        padding-left: 0px; }
       .search-popup .category-btn .dropdown-trigger .multiselect-container input {
         visibility: hidden; }
   .search-popup .search-btn {
@@ -222,7 +240,6 @@
   z-index: 200;
   position: fixed;
   top: 0px;
-  left: 0px;
   padding: 15px 18px;
   margin: 0px;
   border-radius: 0px; }
@@ -235,7 +252,6 @@
 .ecorcoran-navbar .ecorcoran-nav-list {
   padding: 0px;
   position: fixed;
-  left: 0;
   top: 200px;
   z-index: 160; }
   @media only screen and (max-width: 768px) {
@@ -449,7 +465,14 @@
           margin-top: 0px;
           position: fixed;
           top: 0px;
-          right: 0px; }
+          right: 0px;
+          max-width: 1000px; }
+          @media only screen and (min-width: 1280px) {
+            .main-search .content-wrapper .make-it-center .search-bar.stick {
+              margin-left: 250px; } }
+          @media only screen and (min-width: 1440px) {
+            .main-search .content-wrapper .make-it-center .search-bar.stick {
+              right: auto; } }
           .main-search .content-wrapper .make-it-center .search-bar.stick .search-input {
             border-radius: 0px !important;
             background-color: black;
@@ -469,7 +492,7 @@
               background-color: rgba(0, 0, 0, 0.65) !important; }
           .main-search .content-wrapper .make-it-center .search-bar.stick .search-btn {
             background-color: white;
-            color: #000;
+            color: #0064b1;
             height: 36px;
             width: 90px;
             margin-left: 4px; }
@@ -533,7 +556,15 @@
                 margin-top: 3px;
                 display: inline-block; }
             .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container {
-              width: 100%; }
+              width: 100%;
+              padding: 0px; }
+              .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container .active a {
+                background-color: rgba(0, 0, 0, 0.1);
+                color: #000; }
+              .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container li a {
+                padding: 12px; }
+              .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container li label {
+                padding-left: 0px; }
               .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container input {
                 visibility: hidden; }
         .main-search .content-wrapper .make-it-center .search-bar .search-btn {
@@ -643,7 +674,6 @@
           top: 0px; }
       .resource-section .resource-list .resource-item .resource-name {
         margin-top: 10px;
-        text-transform: capitalize;
         color: #0064b1;
         font-size: 18px;
         font-weight: 500; }
@@ -692,8 +722,7 @@
   .default-section .section-bkg, .title-left .section-bkg, .title-right .section-bkg {
     overflow: hidden;
     width: 100%;
-    height: 100%;
-    opacity: 0.8; }
+    height: 100%; }
     @media only screen and (max-width: 992px) {
       .default-section .section-bkg, .title-left .section-bkg, .title-right .section-bkg {
         height: auto;
