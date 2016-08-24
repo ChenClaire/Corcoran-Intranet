@@ -34,6 +34,7 @@ $item-type-width: 38px;
     padding-top: 16px;
     input {
         height: 16px;
+        outline: none;
     }
 }
 
@@ -80,10 +81,11 @@ $item-type-width: 38px;
 
 .item-link {
     @extend .item-label;
-    // background-color: $purple;
-    // display: none;
-    padding:0px;
-    // text-align: center;
+    padding: 0px;
+    img {
+        float: right;
+        margin-bottom: 2px;
+    }
 }
 
 .item-name {
@@ -159,8 +161,8 @@ $item-type-width: 38px;
     text-align: center;
     border-top: 1px solid #858585;
     @media only screen and (max-width: $breakpoint-ipad-portrait) {
-            display: none;
-        }
+        display: none;
+    }
     .search-wrapper {
         font-size: 16px;
         position: relative;
@@ -192,7 +194,6 @@ $item-type-width: 38px;
         margin: auto;
         position: relative;
         margin-top: -1px;
-         
         .dropdown-trigger {
             .multiselect {
                 width: 100%;
@@ -229,7 +230,10 @@ $item-type-width: 38px;
                 }
             }
             .multiselect-container {
+                border-radius: 0px 0px 3px 3px;
+                margin-top: -1px;
                 width: 100%;
+                border-color: $light-gray;
                 padding: 0px;
                 .active {
                     a {
@@ -276,21 +280,24 @@ $item-type-width: 38px;
     background-color: $primary-color;
 }
 
-.ui-autocomplete{
-    list-style:none;
+.ui-autocomplete {
+    list-style: none;
     background-color: white;
     border-radius: 3px;
-    border:1px solid $light-gray;
-    padding-left:0px;
-    width:200px;
+    border: 1px solid $light-gray;
+    padding-left: 0px;
+    width: 200px;
     z-index: 300;
     margin-top: 1px;
-    li{
-        padding:15px;
+    max-height: 302px;
+    overflow-y: scroll;
+    border-radius: 0px 0px 3px 3px;
+    li {
+        padding: 15px;
         padding-left: 37px;
-        &:hover{
+        &:hover {
             cursor: pointer;
-            background-color: rgba($light-gray,0.2);
+            background-color: rgba($light-gray, 0.2);
         }
     }
 }

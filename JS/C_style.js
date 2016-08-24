@@ -47,16 +47,18 @@ $('#section-resource-mobile').on('slide.bs.carousel', function() {
 
 
 // more & less controller for resrouce-section
+$(".resource-desktop .resource-list-toggle").hide();
 $(".resource-desktop .resource-more-btn").click(function() {
-    $(".resource-desktop .resource-list-toggle").slideDown("slow");
+    $(".resource-desktop .resource-list-toggle").slideDown(400);
+    $(".resource-desktop .resource-list-toggle").removeClass('fadeEffect');
     $(this).toggle();
     $(".resource-less-btn").toggle();
 });
 $(".resource-desktop .resource-less-btn").click(function() {
-    $(".resource-desktop .resource-list-toggle").slideUp("slow");
+    $(".resource-desktop .resource-list-toggle").slideUp(400);
+    $(".resource-desktop .resource-list-toggle").addClass('fadeEffect');
     $(this).toggle();
     $(".resource-more-btn").toggle();
-
 });
 
 
@@ -139,7 +141,13 @@ $(window).scroll(function() {
   }
 });
 
-
+//load-more-btn on search page
+$(".load-more-files").click(function(){
+    $(".groupOf12.hiddenFiles").first().removeClass('hiddenFiles');
+    $(".load-more-btn-wrapper").slideDown("slow");
+    if($(".groupOf12.hiddenFiles").length == 0)
+        $(this).hide();
+});
 
 //goto search result page
 // $(".view-all-btn").click(function() {
