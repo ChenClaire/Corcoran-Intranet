@@ -86,15 +86,11 @@
             z-index: 200;
             position: fixed;
             top: 0px;
-            // left: 0px;
             padding: 15px 18px;
             margin: 0px;
             border-radius: 0px;
             @media only screen and (max-width: $breakpoint-ipad-portrait) {
                 z-index: 600;
-            }
-            &:hover {
-                // background-color: rgba(white, 0.1);
             }
             span {
                 text-transform: uppercase;
@@ -104,7 +100,6 @@
         .ecorcoran-nav-list {
             padding: 0px;
             position: fixed;
-            // left: 0;
             top: 200px;
             z-index: 160;
             @media only screen and (max-width: $breakpoint-ipad-portrait) {
@@ -151,6 +146,10 @@
                         padding: 0px 40px 0px 18px;
                     }
                     height: 38px;
+                    a {
+                        text-decoration: none;
+                    }
+                    
                     &.active {
                         .indicator {
                             @include transition(all 0.3s ease);
@@ -471,13 +470,14 @@
                                 padding: 0px;
                                 .active {
                                     a {
-                                        background-color: rgba($primary-color, 0.1);
+                                        background-color: rgba($primary-color, 0);
                                         color: $primary-color;
                                     }
                                 }
                                 li {
                                     a {
                                         padding: 12px;
+                                        outline: none;
                                     }
                                     label {
                                         padding-left: 0px;
@@ -504,12 +504,6 @@
                         vertical-align: middle;
                         font-size: 16px;
                         padding-bottom: 4px;
-                        // @media only screen and (max-width: 580px) {
-                        //     min-width: 250px;
-                        //     display: block;
-                        //     margin-top: 10px;
-                        //     margin-left: 0px;
-                        // }
                         &:hover {
                             background-color: darken($primary-color, 20%);
                         }
@@ -534,18 +528,19 @@
     }
     
     .resource-section {
-        &.mobile {
+        .resource-mobile {
             display: none;
             @media only screen and (max-width: $breakpoint-ipad-portrait) {
                 display: block;
             }
         }
-        &.desktop {
+        .resource-desktop {
             @media only screen and (max-width: $breakpoint-ipad-portrait) {
                 display: none;
             }
         }
-        margin-bottom: 30px;
+        padding-bottom: 30px;
+        background-color: white;
         .resource-container {
             margin: auto;
         }
@@ -556,7 +551,7 @@
                 @extend .section-title;
                 text-align: center;
                 padding-top: 40px;
-                padding-bottom: 20px;
+                padding-bottom: 24px;
             }
         }
         .resource-list {
@@ -566,9 +561,9 @@
             @media only screen and (max-width: $breakpoint-ipad-portrait) {
                 width: 100%;
             }
-            &.notVisible {
-                display: none;
-            }
+            // &.notVisible {
+            //     display: none;
+            // }
             .resource-item-wrapper {
                 display: inline-block;
                 width: 16%;
@@ -637,6 +632,9 @@
                     }
                 }
             }
+        }
+        .resource-list-toggle {
+            display: none;
         }
         .carousel-control {
             position: absolute;
@@ -708,7 +706,7 @@
             @media only screen and (max-width: $bootstrap-md) {
                 position: relative;
                 padding-top: 0px;
-                padding-bottom: 40px;
+                // margin-bottom: 80px;
             }
             .section-header-wrapper {
                 @media only screen and (max-width: $bootstrap-md) {
@@ -725,11 +723,10 @@
                     @media only screen and (max-width: $bootstrap-md) {
                         height: auto;
                         text-align: left !important;
-                        padding: 20px 35px 0px 35px;
+                        padding: 34px 35px 0px 35px;
                         background-color: transparent;
                         margin: 0px;
                     }
-                    @media only screen and (max-width: $breakpoint-ipad-portrait) {}
                     .section-title {
                         color: white;
                         margin-bottom: 14px;
@@ -738,7 +735,7 @@
                             color: $primary-color;
                         }
                         @media only screen and (max-width: $bootstrap-sm) {
-                            margin-top: 18px;
+                            // margin-top: 18px;
                         }
                     }
                     .section-description {
@@ -794,7 +791,7 @@
         &:hover {
             cursor: pointer;
         }
-        @media only screen and (max-width: $breakpoint-ipad-portrait) {
+        @media only screen and (max-width: $bootstrap-md) {
             height: auto;
             padding: 30px 0px;
         }
@@ -829,6 +826,11 @@
                             background-color: white;
                             color: $orange;
                         }
+                        .item-link {
+                            img {
+                                -webkit-filter: saturate(0) brightness(255);
+                            }
+                        }
                     }
                 }
             }
@@ -845,7 +847,7 @@
         background-color: $primary-color;
         font-weight: 500;
         margin: auto;
-        margin-bottom: 10px;
+        margin-bottom: 24px;
         i {
             margin-left: 5px;
         }

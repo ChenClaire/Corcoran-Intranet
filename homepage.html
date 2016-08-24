@@ -21,9 +21,12 @@
     <link rel="stylesheet" type="text/css" href="CSS/homePage.css">
     <!-- google font -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,400italic,300italic' rel='stylesheet' type='text/css'>
+
+        <script src="js/jquery.hash-magic.min.js"></script>
+
 </head>
 
-<body class="container-fluid">
+<body class="container-fluid" data-anchor="homepage">
     <div class="max-width-wrapper">
         <div class="menu-dimmer"></div>
         <div class="search-popup">
@@ -47,7 +50,7 @@
                 <button class="search-btn">Search</button>
             </div>
         </div>
-        <div class="main-section row" id="home">
+        <div class="main-section row">
             <div class="ecorcoran-navbar" role="navigation">
                 <div class="navbar-toggle-wrapper">
                     <button type="button" class="navbar-toggle collapsed" data-target="#ecorcoran-nav">
@@ -61,66 +64,73 @@
                             <i class="fa fa-times" aria-hidden="true"></i>
                         </div>
                         <li class="active" onclick="goTo('home',this)">
-                            <div class="indicator-wrapper">
-                                <div class="indicator"></div>
-                            </div>
-                            <div class="menu-item-wrapper">
-                                <div class="menu-item" data-toggle="collapse" data-target=".in">Homepage</div>
-                            </div>
+                            <a href="#homepage">
+                                <div class="indicator-wrapper">
+                                    <div class="indicator"></div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item">Homepage</div>
+                                </div>
+                            </a>
                         </li>
+                        
                         <li onclick="goTo('section_resource',this)">
-                            <div class="indicator-wrapper">
-                                <div class="indicator"></div>
-                            </div>
-                            <div class="menu-item-wrapper">
-                                <div class="menu-item" data-toggle="collapse" data-target=".in">Resources</div>
-                            </div>
-                        </li>
-                        <li onclick="goTo('section_1',this)">
-                            <div class="indicator-wrapper">
-                                <div class="indicator"></div>
-                            </div>
-                            <div class="menu-item-wrapper">
-                                <div class="menu-item" data-toggle="collapse" data-target=".in">Buying</div>
-                            </div>
+                            <a href="#section_resource">
+                                <div class="indicator-wrapper">
+                                    <div class="indicator"></div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item">Resources</div>
+                                </div>
+                            </a>
                         </li>
                         <li onclick="goTo('section_2',this)">
-                            <div class="indicator-wrapper">
-                                <div class="indicator"></div>
-                            </div>
-                            <div class="menu-item-wrapper">
-                                <div class="menu-item" data-toggle="collapse" data-target=".in">Selling</div>
-                            </div>
+                            <a href="#section_2">
+                                <div class="indicator-wrapper">
+                                    <div class="indicator"></div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item">Selling</div>
+                                </div>
+                            </a>
                         </li>
                         <li onclick="goTo('section_3',this)">
-                            <div class="indicator-wrapper">
-                                <div class="indicator"></div>
-                            </div>
-                            <div class="menu-item-wrapper">
-                                <div class="menu-item" data-toggle="collapse" data-target=".in">Renting</div>
-                            </div>
-                        </li>
-                        <li onclick="goTo('section_5',this)">
-                            <div class="indicator-wrapper">
-                                <div class="indicator"></div>
-                            </div>
-                            <div class="menu-item-wrapper">
-                                <div class="menu-item" data-toggle="collapse" data-target=".in">Digial Marketing</div>
-                            </div>
+                            <a href="#section_3">
+                                <div class="indicator-wrapper">
+                                    <div class="indicator"></div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item">Renting</div>
+                                </div>
+                            </a>
                         </li>
                         <li onclick="goTo('section_4',this)">
-                            <div class="indicator-wrapper">
-                                <div class="indicator"></div>
-                            </div>
-                            <div class="menu-item-wrapper">
-                                <div class="menu-item" data-toggle="collapse" data-target=".in">Market Research</div>
-                            </div>
+                            <a href="#section_4">
+                                <div class="indicator-wrapper">
+                                    <div class="indicator"></div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item">Market Research</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li onclick="goTo('section_5',this)">
+                            <a href="#section_5">
+                                <div class="indicator-wrapper">
+                                    <div class="indicator"></div>
+                                </div>
+                                <div class="menu-item-wrapper">
+                                    <div class="menu-item">Digital Marketing</div>
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="top-header">
-                <div class="logo"><input type="image" src="img/ecorcoran.png" alt=""></div>
+                <div class="logo">
+                    <input type="image" src="img/ecorcoran.png" alt="">
+                </div>
             </div>
             <div class="search-toggle">
                 <i class="fa fa-search open-search" aria-hidden="true"></i>
@@ -166,24 +176,173 @@
                 </div>
             </div>
         </div>
-        <a id="section_resource"></a>
-        <div class="resource-section mobile">
-            <div class="row">
-                <div class="section-header col-md-12">
-                    <div class="resources-section-title">Agent Suite</div>
+        <div class="resource-section" data-anchor="section_resource">
+            <div class="resource-mobile">
+                <div class="row">
+                    <div class="section-header col-md-12">
+                        <div class="resources-section-title">Agent Suite</div>
+                    </div>
+                </div>
+                <div class="row carousel slide" data-ride="carousel" id="section-resource-mobile">
+                    <div class="row resource-container carousel-inner" role="listbox">
+                        <div class="resource-list item active" id="item-1">
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/contactually.png" alt="">
+                                    </div>
+                                    <div class="resource-name">Contactually</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/erfc.png" alt="">
+                                    </div>
+                                    <div class="resource-name">erfc</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/property_shark.png" alt="">
+                                    </div>
+                                    <div class="resource-name">Property shark</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/lear.png" alt="">
+                                    </div>
+                                    <div class="resource-name">lear</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="resource-list item" id="item-2">
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/taxi.png" alt="">
+                                    </div>
+                                    <div class="resource-name">taxi</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/property_shark.png" alt="">
+                                    </div>
+                                    <div class="resource-name">Property shark</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/property_shark.png" alt="">
+                                    </div>
+                                    <div class="resource-name">Property shark</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/online_help.png" alt="">
+                                    </div>
+                                    <div class="resource-name">online help</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class=" resource-list item" id="item-3">
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/xpress_docs.png" alt="">
+                                    </div>
+                                    <div class="resource-name">xpress_doc</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/imprev.png" alt="">
+                                    </div>
+                                    <div class="resource-name">imprev</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/my_profile.png" alt="">
+                                    </div>
+                                    <div class="resource-name">my profile</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/spacio.png" alt="">
+                                    </div>
+                                    <div class="resource-name">spacio</div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class=" resource-list item" id="item-4">
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/corcoran.png" alt="">
+                                    </div>
+                                    <div class="resource-name">corcoran</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/outlook.png" alt="">
+                                    </div>
+                                    <div class="resource-name">outlook</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/quick_stats.png" alt="">
+                                    </div>
+                                    <div class="resource-name">quick stats</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/property_shark.png" alt="">
+                                    </div>
+                                    <div class="resource-name">Property shark</div>
+                                </a>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#section-resource-mobile" role="button" data-slide="prev">
+                            <span class="control-arrow"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#section-resource-mobile" role="button" data-slide="next">
+                            <span class="control-arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="row carousel slide" data-ride="carousel" id="section-resource-mobile">
-                <div class="row resource-container carousel-inner" role="listbox">
-                    <div class="resource-list item active" id="item-1">
-                        <div class="resource-item-wrapper png-sprite">
-                            <a class="resource-item" target="_blank">
-                                <div class="sprite-wrapper">
-                                    <img src="img/contactually.png" alt="">
-                                </div>
-                                <div class="resource-name">Contactually</div>
-                            </a>
+        
+            <div class="resource-desktop">
+                <div class="row">
+                    <div class="section-header col-md-12">
+                        <div class="section-title-wrapper">
+                            <div class="resources-section-title">Agent Suite</div>
                         </div>
+                    </div>
+                </div>
+                <div class="row resource-container">
+                    <div class="resource-list text-center">
                         <div class="resource-item-wrapper png-sprite">
                             <a class="resource-item" target="_blank">
                                 <div class="sprite-wrapper">
@@ -195,9 +354,17 @@
                         <div class="resource-item-wrapper png-sprite">
                             <a class="resource-item" target="_blank">
                                 <div class="sprite-wrapper">
-                                    <img src="img/property_shark.png" alt="">
+                                    <img src="img/taxi.png" alt="">
                                 </div>
-                                <div class="resource-name">Property shark</div>
+                                <div class="resource-name">taxi</div>
+                            </a>
+                        </div>
+                        <div class="resource-item-wrapper png-sprite">
+                            <a class="resource-item" target="_blank">
+                                <div class="sprite-wrapper">
+                                    <img src="img/one_drive.png" alt="">
+                                </div>
+                                <div class="resource-name">One Drive</div>
                             </a>
                         </div>
                         <div class="resource-item-wrapper png-sprite">
@@ -208,98 +375,12 @@
                                 <div class="resource-name">lear</div>
                             </a>
                         </div>
-                    </div>
-                    <div class="resource-list item" id="item-2">
-                        <div class="resource-item-wrapper png-sprite">
-                            <a class="resource-item" target="_blank">
-                                <div class="sprite-wrapper">
-                                    <img src="img/taxi.png" alt="">
-                                </div>
-                                <div class="resource-name">taxi</div>
-                            </a>
-                        </div>
-                        <div class="resource-item-wrapper png-sprite">
-                            <a class="resource-item" target="_blank">
-                                <div class="sprite-wrapper">
-                                    <img src="img/property_shark.png" alt="">
-                                </div>
-                                <div class="resource-name">Property shark</div>
-                            </a>
-                        </div>
-                        <div class="resource-item-wrapper png-sprite">
-                            <a class="resource-item" target="_blank">
-                                <div class="sprite-wrapper">
-                                    <img src="img/property_shark.png" alt="">
-                                </div>
-                                <div class="resource-name">Property shark</div>
-                            </a>
-                        </div>
-                        <div class="resource-item-wrapper png-sprite">
-                            <a class="resource-item" target="_blank">
-                                <div class="sprite-wrapper">
-                                    <img src="img/online_help.png" alt="">
-                                </div>
-                                <div class="resource-name">online help</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class=" resource-list item" id="item-3">
-                        <div class="resource-item-wrapper png-sprite">
-                            <a class="resource-item" target="_blank">
-                                <div class="sprite-wrapper">
-                                    <img src="img/xpress_docs.png" alt="">
-                                </div>
-                                <div class="resource-name">xpress_doc</div>
-                            </a>
-                        </div>
-                        <div class="resource-item-wrapper png-sprite">
-                            <a class="resource-item" target="_blank">
-                                <div class="sprite-wrapper">
-                                    <img src="img/imprev.png" alt="">
-                                </div>
-                                <div class="resource-name">imprev</div>
-                            </a>
-                        </div>
-                        <div class="resource-item-wrapper png-sprite">
-                            <a class="resource-item" target="_blank">
-                                <div class="sprite-wrapper">
-                                    <img src="img/my_profile.png" alt="">
-                                </div>
-                                <div class="resource-name">my profile</div>
-                            </a>
-                        </div>
-                        <div class="resource-item-wrapper png-sprite">
-                            <a class="resource-item" target="_blank">
-                                <div class="sprite-wrapper">
-                                    <img src="img/spacio.png" alt="">
-                                </div>
-                                <div class="resource-name">spacio</div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class=" resource-list item" id="item-4">
-                        <div class="resource-item-wrapper png-sprite">
-                            <a class="resource-item" target="_blank">
-                                <div class="sprite-wrapper">
-                                    <img src="img/corcoran.png" alt="">
-                                </div>
-                                <div class="resource-name">corcoran</div>
-                            </a>
-                        </div>
                         <div class="resource-item-wrapper png-sprite">
                             <a class="resource-item" target="_blank">
                                 <div class="sprite-wrapper">
                                     <img src="img/outlook.png" alt="">
                                 </div>
-                                <div class="resource-name">outlook</div>
-                            </a>
-                        </div>
-                        <div class="resource-item-wrapper png-sprite">
-                            <a class="resource-item" target="_blank">
-                                <div class="sprite-wrapper">
-                                    <img src="img/quick_stats.png" alt="">
-                                </div>
-                                <div class="resource-name">quick stats</div>
+                                <div class="resource-name">Outlook</div>
                             </a>
                         </div>
                         <div class="resource-item-wrapper png-sprite">
@@ -311,286 +392,98 @@
                             </a>
                         </div>
                     </div>
-                    <a class="left carousel-control" href="#section-resource-mobile" role="button" data-slide="prev">
-                        <span class="control-arrow"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#section-resource-mobile" role="button" data-slide="next">
-                        <span class="control-arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="resource-section desktop">
-            <div class="row">
-                <div class="section-header col-md-12">
-                    <div class="section-title-wrapper">
-                        <div class="resources-section-title">Resources</div>
-                    </div>
-                </div>
-            </div>
-            <div class="row resource-container">
-                <div class=" resource-list  text-center ">
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/erfc.png" alt="">
+                    <div class="resource-list-toggle">
+                        <div class="resource-list text-center">
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/online_help.png" alt="">
+                                    </div>
+                                    <div class="resource-name">online help</div>
+                                </a>
                             </div>
-                            <div class="resource-name">erfc</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/taxi.png" alt="">
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/quick_stats.png" alt="">
+                                    </div>
+                                    <div class="resource-name">quick stats</div>
+                                </a>
                             </div>
-                            <div class="resource-name">taxi</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/one_drive.png" alt="">
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/corcoran.png" alt="">
+                                    </div>
+                                    <div class="resource-name">corcoran</div>
+                                </a>
                             </div>
-                            <div class="resource-name">One Drive</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/lear.png" alt="">
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/property_shark.png" alt="">
+                                    </div>
+                                    <div class="resource-name">Property shark</div>
+                                </a>
                             </div>
-                            <div class="resource-name">lear</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/outlook.png" alt="">
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/xpress_docs.png" alt="">
+                                    </div>
+                                    <div class="resource-name">xpress docs</div>
+                                </a>
                             </div>
-                            <div class="resource-name">Outlook</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/property_shark.png" alt="">
-                            </div>
-                            <div class="resource-name">Property shark</div>
-                        </a>
-                    </div>
-                </div>
-                <div class=" resource-list text-center notVisible">
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/online_help.png" alt="">
-                            </div>
-                            <div class="resource-name">online help</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/quick_stats.png" alt="">
-                            </div>
-                            <div class="resource-name">quick stats</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/corcoran.png" alt="">
-                            </div>
-                            <div class="resource-name">corcoran</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/property_shark.png" alt="">
-                            </div>
-                            <div class="resource-name">Property shark</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/xpress_docs.png" alt="">
-                            </div>
-                            <div class="resource-name">xpress docs</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="resource-list text-center notVisible ">
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/property_shark.png" alt="">
-                            </div>
-                            <div class="resource-name">Property shark</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/my_profile.png" alt="">
-                            </div>
-                            <div class="resource-name">my profile</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/imprev.png" alt="">
-                            </div>
-                            <div class="resource-name">imprev</div>
-                        </a>
-                    </div>
-                    <div class="resource-item-wrapper png-sprite">
-                        <a class="resource-item" target="_blank">
-                            <div class="sprite-wrapper">
-                                <img src="img/online_help.png" alt="">
-                            </div>
-                            <div class="resource-name">online help</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-12 col-xs-12">
-                    <div class="resource-less-btn">Less <i class="fa fa-chevron-up" aria-hidden="true"></i></div>
-                </div>
-                <div class="col-md-12 col-xs-12">
-                    <div class="resource-more-btn">More <i class="fa fa-chevron-down" aria-hidden="true"></i></div>
-                </div>
-            </div>
-        </div>
-        <div class="row default-section" id="section_1">
-            <div class="section-bkg">
-                <img src="img/bkg-1.png" alt="">
-            </div>
-            <div class="section-body">
-                <div class="col-md-4 col-sm-12 section-header-wrapper">
-                    <div class="section-header">
-                        <div class="section-title" id="section-header">
-                            Buying
                         </div>
-                        <div class="section-description" id="section-content">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum aliquid eligendi, iure nostrum illo sint ducimus. Recusandae vel voluptatibus sit fuga
-                        </div>
-                        <form action="">
-                            <button class="view-all-btn">
-                                view all
-                                <i class="fa fa-chevron-right " aria-hidden="true"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-8 col-sm-12 section-content-wrapper">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="item-card dark-item-card">
-                            <div class="item-name-wrapper">
-                                <a class="item-name" target="_blank" id="link1">
-                            Agency Disclosure Buyer & Seller Form 2016
-                            </a>
+                        <div class="resource-list text-center">
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/property_shark.png" alt="">
+                                    </div>
+                                    <div class="resource-name">Property shark</div>
+                                </a>
                             </div>
-                            <div class="item-label-wrapper">
-                                <div class="item-ppt">ppt</div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/my_profile.png" alt="">
+                                    </div>
+                                    <div class="resource-name">my profile</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/imprev.png" alt="">
+                                    </div>
+                                    <div class="resource-name">imprev</div>
+                                </a>
+                            </div>
+                            <div class="resource-item-wrapper png-sprite">
+                                <a class="resource-item" target="_blank">
+                                    <div class="sprite-wrapper">
+                                        <img src="img/online_help.png" alt="">
+                                    </div>
+                                    <div class="resource-name">online help</div>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="item-card dark-item-card">
-                            <div class="item-name-wrapper">
-                                <a class="item-name" target="_blank" id="link2">
-                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
-                        </a>
-                            </div>
-                            <div class="item-label-wrapper">
-                                <div class="item-link">link</div>
-                            </div>
-                        </div>
+                    <div class="col-md-12 col-xs-12">
+                        <div class="resource-less-btn">Less <i class="fa fa-chevron-up" aria-hidden="true"></i></div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="item-card dark-item-card">
-                            <div class="item-name-wrapper">
-                                <a class="item-name" target="_blank" id="link3">
-                            Agency Disclosure Buyer & Seller Form 2016
-                        </a>
-                            </div>
-                            <div class="item-label-wrapper">
-                                <div class="item-pdf">pdf</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="item-card dark-item-card">
-                            <div class="item-name-wrapper">
-                                <a class="item-name" target="_blank" id="link4">
-                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
-                        </a>
-                            </div>
-                            <div class="item-label-wrapper">
-                                <div class="item-xls">xls</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="item-card dark-item-card">
-                            <div class="item-name-wrapper">
-                                <a class="item-name" target="_blank" id="link5">
-                            Agency Disclosure Buyer & Seller Form 2016
-                        </a>
-                            </div>
-                            <div class="item-label-wrapper">
-                                <div class="item-pdf">pdf</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="item-card dark-item-card">
-                            <div class="item-name-wrapper">
-                                <a class="item-name" target="_blank" id="link6">
-                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
-                        </a>
-                            </div>
-                            <div class="item-label-wrapper">
-                                <div class="item-xls">xls</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="item-card dark-item-card">
-                            <div class="item-name-wrapper">
-                                <a class="item-name" target="_blank" id="link7">
-                            Agency Disclosure Buyer & Seller Form 2016
-                        </a>
-                            </div>
-                            <div class="item-label-wrapper">
-                                <div class="item-pdf">pdf</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="item-card dark-item-card">
-                            <div class="item-name-wrapper">
-                                <a class="item-name" target="_blank" id="link8">
-                            Closing Cost for Condo / Townhouse or 1-3 Family Dwelling
-                        </a>
-                            </div>
-                            <div class="item-label-wrapper">
-                                <div class="item-xls">xls</div>
-                            </div>
-                        </div>
+                    <div class="col-md-12 col-xs-12">
+                        <div class="resource-more-btn">More <i class="fa fa-chevron-down" aria-hidden="true"></i></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row default-section" id="section_2">
+        <div class="default-section" data-anchor="section_2">
             <div class="section-bkg">
                 <img src="img/bkg-4.png" alt="">
             </div>
-            <div class="section-body">
+            <div class="section-body row">
                 <div class="col-md-4 col-sm-12 section-header-wrapper">
                     <div class="section-header">
                         <div class="section-title">
@@ -606,7 +499,7 @@
                     </div>
                 </div>
                 <div class="col-md-8 col-sm-12 section-content-wrapper">
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="item-card dark-item-card">
                             <div class="item-name-wrapper">
                                 <a class="item-name">
@@ -618,7 +511,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="item-card dark-item-card">
                             <div class="item-name-wrapper">
                                 <a class="item-name">
@@ -626,11 +519,24 @@
                         </a>
                             </div>
                             <div class="item-label-wrapper">
-                                <div class="item-link">link</div>
+                                <div class="item-link">
+                                    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                                    <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                            <g id="sections-and-footer" transform="translate(-781.000000, -440.000000)" stroke-width="2">
+                                                <g id="external_link_icon-copy" transform="translate(782.000000, 441.000000)">
+                                                    <path d="M7.56761018,10.1136009 L17.6813478,-0.000136956522" id="Stroke-1" stroke="#0566B0" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    <polyline id="Stroke-3" stroke="#0566B0" stroke-linecap="round" stroke-linejoin="round" points="12.4 0 18 0 18 5.6"></polyline>
+                                                    <polyline id="Path-3" stroke="#0A68AF" points="9.42473941 2.96887892 0 3 9.25050621e-16 18 15 18 15 8.48276735"></polyline>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="item-card dark-item-card">
                             <div class="item-name-wrapper">
                                 <a class="item-name">
@@ -642,7 +548,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="item-card dark-item-card">
                             <div class="item-name-wrapper">
                                 <a href="" class="item-name">
@@ -654,7 +560,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="item-card dark-item-card">
                             <div class="item-name-wrapper">
                                 <a href="" class="item-name">
@@ -666,7 +572,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="item-card dark-item-card">
                             <div class="item-name-wrapper">
                                 <a href="" class="item-name">
@@ -678,7 +584,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="item-card dark-item-card">
                             <div class="item-name-wrapper">
                                 <a href="" class="item-name">
@@ -690,7 +596,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="item-card dark-item-card">
                             <div class="item-name-wrapper">
                                 <a href="" class="item-name">
@@ -705,11 +611,11 @@
                 </div>
             </div>
         </div>
-        <div class="row default-section" id="section_3">
+        <div class="default-section" data-anchor="section_3">
             <div class="section-bkg">
                 <img src="img/bkg-2.png" alt="">
             </div>
-            <div class="section-body">
+            <div class="section-body row">
                 <div class="col-md-4 col-sm-12 section-header-wrapper">
                     <div class="section-header">
                         <div class="section-title">
@@ -745,7 +651,7 @@
                         </a>
                             </div>
                             <div class="item-label-wrapper">
-                                <div class="item-link">link</div>
+                                <div class="item-link"><img src="img/link_icon.png" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -824,11 +730,11 @@
                 </div>
             </div>
         </div>
-        <div class="row default-section" id="section_4">
+        <div class="default-section" data-anchor="section_4">
             <div class="section-bkg">
                 <img src="img/bkg-3.png" alt="">
             </div>
-            <div class="section-body">
+            <div class="section-body row">
                 <div class="col-md-4 col-sm-12 section-header-wrapper">
                     <div class="section-header">
                         <div class="section-title">
@@ -864,7 +770,7 @@
                         </a>
                             </div>
                             <div class="item-label-wrapper">
-                                <div class="item-link">link</div>
+                                <div class="item-link"><img src="img/link_icon.png" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -943,11 +849,11 @@
                 </div>
             </div>
         </div>
-        <div class="row default-section" id="section_5">
+        <div class="default-section" data-anchor="section_5">
             <div class="section-bkg">
                 <img src="img/bkg-5.png" alt="">
             </div>
-            <div class="section-body">
+            <div class="section-body row">
                 <div class="col-md-4 col-sm-12 section-header-wrapper">
                     <div class="section-header">
                         <div class="section-title">
@@ -983,7 +889,7 @@
                         </a>
                             </div>
                             <div class="item-label-wrapper">
-                                <div class="item-link">link</div>
+                                <div class="item-link"><img src="img/link_icon.png" alt=""></div>
                             </div>
                         </div>
                     </div>
@@ -1070,6 +976,7 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="JS/autocomplete.js"></script>
     <script type="text/javascript" src="JS/C_style.js"></script>
 </body>
 

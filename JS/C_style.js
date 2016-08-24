@@ -17,7 +17,7 @@ $(".navbar-toggle").click(function() {
 });
 
 
-
+$(".ui-autocomplete").width($(".search-wrapper").width());
 
 
 //show or hide carousel conditionally
@@ -47,14 +47,13 @@ $('#section-resource-mobile').on('slide.bs.carousel', function() {
 
 
 // more & less controller for resrouce-section
-$(".desktop .resource-more-btn").click(function() {
-    $(".desktop .resource-list").slice(1, 3).removeClass("notVisible");
-    // $(".desktop .resource-list").slice(1, 3).show('slide', { direction: 'up' }, 500);
+$(".resource-desktop .resource-more-btn").click(function() {
+    $(".resource-desktop .resource-list-toggle").slideDown("slow");
     $(this).toggle();
     $(".resource-less-btn").toggle();
 });
-$(".desktop .resource-less-btn").click(function() {
-    $(".desktop .resource-list").slice(1, 3).addClass("notVisible");
+$(".resource-desktop .resource-less-btn").click(function() {
+    $(".resource-desktop .resource-list-toggle").slideUp("slow");
     $(this).toggle();
     $(".resource-more-btn").toggle();
 
