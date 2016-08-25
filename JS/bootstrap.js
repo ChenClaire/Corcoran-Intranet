@@ -56,7 +56,8 @@ if (typeof jQuery === 'undefined') {
         var $el = this
         $(this).one('bsTransitionEnd', function() { called = true })
         var callback = function() {
-            if (!called) $($el).trigger($.support.transition.end) }
+            if (!called) $($el).trigger($.support.transition.end)
+        }
         setTimeout(callback, duration)
         return this
     }
@@ -1948,7 +1949,8 @@ if (typeof jQuery === 'undefined') {
                 ]) || null
             })
             .sort(function(a, b) {
-                return a[0] - b[0] })
+                return a[0] - b[0]
+            })
             .each(function() {
                 that.offsets.push(this[0])
                 that.targets.push(this[1])

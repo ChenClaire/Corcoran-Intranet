@@ -21,35 +21,13 @@
     <link rel="stylesheet" type="text/css" href="CSS/homePage.css">
     <!-- google font -->
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300,100,700,400italic,300italic' rel='stylesheet' type='text/css'>
-
-        <script src="js/jquery.hash-magic.min.js"></script>
-
+    <script src="js/jquery.hash-magic.min.js"></script>
 </head>
 
 <body class="container-fluid" data-anchor="homepage">
     <div class="max-width-wrapper">
         <div class="menu-dimmer"></div>
-        <div class="search-popup">
-            <div class="search-bar">
-                <div class="search-wrapper">
-                    <label for="search-input">
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </label>
-                    <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
-                </div>
-                <div class="category-btn">
-                    <select class="multi-select-dropdown" id="">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                        <option value="5">Market Material</option>
-                        <option value="6">Digital Marketing</option>
-                    </select>
-                </div>
-                <button class="search-btn">Search</button>
-            </div>
-        </div>
+       
         <div class="main-section row">
             <div class="ecorcoran-navbar" role="navigation">
                 <div class="navbar-toggle-wrapper">
@@ -73,7 +51,6 @@
                                 </div>
                             </a>
                         </li>
-                        
                         <li onclick="goTo('section_resource',this)">
                             <a href="#section_resource">
                                 <div class="indicator-wrapper">
@@ -132,9 +109,33 @@
                     <input type="image" src="img/ecorcoran.png" alt="">
                 </div>
             </div>
-            <div class="search-toggle">
-                <i class="fa fa-search open-search" aria-hidden="true"></i>
-                <i class="fa fa-times close-search" aria-hidden="true"></i>
+            <div class="mobile-search-dropdown">
+                <div class="search-toggle">
+                    <i class="fa fa-search open-search" aria-hidden="true"></i>
+                    <i class="fa fa-times close-search" aria-hidden="true"></i>
+                </div>
+                <div class="search-popup">
+                    <div class="search-bar">
+                        <div class="search-wrapper">
+                            <label for="search-input">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </label>
+                            <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
+                        </div>
+                        <div class="category-btn">
+                            <select class="multi-select-dropdown" id="">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                                <option value="4">Option 4</option>
+                                <option value="5">Market Material</option>
+                                <option value="6">Digital Marketing</option>
+                            </select>
+                        </div>
+                        <button class="search-btn">Search</button>
+                    </div>
+                </div>
+                <div class="mobile-search-dimmer"></div>
             </div>
             <div class="corcoran-bar">
                 <span class="bar-segment" id="bar-light-blue"></span><span class="bar-segment" id="bar-orange"></span><span class="bar-segment" id="bar-green"></span><span class="bar-segment" id="bar-pink"></span><span class="bar-segment" id="bar-dark-blue"></span><span class="bar-segment" id="bar-yellow"></span>
@@ -150,7 +151,7 @@
                             <div class="page-title">Welcome to the new eCorcoran</div>
                         </div>
                         <div id="search-bar-top"></div>
-                        <div class="search-bar-wrapper">
+                        <div class="search-bar-wrapper desktop-search">
                             <div class="search-bar">
                                 <div class="search-wrapper">
                                     <label for="search-input">
@@ -321,18 +322,17 @@
                                 </a>
                             </div>
                         </div>
-                        <a class="left carousel-control" href="#section-resource-mobile" role="button" data-slide="prev">
+                        <a class="left carousel-control" data-target="#section-resource-mobile" role="button" data-slide="prev">
                             <span class="control-arrow"><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="right carousel-control" href="#section-resource-mobile" role="button" data-slide="next">
+                        <a class="right carousel-control" data-target="#section-resource-mobile" role="button" data-slide="next">
                             <span class="control-arrow"><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
                 </div>
             </div>
-        
             <div class="resource-desktop">
                 <div class="row">
                     <div class="section-header col-md-12">
@@ -392,7 +392,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="resource-list-toggle">
+                    <div class="resource-list-toggle ">
                         <div class="resource-list text-center">
                             <div class="resource-item-wrapper png-sprite">
                                 <a class="resource-item" target="_blank">
@@ -978,6 +978,7 @@
     </div>
     <script type="text/javascript" src="JS/autocomplete.js"></script>
     <script type="text/javascript" src="JS/C_style.js"></script>
+    
 </body>
 
 </html>

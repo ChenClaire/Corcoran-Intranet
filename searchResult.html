@@ -24,37 +24,40 @@
 </head>
 
 <body class="container-fluid">
-    <div class="search-popup">
-        <!-- <div class="search-bar-wrapper"> -->
-        <div class="search-bar">
-            <div class="search-wrapper">
-                <label for="search-input">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </label>
-                <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
-            </div>
-            <div class="category-btn">
-                <select class="multi-select-dropdown" id="">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
-                    <option value="5">Option 5</option>
-                    <option value="6">Option 6</option>
-                </select>
-            </div>
-            <button class="search-btn">Search</button>
-        </div>
-        <!-- </div> -->
-    </div>
+    
     <div class="main-section row">
         <div class="top-header">
             <div class="logo">
                 <input type="image" src="img/ecorcoran.png" alt="">
             </div>
         </div>
-        <div class="search-toggle">
-            <i class="fa fa-search" aria-hidden="true"></i>
+        <div class="mobile-search-dropdown">
+            <div class="search-toggle">
+                <i class="fa fa-search open-search" aria-hidden="true"></i>
+                <i class="fa fa-times close-search" aria-hidden="true"></i>
+            </div>
+            <div class="search-popup">
+                <div class="search-bar">
+                    <div class="search-wrapper">
+                        <label for="search-input">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </label>
+                        <input type="search" placeholder="Search for documents" class="search-input" aria-label="...">
+                    </div>
+                    <div class="category-btn">
+                        <select class="multi-select-dropdown" id="">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                            <option value="4">Option 4</option>
+                            <option value="5">Market Material</option>
+                            <option value="6">Digital Marketing</option>
+                        </select>
+                    </div>
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+            <div class="mobile-search-dimmer"></div>
         </div>
         <div class="main-search text-center">
             <div class="img-fill">
@@ -64,7 +67,7 @@
                 <div class="make-it-center">
                     <div id="page-title-top"></div>
                     <div id="search-bar-top"></div>
-                    <div class="search-bar-wrapper">
+                    <div class="search-bar-wrapper desktop-search">
                         <div class="search-bar">
                             <div class="search-wrapper">
                                 <label for="search-input">
