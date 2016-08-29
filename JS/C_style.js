@@ -109,18 +109,16 @@ $(".default-section:nth-child(odd)").addClass('title-right');
 
 // jump to sections on desktop & mobile and close the menu after goto the destination
 function goTo(target_ID, el) {
-    var ID = "#" + target_ID;
+    var ID = "." + target_ID;
     var destination = $(ID).offset().top - 50;
-    $('body, html').animate({ scrollTop: destination }, '700');
+    $('body, html').animate({ scrollTop: destination }, 600);
+    console.log("moving from GOTO");
     $(el).addClass('active');
     $(el).siblings('li').removeClass('active');
     if ($(window).width() <= 768) {
         $(".ecorcoran-nav-list").hide('slide', { direction: 'left' }, 350);
         $(".menu-dimmer").fadeOut("slow");
-    } else {
-        $(".ecorcoran-nav-list .menu-item-wrapper").hide('slide', { direction: 'left' }, 250);
-        // $(".menu-dimmer").fadeOut("slow");
-    }
+    } 
 }
 
 
@@ -133,7 +131,7 @@ $(".section-list-item").click(function() {
 
 //show search-bar in top-header on desktop
 $(window).scroll(function() {
-    var header_bottom = $(window).scrollTop() + 60;
+    var header_bottom = $(window).scrollTop() - 50;
     var search_bar_top = $('#search-bar-top').offset().top;
     var title_top = $('#page-title-top').offset().top;
     if ($(window).width() >= 768) {
@@ -153,11 +151,27 @@ $(window).scroll(function() {
 });
 
 $(window).scroll(function() {
-    if ($(window).scrollTop() > 190) {
-        $(".section-list-wrapper").addClass("fixedPosition");
-    } else {
-        $(".section-list-wrapper").removeClass("fixedPosition");
-    }
+    var bottomOfSectionList = $(".section-list-wrapper").position().top + $(".section-list-wrapper").outerHeight();
+    var topOfFooter = $(".footer").position().top - $(window).scrollTop();
+    console.log("bottomOfSectionList" + bottomOfSectionList);
+    console.log("topOfFooter" + topOfFooter);
+        if ($(window).scrollTop() > 190) {
+            $(".section-list-wrapper").addClass("fixedPosition");
+            if ((topOfFooter - 40) <= bottomOfSectionList) {
+                $(".section-list-wrapper").removeClass("fixedPosition");
+                $(".section-list-wrapper").addClass("fixedBottom");
+            }
+            else {
+                $(".section-list-wrapper").addClass("fixedPosition");
+                $(".section-list-wrapper").removeClass("fixedBottom");
+            }
+
+        } else {
+            $(".section-list-wrapper").removeClass("fixedPosition");
+        }
+
+
+
 });
 
 //load-more-btn on search page
@@ -199,5 +213,3 @@ function move_autocomplete_dropdown() {
 //     "position":"absolute",
 //     "top":"0px",
 //     "text-align":"left"
-
-

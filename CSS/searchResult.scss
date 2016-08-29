@@ -334,10 +334,15 @@
             }
             &.fixedPosition {
                 position: fixed;
-                top: 90px;
+                top: 80px;
                 @media only screen and (max-width: $bootstrap-md) {
                     top: 80px;
                 }
+            }
+            &.fixedBottom{
+                position: fixed;
+                bottom: 90px;
+                top:auto;
             }
             .section-list {
                 @media only screen and (max-width: $breakpoint-ipad-portrait) {

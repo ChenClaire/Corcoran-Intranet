@@ -65,8 +65,6 @@
         }
     }
     
-    
-    
     .menu-dimmer {
         position: fixed;
         top: 0px;
@@ -533,7 +531,7 @@
     
     .resource-section {
         padding-bottom: 30px;
-        // background-color: white;
+        background-color: white;
         .resource-mobile {
             display: none;
             @media only screen and (max-width: $breakpoint-ipad-portrait) {
@@ -792,6 +790,10 @@
         border-bottom: 1px solid $light-gray;
         margin: 0px 15px;
         font-weight: 300;
+        text-decoration: none;
+        // &:hover * {
+        //     text-decoration: none;
+        // }
         .item-name-wrapper {
             display: inline-block;
             width: 80%;
@@ -808,6 +810,7 @@
             padding: 30px 0px;
         }
         &.dark-item-card {
+            text-decoration: none;
             @media only screen and (min-width: 992px) {
                 border-radius: 3px;
                 font-weight: 400;

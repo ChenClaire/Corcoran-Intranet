@@ -494,10 +494,14 @@
         width: auto; } }
     .result-list .section-list-wrapper.fixedPosition {
       position: fixed;
-      top: 90px; }
+      top: 80px; }
       @media only screen and (max-width: 991px) {
         .result-list .section-list-wrapper.fixedPosition {
           top: 80px; } }
+    .result-list .section-list-wrapper.fixedBottom {
+      position: fixed;
+      bottom: 90px;
+      top: auto; }
     @media only screen and (max-width: 768px) {
       .result-list .section-list-wrapper .section-list {
         display: none; } }

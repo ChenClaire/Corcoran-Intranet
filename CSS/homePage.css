@@ -266,7 +266,7 @@
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 100%;
+  height: 150%;
   background-color: rgba(0, 0, 0, 0.4);
   display: none;
   z-index: 600; }
@@ -643,7 +643,8 @@
           width: auto; } }
 
 .resource-section {
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  background-color: white; }
   .resource-section .resource-mobile {
     display: none; }
     @media only screen and (max-width: 768px) {
@@ -852,7 +853,8 @@
   font-size: 22px;
   border-bottom: 1px solid #d4d4d4;
   margin: 0px 15px;
-  font-weight: 300; }
+  font-weight: 300;
+  text-decoration: none; }
   .item-card .item-name-wrapper {
     display: inline-block;
     width: 80%; }
@@ -865,33 +867,35 @@
     .item-card {
       height: auto;
       padding: 30px 0px; } }
-  @media only screen and (min-width: 992px) {
-    .item-card.dark-item-card {
-      border-radius: 3px;
-      font-weight: 400;
-      height: 80px;
-      padding: 24px;
-      border: none;
-      margin: 10px 0px;
-      font-size: 14px; }
-      .item-card.dark-item-card:hover {
-        background-color: #000; }
-        .item-card.dark-item-card:hover .item-name {
-          color: white; }
-        .item-card.dark-item-card:hover .item-label-wrapper .item-xls {
-          background-color: white;
-          color: #18a344; }
-        .item-card.dark-item-card:hover .item-label-wrapper .item-pdf {
-          background-color: white;
-          color: #df3d3d; }
-        .item-card.dark-item-card:hover .item-label-wrapper .item-doc {
-          background-color: white;
-          color: #0064b1; }
-        .item-card.dark-item-card:hover .item-label-wrapper .item-ppt {
-          background-color: white;
-          color: #F26522; }
-        .item-card.dark-item-card:hover .item-label-wrapper .item-link img {
-          -webkit-filter: saturate(0) brightness(255); } }
+  .item-card.dark-item-card {
+    text-decoration: none; }
+    @media only screen and (min-width: 992px) {
+      .item-card.dark-item-card {
+        border-radius: 3px;
+        font-weight: 400;
+        height: 80px;
+        padding: 24px;
+        border: none;
+        margin: 10px 0px;
+        font-size: 14px; }
+        .item-card.dark-item-card:hover {
+          background-color: #000; }
+          .item-card.dark-item-card:hover .item-name {
+            color: white; }
+          .item-card.dark-item-card:hover .item-label-wrapper .item-xls {
+            background-color: white;
+            color: #18a344; }
+          .item-card.dark-item-card:hover .item-label-wrapper .item-pdf {
+            background-color: white;
+            color: #df3d3d; }
+          .item-card.dark-item-card:hover .item-label-wrapper .item-doc {
+            background-color: white;
+            color: #0064b1; }
+          .item-card.dark-item-card:hover .item-label-wrapper .item-ppt {
+            background-color: white;
+            color: #F26522; }
+          .item-card.dark-item-card:hover .item-label-wrapper .item-link img {
+            -webkit-filter: saturate(0) brightness(255); } }
 
 .resource-more-btn,
 .resource-less-btn {
