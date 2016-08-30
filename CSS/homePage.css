@@ -180,6 +180,8 @@
         margin-top: 4px;
         margin-right: 4px; }
     .mobile-search-dropdown .search-popup .category-btn .dropdown-trigger .multiselect-container {
+      max-height: 302px;
+      overflow-y: scroll;
       border-radius: 0px 0px 3px 3px;
       margin-top: -1px;
       width: 100%;
@@ -292,11 +294,12 @@
 .ecorcoran-navbar .ecorcoran-nav-list {
   padding: 0px;
   position: fixed;
-  top: 160px;
+  top: 50%;
   z-index: 160; }
   @media only screen and (max-width: 768px) {
     .ecorcoran-navbar .ecorcoran-nav-list {
       top: 0px;
+      margin-top: 0px;
       z-index: 700;
       height: 100%;
       width: 232px; } }
@@ -598,6 +601,8 @@
                 margin-top: 3px;
                 display: inline-block; }
             .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container {
+              max-height: 302px;
+              overflow-y: scroll;
               width: 100%;
               padding: 0px;
               border-radius: 0px 0px 3px 3px;
@@ -638,8 +643,9 @@
     z-index: 0; }
     .main-search .img-fill img {
       width: 100%; }
-      @media only screen and (max-width: 1024px) {
+      @media only screen and (max-width: 1280px) {
         .main-search .img-fill img {
+          height: 100%;
           width: auto; } }
 
 .resource-section {
@@ -659,6 +665,7 @@
     width: 100%;
     margin-top: 6px; }
     .resource-section .section-header .resources-section-title {
+      font-weight: 400;
       text-align: center;
       padding-top: 40px;
       padding-bottom: 24px; }
@@ -779,7 +786,11 @@
         height: 150px;
         opacity: 1; } }
     .default-section .section-bkg img, .title-left .section-bkg img, .title-right .section-bkg img {
-      height: 100%; }
+      width: 100%; }
+      @media only screen and (max-width: 1360px) {
+        .default-section .section-bkg img, .title-left .section-bkg img, .title-right .section-bkg img {
+          height: 100%;
+          width: auto; } }
       @media only screen and (max-width: 991px) {
         .default-section .section-bkg img, .title-left .section-bkg img, .title-right .section-bkg img {
           width: 100%;

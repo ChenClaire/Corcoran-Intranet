@@ -178,6 +178,8 @@
         margin-top: 4px;
         margin-right: 4px; }
     .mobile-search-dropdown .search-popup .category-btn .dropdown-trigger .multiselect-container {
+      max-height: 302px;
+      overflow-y: scroll;
       border-radius: 0px 0px 3px 3px;
       margin-top: -1px;
       width: 100%;
@@ -391,6 +393,8 @@
                 float: right;
                 margin-top: 3px; }
             .main-search .content-wrapper .make-it-center .search-bar .category-btn .dropdown-trigger .multiselect-container {
+              max-height: 302px;
+              overflow-y: scroll;
               width: 100%;
               border-color: #d4d4d4;
               padding: 0px;
@@ -492,12 +496,10 @@
     @media only screen and (max-width: 768px) {
       .result-list .section-list-wrapper {
         width: auto; } }
-    .result-list .section-list-wrapper.fixedPosition {
-      position: fixed;
-      top: 80px; }
-      @media only screen and (max-width: 991px) {
-        .result-list .section-list-wrapper.fixedPosition {
-          top: 80px; } }
+    @media only screen and (min-width: 991px) {
+      .result-list .section-list-wrapper.fixedPosition {
+        position: fixed;
+        top: 80px; } }
     .result-list .section-list-wrapper.fixedBottom {
       position: fixed;
       bottom: 90px;
@@ -550,9 +552,12 @@
           float: right;
           margin-top: 3px; }
       .result-list .section-list-wrapper .section-list-dropdown .dropdown-menu {
+        max-height: 302px;
+        overflow-y: scroll;
         margin-top: -1px;
         padding: 0px;
-        width: 100%; }
+        width: 100%;
+        z-index: 300; }
         .result-list .section-list-wrapper .section-list-dropdown .dropdown-menu .section-list-item {
           background: none;
           border: none;
@@ -566,7 +571,8 @@
     .result-list .docs-wrapper .groupOf12.hiddenFiles {
       display: none; }
     .result-list .docs-wrapper .no-search-result {
-      margin-top: 30px; }
+      margin-top: 30px;
+      font-size: 16px; }
 
 .resource-more-btn {
   height: 32px;

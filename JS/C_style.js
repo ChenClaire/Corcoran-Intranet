@@ -6,6 +6,15 @@ $(".carousel").carousel({
     interval: false
 });
 
+
+
+//make the dot-nav vertically centered on desktop view
+var NavTopOffset = $(".ecorcoran-nav-list").outerHeight() / 2;
+NavTopOffset = -NavTopOffset;
+$(".ecorcoran-nav-list").css("margin-top", NavTopOffset);
+
+
+
 //menu toggel on mobile
 $(".close-nav").click(function() {
     $(".ecorcoran-nav-list").hide('slide', { direction: 'left' }, 300);
@@ -118,7 +127,7 @@ function goTo(target_ID, el) {
     if ($(window).width() <= 768) {
         $(".ecorcoran-nav-list").hide('slide', { direction: 'left' }, 350);
         $(".menu-dimmer").fadeOut("slow");
-    } 
+    }
 }
 
 
@@ -155,20 +164,19 @@ $(window).scroll(function() {
     var topOfFooter = $(".footer").position().top - $(window).scrollTop();
     console.log("bottomOfSectionList" + bottomOfSectionList);
     console.log("topOfFooter" + topOfFooter);
-        if ($(window).scrollTop() > 190) {
-            $(".section-list-wrapper").addClass("fixedPosition");
-            if ((topOfFooter - 40) <= bottomOfSectionList) {
-                $(".section-list-wrapper").removeClass("fixedPosition");
-                $(".section-list-wrapper").addClass("fixedBottom");
-            }
-            else {
-                $(".section-list-wrapper").addClass("fixedPosition");
-                $(".section-list-wrapper").removeClass("fixedBottom");
-            }
-
-        } else {
+    if ($(window).scrollTop() > 190) {
+        $(".section-list-wrapper").addClass("fixedPosition");
+        if ((topOfFooter - 40) <= bottomOfSectionList) {
             $(".section-list-wrapper").removeClass("fixedPosition");
+            $(".section-list-wrapper").addClass("fixedBottom");
+        } else {
+            $(".section-list-wrapper").addClass("fixedPosition");
+            $(".section-list-wrapper").removeClass("fixedBottom");
         }
+
+    } else {
+        $(".section-list-wrapper").removeClass("fixedPosition");
+    }
 
 
 

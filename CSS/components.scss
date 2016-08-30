@@ -125,7 +125,7 @@ $item-type-width: 38px;
     //     border: none;
     // @media only screen and (min-width: $breakpoint-ipad-portrait) {
     //         display: none;
-        // }
+    // }
     .search-toggle {
         position: fixed;
         right: 0px;
@@ -235,6 +235,8 @@ $item-type-width: 38px;
                     }
                 }
                 .multiselect-container {
+                    max-height: 302px;
+                    overflow-y: scroll;
                     border-radius: 0px 0px 3px 3px;
                     margin-top: -1px;
                     width: 100%;

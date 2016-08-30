@@ -100,10 +100,11 @@
         .ecorcoran-nav-list {
             padding: 0px;
             position: fixed;
-            top: 160px;
+            top: 50%;
             z-index: 160;
             @media only screen and (max-width: $breakpoint-ipad-portrait) {
                 top: 0px;
+                margin-top:0px !important;
                 z-index: 700;
                 height: 100%;
                 width: 232px;
@@ -465,6 +466,8 @@
                                 }
                             }
                             .multiselect-container {
+                                max-height: 302px;
+                                overflow-y: scroll;
                                 width: 100%;
                                 padding: 0px;
                                 border-radius: 0px 0px 3px 3px;
@@ -521,8 +524,8 @@
             z-index: 0;
             img {
                 width: 100%;
-                @media only screen and (max-width: $breakpoint-ipad-landscape) {
-                    // height: 100%;
+                @media only screen and (max-width: $breakpoint-sm-desktop) {
+                    height: 100%;
                     width: auto;
                 }
             }
@@ -551,6 +554,7 @@
             margin-top: 6px;
             .resources-section-title {
                 @extend .section-title;
+                font-weight: 400;
                 text-align: center;
                 padding-top: 40px;
                 padding-bottom: 24px;
@@ -699,7 +703,11 @@
                 opacity: 1;
             }
             img {
-                height: 100%;
+                width: 100%;
+                @media only screen and (max-width: 1360px) {
+                    height: 100%;
+                    width: auto;
+                }
                 @media only screen and (max-width: $bootstrap-md) {
                     width: 100%;
                     height: auto;
