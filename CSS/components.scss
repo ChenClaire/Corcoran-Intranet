@@ -38,6 +38,48 @@ $item-type-width: 38px;
     }
 }
 
+.top-logo {
+    @extend .logo;
+    position: fixed;
+    top: 0px;
+    padding-left: 75px;
+    z-index: 900;
+    @media only screen and (max-width: $breakpoint-ipad-portrait) {
+        padding-left: 0px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.search-toggle {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    color: white;
+    padding: 16px 20px;
+    visibility: hidden;
+    z-index: 1000;
+    @media only screen and (max-width: $breakpoint-ipad-portrait) {
+        // z-index: 500;
+        visibility: visible;
+    }
+    &:hover {
+        // background-color: rgba(white, 0.2);
+        cursor: pointer;
+    }
+    &.isVisible {
+        @media only screen and (max-width: $breakpoint-ipad-landscape) {
+            visibility: visible;
+        }
+    }
+    i {
+        font-size: 18px;
+    }
+    .close-search {
+        display: none;
+    }
+}
+
 .sm-buttons {
     padding: 5px 10px;
     text-align: center;
@@ -111,49 +153,16 @@ $item-type-width: 38px;
         z-index: 500;
         text-align: center;
     }
-    .logo {
-        display: inline-block;
-        padding-left: 75px;
-        @media only screen and (max-width: $breakpoint-ipad-portrait) {
-            padding-left: 0px;
-        }
-    }
+    // .logo {
+    //     display: inline-block;
+    //     padding-left: 75px;
+    //     @media only screen and (max-width: $breakpoint-ipad-portrait) {
+    //         padding-left: 0px;
+    //     }
+    // }
 }
 
 .mobile-search-dropdown {
-    //     border-radius: 0px;
-    //     border: none;
-    // @media only screen and (min-width: $breakpoint-ipad-portrait) {
-    //         display: none;
-    // }
-    .search-toggle {
-        position: fixed;
-        right: 0px;
-        top: 0px;
-        color: white;
-        padding: 16px 20px;
-        visibility: hidden;
-        z-index: 200;
-        @media only screen and (max-width: $breakpoint-ipad-portrait) {
-            z-index: 500;
-            visibility: visible;
-        }
-        &:hover {
-            // background-color: rgba(white, 0.2);
-            cursor: pointer;
-        }
-        &.isVisible {
-            @media only screen and (max-width: $breakpoint-ipad-landscape) {
-                visibility: visible;
-            }
-        }
-        i {
-            font-size: 18px;
-        }
-        .close-search {
-            display: none;
-        }
-    }
     .search-popup {
         position: fixed;
         display: none;
@@ -200,6 +209,8 @@ $item-type-width: 38px;
             position: relative;
             margin-top: -1px;
             .dropdown-trigger {
+                width:100%;
+                position: relative;
                 .multiselect {
                     width: 100%;
                     height: 50px;
@@ -321,4 +332,8 @@ $item-type-width: 38px;
             background-color: rgba($light-gray, 0.2);
         }
     }
+}
+
+form {
+    margin: 0px;
 }
