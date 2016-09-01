@@ -24,7 +24,8 @@ var availableTags = [
     "Scheme"
 ];
 $(".search-input").autocomplete({
-    source: availableTags
+    source: availableTags,
+    appendTo: ".search-wrapper"
 });
 
 // })

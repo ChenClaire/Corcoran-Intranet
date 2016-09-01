@@ -140,20 +140,17 @@ $(".section-list-item").click(function() {
 
 //show search-bar in top-header on desktop
 $(window).scroll(function() {
-    var header_bottom = $(window).scrollTop() - 50;
+    var header_bottom = $(window).scrollTop() + 50;
     var search_bar_top = $('#search-bar-top').offset().top;
-    var title_top = $('#page-title-top').offset().top;
+    var title_top = $('#page-title-top').offset().top + 15;
     if ($(window).width() >= 768) {
-        if (header_bottom > search_bar_top) {
+        if (header_bottom > title_top) {
+            $('.page-title').fadeOut("fast");
             $('.search-bar').addClass('stick');
             $('#search-bar-top').height($('.search-bar').outerHeight());
         } else {
             $('.search-bar').removeClass('stick');
             $('#search-bar-top').height(0);
-        }
-        if (header_bottom > title_top) {
-            $('.page-title').fadeOut("fast");
-        } else {
             $('.page-title').show();
         }
     }
@@ -190,24 +187,23 @@ $(".load-more-files").click(function() {
         $(this).hide();
 });
 
-move_autocomplete_dropdown();
+// move_autocomplete_dropdown();
 
-function move_autocomplete_dropdown() {
-    $("#ui-id-1").appendTo('.mobile-search-dropdown .search-wrapper');
-    $("#ui-id-1").css({
-        "position": "absolute",
-        "top": "0px",
-        "text-align": "left"
-    });
+// function move_autocomplete_dropdown() {
+//     $("#ui-id-1").appendTo('.mobile-search-dropdown .search-wrapper');
+//     $("#ui-id-1").css({
+//         "position": "absolute",
+//         "top": "0px",
+//         "text-align": "left"
+//     });
 
-    $("#ui-id-2").appendTo('.desktop-search .search-wrapper');
-    $("#ui-id-2").css({
-        "position": "absolute",
-        "top": "0px",
-        "text-align": "left"
-    });
-    // alert("moved");
-}
+//     $("#ui-id-2").appendTo('.desktop-search .search-wrapper');
+//     $("#ui-id-2").css({
+//         "position": "absolute",
+//         "top": "0px",
+//         "text-align": "left"
+//     });
+// }
 // $("#ui-id-1").appendTo('.mobile-search-dropdown .search-wrapper');
 // $("#ui-id-1").css({
 //     "position":"absolute",

@@ -104,7 +104,7 @@
             z-index: 160;
             @media only screen and (max-width: $breakpoint-ipad-portrait) {
                 top: 0px;
-                margin-top:0px !important;
+                margin-top: 0px !important;
                 z-index: 1100;
                 height: 100%;
                 width: 232px;
@@ -199,36 +199,19 @@
                     .indicator {
                         width: 10px;
                         height: 10px;
-                        // border: 2px solid rgba(white, 0.5);
                         background-color: rgba(white, 0.5);
                         display: inline-block;
                         border-radius: 100%;
-                        // vertical-align: middle;
                         margin-top: 8px;
-                        // margin-bottom: 8px;
                     }
                     .add-line {
                         display: inline-block;
                         margin-left: 20px;
-                        // height:38px;
                     }
                     .menu-item {
-                        // display: none;
-                        // opacity: 0;
-                        // margin-left: 20px;
-                        // padding-top:8px;
-                        // padding-bottom: 8px;
                         color: rgba(white, 0.5);
                         font-size: 16px;
-                        // vertical-align: middle;
-                        // padding-left: 20px;
                         margin-top: 8px;
-                        // border-left: 1px solid transparent;
-                        @media only screen and (max-width: $breakpoint-ipad-portrait) {
-                            // display: inline-block;
-                            // padding-left: 0px;
-                            // margin-left: 0px;
-                        }
                     }
                 }
             }
@@ -286,12 +269,14 @@
             top: 0px;
             left: 0px;
             z-index: 100;
-            padding: 110px 90px 150px 90px;
+            // padding: 110px 90px 150px 90px;
+            padding-top: 110px;
             @media only screen and (max-width: $breakpoint-ipad-landscape) {
-                padding: 110px 50px 150px 50px;
+                // padding: 110px 50px 150px 50px;
             }
             @media only screen and (max-width: $breakpoint-ipad-portrait) {
-                padding: 66px 0px 70px 0px;
+                // padding: 66px 0px 70px 0px;
+                padding-top: 66px;
             }
             // @media only screen and (max-width: 750px) {
             //     padding: 120px 10px;
@@ -338,28 +323,45 @@
                     }
                 }
                 .search-bar {
+                    @include transition(all 0.43s ease);
                     height: 50px;
                     position: relative;
                     margin: auto;
-                    width: 75%;
+                    // width: 75%;
+                    width: 1000px;
+                    @media only screen and (max-width: $breakpoint-sm-desktop) {
+                        width: 870px;
+                    }
                     @media only screen and (max-width: $breakpoint-ipad-landscape) {
-                        width: 73%;
+                        width: 700px;
                     }
                     @media only screen and (max-width: $breakpoint-ipad-portrait) {
                         display: none;
                     }
                     &.stick {
-                        // margin-right: -35px;
+                        @include transition(all 0.3s ease);
                         margin-top: 0px;
                         position: fixed;
                         top: 0px;
                         right: 0px;
                         max-width: 1000px;
                         @media only screen and (min-width: $breakpoint-sm-desktop) {
-                            margin-left: 250px;
+                            margin-left: 350px;
                         }
                         @media only screen and (min-width: $breakpoint-lg-desktop) {
                             right: auto;
+                        }
+                        @media only screen and (max-width: $breakpoint-sm-desktop) {
+                            width: 870px;
+                        }
+                        @media only screen and (max-width: $breakpoint-ipad-landscape) {
+                            width: 700px;
+                        }
+                        @media only screen and (max-width: 900px) {
+                            max-width: 650px;
+                        }
+                        @media only screen and (max-width: 830px) {
+                            max-width: 570px;
                         }
                         .search-input {
                             border-radius: 0px !important;
@@ -396,7 +398,7 @@
                     }
                     .search-wrapper {
                         height: 100%;
-                        width: 43%;
+                        width: 40%;
                         display: inline-block;
                         position: relative;
                         label {
@@ -404,7 +406,6 @@
                             top: 15px;
                             left: 12px;
                             i {
-                                // color: $light-gray;
                                 color: #999;
                                 font-size: 20px;
                             }
@@ -420,9 +421,6 @@
                             padding-left: 37px;
                             font-size: 16px;
                             padding-bottom: 2px;
-                            // @media only screen and (max-width: 580px) {
-                            //     border-radius: 3px 3px 0px 0px;
-                            // }
                         }
                     }
                     .category-btn {
@@ -558,7 +556,7 @@
                 text-align: center;
                 padding-top: 40px;
                 padding-bottom: 24px;
-                letter-spacing: 2.5px;
+                letter-spacing: 5px;
             }
         }
         .resource-list {

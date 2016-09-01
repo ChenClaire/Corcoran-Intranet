@@ -115,6 +115,9 @@
       z-index: 500;
       text-align: center; } }
 
+@media only screen and (min-width: 768px) {
+  .mobile-search-dropdown {
+    display: none; } }
 .mobile-search-dropdown .search-popup {
   position: fixed;
   display: none;
@@ -235,6 +238,8 @@
   background-color: #000; }
 
 .ui-autocomplete {
+  text-align: left;
+  position: absolute;
   list-style: none;
   background-color: white;
   border-radius: 3px;
@@ -255,6 +260,16 @@
 
 form {
   margin: 0px; }
+
+.ui-helper-hidden-accessible {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 
 * {
   font-family: "Roboto", sans-serif; }
@@ -461,13 +476,10 @@ form {
     top: 0px;
     left: 0px;
     z-index: 100;
-    padding: 110px 90px 150px 90px; }
-    @media only screen and (max-width: 1024px) {
-      .main-search .content-wrapper {
-        padding: 110px 50px 150px 50px; } }
+    padding-top: 110px; }
     @media only screen and (max-width: 768px) {
       .main-search .content-wrapper {
-        padding: 66px 0px 70px 0px; } }
+        padding-top: 66px; } }
     .main-search .content-wrapper .make-it-center {
       margin: auto; }
       .main-search .content-wrapper .make-it-center .page-title-wrapper {
@@ -505,17 +517,28 @@ form {
               width: 60%;
               padding-bottom: 3px; } }
       .main-search .content-wrapper .make-it-center .search-bar {
+        transition: all 0.43s ease;
+        -webkit-transition: all 0.43s ease;
+        -moz-transition: all 0.43s ease;
+        -o-transition: all 0.43s ease;
         height: 50px;
         position: relative;
         margin: auto;
-        width: 75%; }
+        width: 1000px; }
+        @media only screen and (max-width: 1280px) {
+          .main-search .content-wrapper .make-it-center .search-bar {
+            width: 870px; } }
         @media only screen and (max-width: 1024px) {
           .main-search .content-wrapper .make-it-center .search-bar {
-            width: 73%; } }
+            width: 700px; } }
         @media only screen and (max-width: 768px) {
           .main-search .content-wrapper .make-it-center .search-bar {
             display: none; } }
         .main-search .content-wrapper .make-it-center .search-bar.stick {
+          transition: all 0.3s ease;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
           margin-top: 0px;
           position: fixed;
           top: 0px;
@@ -523,10 +546,22 @@ form {
           max-width: 1000px; }
           @media only screen and (min-width: 1280px) {
             .main-search .content-wrapper .make-it-center .search-bar.stick {
-              margin-left: 250px; } }
+              margin-left: 350px; } }
           @media only screen and (min-width: 1440px) {
             .main-search .content-wrapper .make-it-center .search-bar.stick {
               right: auto; } }
+          @media only screen and (max-width: 1280px) {
+            .main-search .content-wrapper .make-it-center .search-bar.stick {
+              width: 870px; } }
+          @media only screen and (max-width: 1024px) {
+            .main-search .content-wrapper .make-it-center .search-bar.stick {
+              width: 700px; } }
+          @media only screen and (max-width: 900px) {
+            .main-search .content-wrapper .make-it-center .search-bar.stick {
+              max-width: 650px; } }
+          @media only screen and (max-width: 830px) {
+            .main-search .content-wrapper .make-it-center .search-bar.stick {
+              max-width: 570px; } }
           .main-search .content-wrapper .make-it-center .search-bar.stick .search-input {
             border-radius: 0px !important;
             background-color: black;
@@ -554,7 +589,7 @@ form {
               background-color: rgba(255, 255, 255, 0.9); }
         .main-search .content-wrapper .make-it-center .search-bar .search-wrapper {
           height: 100%;
-          width: 43%;
+          width: 40%;
           display: inline-block;
           position: relative; }
           .main-search .content-wrapper .make-it-center .search-bar .search-wrapper label {
@@ -678,7 +713,7 @@ form {
       text-align: center;
       padding-top: 40px;
       padding-bottom: 24px;
-      letter-spacing: 2.5px; }
+      letter-spacing: 5px; }
   .resource-section .resource-list {
     width: 80%;
     text-align: center;

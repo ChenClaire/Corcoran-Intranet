@@ -163,6 +163,9 @@ $item-type-width: 38px;
 }
 
 .mobile-search-dropdown {
+    @media only screen and (min-width: $breakpoint-ipad-portrait) {
+            display: none;
+        }
     .search-popup {
         position: fixed;
         display: none;
@@ -313,6 +316,8 @@ $item-type-width: 38px;
 }
 
 .ui-autocomplete {
+    text-align: left;
+    position: absolute;
     list-style: none;
     background-color: white;
     border-radius: 3px;
@@ -336,4 +341,15 @@ $item-type-width: 38px;
 
 form {
     margin: 0px;
+}
+
+.ui-helper-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
 }

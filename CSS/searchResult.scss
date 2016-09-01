@@ -10,6 +10,13 @@
         box-shadow: $shadow;
     }
     
+    @mixin transition($transition) {
+        transition: $transition;
+        -webkit-transition: $transition;
+        -moz-transition: $transition;
+        -o-transition: $transition;
+    }
+    
     * {
         font-family: $primary-font;
     }
@@ -30,19 +37,14 @@
             top: 50px;
             left: 0px;
             z-index: 100;
-            padding: 68px 90px 68px 90px;
+            // padding: 68px 90px 68px 90px;
+            padding-top: 68px;
             @media only screen and (max-width: $breakpoint-ipad-landscape) {
-                padding: 68px 50px 70px 50px;
+                // padding: 68px 50px 70px 50px;
             }
             @media only screen and (max-width: $breakpoint-ipad-portrait) {
-                padding: 68px 30px 70px 30px;
+                // padding: 68px 30px 70px 30px;
             }
-            // @media only screen and (max-width: 750px) {
-            //     padding: 100px 10px 70px 10px;
-            // }
-            // @media only screen and (max-width: 550px) {
-            //     padding: 90px 15px;
-            // }
             .make-it-center {
                 margin: auto;
                 .page-title {
@@ -53,44 +55,41 @@
                     margin: auto;
                     margin-bottom: 30px;
                     vertical-align: middle;
-                    // @media only screen and (max-width: 550px) {
-                    //     font-size: 35px;
-                    //     margin-top: 0px;
-                    //     margin-left: -15px;
-                    //     margin-right: -15px;
-                    //     padding: 40px 14%;
-                    //     background-color: rgba($primary-color, 0.6);
-                    // }
                 }
                 .search-bar {
+                    @include transition(all 0.43s ease);
                     font-size: 16px;
                     height: 50px;
                     position: relative;
                     margin: auto;
-                    width: 77%;
+                    width: 1000px;
+                    @media only screen and (max-width: $breakpoint-sm-desktop) {
+                        width: 870px;
+                    }
                     @media only screen and (max-width: $breakpoint-ipad-landscape) {
-                        width: 73%;
+                        width: 700px;
                     }
                     @media only screen and (max-width: $breakpoint-ipad-portrait) {
-                        // display: none;
-                        width: 250px;
-                        text-align: center;
+                        display: none;
                     }
-                    // @media only screen and (max-width: 550px) {
-                    // width: 250px;
-                    // display: none;
-                    // }
                     &.stick {
+                        @include transition(all 0.3s ease);
                         margin-top: 0px;
                         position: fixed;
                         top: 0px;
                         right: 0px;
                         max-width: 1000px;
                         @media only screen and (min-width: $breakpoint-sm-desktop) {
-                            margin-left: 250px;
+                            margin-left: 350px;
                         }
                         @media only screen and (min-width: $breakpoint-lg-desktop) {
                             right: auto;
+                        }
+                        @media only screen and (max-width: 900px) {
+                            max-width: 650px;
+                        }
+                        @media only screen and (max-width: 830px) {
+                            max-width: 570px;
                         }
                         .search-input {
                             border-radius: 0px !important;
@@ -323,10 +322,7 @@
             padding: 80px 15px 50px 15px;
         }
         .section-list-wrapper {
-            // position: relative;
             width: 300px;
-            // max-height: 70%;
-            // overflow: scroll;
             @media only screen and (max-width: $breakpoint-sm-desktop) {
                 width: 230px;
             }
@@ -338,9 +334,6 @@
                     position: fixed;
                     top: 80px;
                 }
-                // @media only screen and (max-width: $bootstrap-md) {
-                //     top: 80px;
-                // }
             }
             &.fixedBottom {
                 position: fixed;
@@ -348,7 +341,7 @@
                 top: auto;
             }
             .section-list {
-                @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                @media only screen and (max-width: 767px) {
                     display: none;
                 }
                 .section-list-item {
@@ -361,9 +354,9 @@
                     border: none;
                     text-align: left;
                     outline: none;
-                    @media only screen and (max-width: $breakpoint-ipad-portrait) {
-                        padding: 12px;
-                    }
+                    // @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                    //     padding: 12px;
+                    // }
                     &:hover {
                         cursor: pointer;
                     }
@@ -380,6 +373,10 @@
                             left: 100%;
                             position: absolute;
                             top: 0px;
+                            // @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                            //     border-bottom: 23.5px solid transparent;
+                            //     border-top: 23.5px solid transparent;
+                            // }
                         }
                     }
                 }
@@ -388,8 +385,11 @@
                 display: none;
                 margin-bottom: 20px;
                 width: 100%;
-                @media only screen and (max-width: $breakpoint-ipad-portrait) {
+                @media only screen and (max-width: 767px) {
                     display: block;
+                }
+                .dropdown-backdrop {
+                    display: none !important;
                 }
                 .dropdown-toggle {
                     width: 100%;
@@ -408,8 +408,9 @@
                     margin-top: -1px;
                     padding: 0px;
                     width: 100%;
-                    z-index: 300;
-                    -webkit-overflow-scrolling:touch; //for safari on mobile
+                    z-index: 450;
+                    -webkit-overflow-scrolling: touch;
+                    overflow-scrolling: touch;
                     .section-list-item {
                         background: none;
                         border: none;
