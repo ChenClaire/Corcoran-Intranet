@@ -114,14 +114,11 @@
                             }
                         }
                         .search-btn {
-                            background-color: rgba(white, 1);
-                            color: $blue;
-                            // border-radius: 0px;
-                            width: 90px;
                             height: 36px;
-                            &:hover {
-                                background-color: rgba(white, 0.9);
-                            }
+                            border:2px solid white;
+                            // &:hover {
+                            //     background-color: rgba(white, 0.9);
+                            // }
                         }
                     }
                     .search-wrapper {

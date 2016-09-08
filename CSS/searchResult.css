@@ -356,12 +356,8 @@ form {
             .main-search .content-wrapper .make-it-center .search-bar.stick .dropdown-toggle:hover {
               background-color: rgba(0, 0, 0, 0.8) !important; }
           .main-search .content-wrapper .make-it-center .search-bar.stick .search-btn {
-            background-color: white;
-            color: #0064b1;
-            width: 90px;
-            height: 36px; }
-            .main-search .content-wrapper .make-it-center .search-bar.stick .search-btn:hover {
-              background-color: rgba(255, 255, 255, 0.9); }
+            height: 36px;
+            border: 2px solid white; }
         .main-search .content-wrapper .make-it-center .search-bar .search-wrapper {
           height: 100%;
           width: 43%;
