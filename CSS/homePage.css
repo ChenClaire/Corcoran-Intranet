@@ -996,4 +996,65 @@ form {
     margin-left: 3px;
     vertical-align: middle; }
 
+.modal-dialog, .new-doc-modal, .mandatory-modal {
+  margin: auto;
+  top: 80px;
+  width: 500px; }
+  @media only screen and (max-width: 550px) {
+    .modal-dialog, .new-doc-modal, .mandatory-modal {
+      width: 400px; } }
+  @media only screen and (max-width: 414px) {
+    .modal-dialog, .new-doc-modal, .mandatory-modal {
+      width: 320px; } }
+  .modal-dialog .modal-content, .new-doc-modal .modal-content, .mandatory-modal .modal-content {
+    box-shadow: none;
+    padding: 15px 25px 22px 25px;
+    border-radius: 0px;
+    border-top: 6px solid #000; }
+    .modal-dialog .modal-content .modal-header, .new-doc-modal .modal-content .modal-header, .mandatory-modal .modal-content .modal-header {
+      padding: 15px 15px 0px 15px;
+      border: none; }
+      .modal-dialog .modal-content .modal-header .modal-title, .new-doc-modal .modal-content .modal-header .modal-title, .mandatory-modal .modal-content .modal-header .modal-title {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 500; }
+      .modal-dialog .modal-content .modal-header .close, .new-doc-modal .modal-content .modal-header .close, .mandatory-modal .modal-content .modal-header .close {
+        opacity: 0.6;
+        outline: none;
+        margin-top: -12px;
+        margin-right: -20px; }
+        .modal-dialog .modal-content .modal-header .close:hover, .new-doc-modal .modal-content .modal-header .close:hover, .mandatory-modal .modal-content .modal-header .close:hover {
+          opacity: 1; }
+    .modal-dialog .modal-content .modal-body, .new-doc-modal .modal-content .modal-body, .mandatory-modal .modal-content .modal-body {
+      padding: 5px 15px; }
+      .modal-dialog .modal-content .modal-body p, .new-doc-modal .modal-content .modal-body p, .mandatory-modal .modal-content .modal-body p {
+        padding: 15px 0px;
+        color: #6b6b6b;
+        font-size: 16px;
+        line-height: 1.5; }
+      .modal-dialog .modal-content .modal-body .item-card, .new-doc-modal .modal-content .modal-body .item-card, .mandatory-modal .modal-content .modal-body .item-card {
+        border: 1px solid #d4d4d4; }
+        @media only screen and (max-width: 414px) {
+          .modal-dialog .modal-content .modal-body .item-card, .new-doc-modal .modal-content .modal-body .item-card, .mandatory-modal .modal-content .modal-body .item-card {
+            padding: 15px; } }
+    .modal-dialog .modal-content .modal-footer, .new-doc-modal .modal-content .modal-footer, .mandatory-modal .modal-content .modal-footer {
+      border: none;
+      text-align: left;
+      padding-top: 0px; }
+      .modal-dialog .modal-content .modal-footer button, .new-doc-modal .modal-content .modal-footer button, .mandatory-modal .modal-content .modal-footer button {
+        text-transform: uppercase;
+        border-radius: 0px;
+        background: #000;
+        color: white;
+        text-transform: uppercase;
+        font-size: 13px; }
+        .modal-dialog .modal-content .modal-footer button i, .new-doc-modal .modal-content .modal-footer button i, .mandatory-modal .modal-content .modal-footer button i {
+          margin-left: 3px; }
+
+.new-doc-modal .modal-footer button {
+  margin-top: 20px; }
+
+.mandatory-modal .modal-body .item-card {
+  margin-top: -5px; }
+
 /*# sourceMappingURL=homePage.css.map */

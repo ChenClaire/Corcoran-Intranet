@@ -912,3 +912,88 @@
             vertical-align: middle;
         }
     }
+    
+    .modal-dialog {
+        margin: auto;
+        top: 80px;
+        width: 500px;
+        @media only screen and (max-width: 550px) {
+            width: 400px;
+        }
+        @media only screen and (max-width: $breakpoint-iphone6plus) {
+            width: 320px;
+        }
+        .modal-content {
+            box-shadow: none;
+            padding: 15px 25px 22px 25px;
+            border-radius: 0px;
+            border-top: 6px solid $primary-color;
+            .modal-header {
+                padding: 15px 15px 0px 15px;
+                border: none;
+                .modal-title {
+                    text-transform: uppercase;
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+                .close {
+                    opacity: 0.6;
+                    outline: none;
+                    margin-top: -12px;
+                    margin-right: -20px;
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+            .modal-body {
+                padding: 5px 15px;
+                p {
+                    padding: 15px 0px;
+                    color: $gray;
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+                .item-card {
+                    border: 1px solid $light-gray;
+                    @media only screen and (max-width: $breakpoint-iphone6plus) {
+                        padding: 15px;
+                    }
+                }
+            }
+            .modal-footer {
+                border: none;
+                text-align: left;
+                padding-top: 0px;
+                button {
+                    text-transform: uppercase;
+                    border-radius: 0px;
+                    background: $primary-color;
+                    color: white;
+                    text-transform: uppercase;
+                    font-size: 13px;
+                    i {
+                        margin-left: 3px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .new-doc-modal {
+        @extend .modal-dialog;
+        .modal-footer {
+            button {
+                margin-top: 20px;
+            }
+        }
+    }
+    
+    .mandatory-modal {
+        @extend .modal-dialog;
+        .modal-body {
+            .item-card {
+                margin-top: -5px;
+            }
+        }
+    }

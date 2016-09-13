@@ -6,7 +6,22 @@ $(".carousel").carousel({
     interval: false
 });
 
+$('.new-doc-modal').modal({
+    backdrop: "static",
+    show: true
+});
 
+$(".new-doc-modal .colse-modal-btn").click(function() {
+    $(".new-doc-modal").modal('hide');
+    $(".mandatory-modal").modal({
+        backdrop: "static",
+        show: true
+    });
+});
+
+$(".mandatory-modal .colse-modal-btn").click(function() {
+    $(".mandatory-modal").modal('hide');
+});
 
 //make the dot-nav vertically centered on desktop view
 var NavTopOffset = $(".ecorcoran-nav-list").outerHeight() / 2;
@@ -158,10 +173,10 @@ $(window).scroll(function() {
 
         if (header_bottom > link_top) {
             console.log("happening:fade");
-            $('.link-wrapper').css('display','none');
+            $('.link-wrapper').css('display', 'none');
         } else {
             console.log("happening:show");
-            $('.link-wrapper').css('display','block');
+            $('.link-wrapper').css('display', 'block');
         }
 
 
