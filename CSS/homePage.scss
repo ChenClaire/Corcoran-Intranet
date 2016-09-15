@@ -956,6 +956,42 @@
                 }
                 .item-card {
                     border: 1px solid $light-gray;
+                    text-decoration: none;
+                    border-radius: 3px;
+                    font-weight: 400;
+                    height: 80px;
+                    padding: 24px;
+                    margin: 10px 0px;
+                    font-size: 14px;
+                    &:hover {
+                        background-color: $primary-color;
+                        .item-name {
+                            color: white;
+                        }
+                        .item-label-wrapper {
+                            .item-xls {
+                                background-color: white;
+                                color: $green;
+                            }
+                            .item-pdf {
+                                background-color: white;
+                                color: $red;
+                            }
+                            .item-doc {
+                                background-color: white;
+                                color: $blue;
+                            }
+                            .item-ppt {
+                                background-color: white;
+                                color: $orange;
+                            }
+                            .item-link {
+                                img {
+                                    -webkit-filter: saturate(0) brightness(255);
+                                }
+                            }
+                        }
+                    }
                     @media only screen and (max-width: $breakpoint-iphone6plus) {
                         padding: 15px;
                     }

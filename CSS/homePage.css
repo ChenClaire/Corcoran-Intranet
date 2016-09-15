@@ -1033,7 +1033,32 @@ form {
         font-size: 16px;
         line-height: 1.5; }
       .modal-dialog .modal-content .modal-body .item-card, .new-doc-modal .modal-content .modal-body .item-card, .mandatory-modal .modal-content .modal-body .item-card {
-        border: 1px solid #d4d4d4; }
+        border: 1px solid #d4d4d4;
+        text-decoration: none;
+        border-radius: 3px;
+        font-weight: 400;
+        height: 80px;
+        padding: 24px;
+        margin: 10px 0px;
+        font-size: 14px; }
+        .modal-dialog .modal-content .modal-body .item-card:hover, .new-doc-modal .modal-content .modal-body .item-card:hover, .mandatory-modal .modal-content .modal-body .item-card:hover {
+          background-color: #000; }
+          .modal-dialog .modal-content .modal-body .item-card:hover .item-name, .new-doc-modal .modal-content .modal-body .item-card:hover .item-name, .mandatory-modal .modal-content .modal-body .item-card:hover .item-name {
+            color: white; }
+          .modal-dialog .modal-content .modal-body .item-card:hover .item-label-wrapper .item-xls, .new-doc-modal .modal-content .modal-body .item-card:hover .item-label-wrapper .item-xls, .mandatory-modal .modal-content .modal-body .item-card:hover .item-label-wrapper .item-xls {
+            background-color: white;
+            color: #18a344; }
+          .modal-dialog .modal-content .modal-body .item-card:hover .item-label-wrapper .item-pdf, .new-doc-modal .modal-content .modal-body .item-card:hover .item-label-wrapper .item-pdf, .mandatory-modal .modal-content .modal-body .item-card:hover .item-label-wrapper .item-pdf {
+            background-color: white;
+            color: #df3d3d; }
+          .modal-dialog .modal-content .modal-body .item-card:hover .item-label-wrapper .item-doc, .new-doc-modal .modal-content .modal-body .item-card:hover .item-label-wrapper .item-doc, .mandatory-modal .modal-content .modal-body .item-card:hover .item-label-wrapper .item-doc {
+            background-color: white;
+            color: #0064b1; }
+          .modal-dialog .modal-content .modal-body .item-card:hover .item-label-wrapper .item-ppt, .new-doc-modal .modal-content .modal-body .item-card:hover .item-label-wrapper .item-ppt, .mandatory-modal .modal-content .modal-body .item-card:hover .item-label-wrapper .item-ppt {
+            background-color: white;
+            color: #F26522; }
+          .modal-dialog .modal-content .modal-body .item-card:hover .item-label-wrapper .item-link img, .new-doc-modal .modal-content .modal-body .item-card:hover .item-label-wrapper .item-link img, .mandatory-modal .modal-content .modal-body .item-card:hover .item-label-wrapper .item-link img {
+            -webkit-filter: saturate(0) brightness(255); }
         @media only screen and (max-width: 414px) {
           .modal-dialog .modal-content .modal-body .item-card, .new-doc-modal .modal-content .modal-body .item-card, .mandatory-modal .modal-content .modal-body .item-card {
             padding: 15px; } }
