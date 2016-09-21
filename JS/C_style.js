@@ -24,9 +24,9 @@ $(".mandatory-modal .colse-modal-btn").click(function() {
 });
 
 //make the dot-nav vertically centered on desktop view
-var NavTopOffset = $(".ecorcoran-nav-list").outerHeight() / 2;
-NavTopOffset = -NavTopOffset;
-$(".ecorcoran-nav-list").css("margin-top", NavTopOffset);
+// var NavTopOffset = $(".ecorcoran-nav-list").outerHeight() / 2;
+// NavTopOffset = -NavTopOffset;
+// $(".ecorcoran-nav-list").css("margin-top", NavTopOffset);
 
 
 
