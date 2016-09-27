@@ -11,7 +11,7 @@ $('.new-doc-modal').modal({
     show: true
 });
 
-$(".new-doc-modal .colse-modal-btn").click(function() {
+$(".new-doc-modal .close-modal-btn").click(function() {
     $(".new-doc-modal").modal('hide');
     $(".mandatory-modal").modal({
         backdrop: "static",
@@ -19,7 +19,7 @@ $(".new-doc-modal .colse-modal-btn").click(function() {
     });
 });
 
-$(".mandatory-modal .colse-modal-btn").click(function() {
+$(".mandatory-modal .close-modal-btn").click(function() {
     $(".mandatory-modal").modal('hide');
 });
 

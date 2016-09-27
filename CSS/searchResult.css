@@ -550,7 +550,12 @@ form {
       .result-list .section-list-wrapper .section-list .section-list-item.active {
         background-color: #000;
         color: white;
-        outline: none; }
+        outline: none;
+        -webkit-animation: all 0.3s;
+        -moz-animation: all 0.3s;
+        -ms-animation: all 0.3s;
+        -o-animation: all 0.3s;
+        animation: all 0.3s; }
         .result-list .section-list-wrapper .section-list .section-list-item.active:after {
           border-left: 20px solid #000;
           border-bottom: 26px solid transparent;

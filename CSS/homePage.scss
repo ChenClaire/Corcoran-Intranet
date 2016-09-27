@@ -1,37 +1,11 @@
     @import 'colors';
     @import 'breakpoints';
     @import 'components';
+    @import 'mixins';
     $primary-font: 'Roboto',
     sans-serif;
     $item-type-width: 38px;
-    @mixin transition($transition) {
-        transition: $transition;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -o-transition: $transition;
-    }
     
-    @mixin transform($transform) {
-        -webkit-transform: $transform;
-        -moz-transform: $transform;
-        -o-transform: $transform;
-        transform: $transform;
-    }
-    
-    @mixin backdrop-filter($effect) {
-        backdrop-filter: $effect;
-        -moz-backdrop-filter: $effect;
-        -ms-backdrop-filter: $effect;
-        -webkit-backdrop-filter: $effect;
-        -o-backdrop-filter: $effect;
-    }
-    
-    @mixin box-shadow($shadow) {
-        -webkit-box-shadow: $shadow;
-        -moz-box-shadow: $shadow;
-        -o-box-shadow: $shadow;
-        box-shadow: $shadow;
-    }
     
     * {
         font-family: $primary-font;
@@ -898,7 +872,8 @@
     
     .view-all-btn {
         @extend .sm-buttons;
-        width: 102px;
+        width: 108px;
+        position: relative;
         height: 32px;
         outline: none;
         border: none;
@@ -906,11 +881,30 @@
         color: $blue;
         background-color: white;
         &:hover {
-            color: $primary-color;
+            // color: $primary-color;
+        }
+        .button-text {
+            @include transition(all 0.3s);
         }
         i {
+            top: 7px;
+            font-size: 18px;
+            position: absolute;
+            opacity: 0;
+            left: 68%;
             margin-left: 3px;
             vertical-align: middle;
+            @include transition(all 0.3s);
+        }
+        &:hover {
+            i {
+                top: 7px;
+                opacity: 1;
+                left: 77%;
+            }
+            .button-text {
+                margin-left: -13px;
+            }
         }
     }
     
@@ -1009,8 +1003,10 @@
                     color: white;
                     text-transform: uppercase;
                     font-size: 13px;
+                    padding:6px 18px;
                     i {
-                        margin-left: 3px;
+                        margin-left: 10px;
+                        @include animation(bounce 1.5s infinite);
                     }
                 }
             }
@@ -1034,3 +1030,65 @@
             }
         }
     }
+    
+    @-webkit-keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            -webkit-transform: translateX(0);
+        }
+        40% {
+            -webkit-transform: translateX(-10px);
+        }
+        60% {
+            -webkit-transform: translateX(5px);
+        }
+    }
+    
+    // @-moz-keyframes bounce {
+    //     0%,
+    //     20%,
+    //     50%,
+    //     80%,
+    //     100% {
+    //         -moz-transform: translateX(0);
+    //     }
+    //     40% {
+    //         -moz-transform: translateX(15px);
+    //     }
+    //     60% {
+    //         -moz-transform: translateX(-5px);
+    //     }
+    // }
+    // @-o-keyframes bounce {
+    //     0%,
+    //     20%,
+    //     50%,
+    //     80%,
+    //     100% {
+    //         -o-transform: translateX(0);
+    //     }
+    //     40% {
+    //         -o-transform: translateX(15px);
+    //     }
+    //     60% {
+    //         -o-transform: translateX(-5px);
+    //     }
+    // }
+    // @keyframes bounce {
+    //     0%,
+    //     20%,
+    //     50%,
+    //     80%,
+    //     100% {
+    //         transform: translateX(0);
+    //     }
+    //     40% {
+    //         transform: translateX(15px);
+    //     }
+    //     60% {
+    //         transform: translateX(-5px);
+    //     }
+    // }

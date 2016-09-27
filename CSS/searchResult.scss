@@ -1,21 +1,11 @@
     @import 'colors';
     @import 'breakpoints';
     @import 'components';
+    @import 'mixins';
     $primary-font: 'Roboto',
     sans-serif;
-    @mixin box-shadow($shadow) {
-        -webkit-box-shadow: $shadow;
-        -moz-box-shadow: $shadow;
-        -o-box-shadow: $shadow;
-        box-shadow: $shadow;
-    }
     
-    @mixin transition($transition) {
-        transition: $transition;
-        -webkit-transition: $transition;
-        -moz-transition: $transition;
-        -o-transition: $transition;
-    }
+
     
     * {
         font-family: $primary-font;
@@ -115,7 +105,7 @@
                         }
                         .search-btn {
                             height: 36px;
-                            border:2px solid white;
+                            border: 2px solid white;
                             // &:hover {
                             //     background-color: rgba(white, 0.9);
                             // }
@@ -360,7 +350,7 @@
                     &.active {
                         background-color: $primary-color;
                         color: white;
-                        outline: none;
+                        outline: none;@include animation(all 0.3s);
                         &:after {
                             border-left: 20px solid $primary-color;
                             border-bottom: 26px solid transparent;

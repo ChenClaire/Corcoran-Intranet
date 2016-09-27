@@ -984,18 +984,37 @@ form {
   display: none; }
 
 .view-all-btn {
-  width: 102px;
+  width: 108px;
+  position: relative;
   height: 32px;
   outline: none;
   border: none;
   text-transform: uppercase;
   color: #0064b1;
   background-color: white; }
-  .view-all-btn:hover {
-    color: #000; }
+  .view-all-btn .button-text {
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s; }
   .view-all-btn i {
+    top: 7px;
+    font-size: 18px;
+    position: absolute;
+    opacity: 0;
+    left: 68%;
     margin-left: 3px;
-    vertical-align: middle; }
+    vertical-align: middle;
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s; }
+  .view-all-btn:hover i {
+    top: 7px;
+    opacity: 1;
+    left: 77%; }
+  .view-all-btn:hover .button-text {
+    margin-left: -13px; }
 
 .modal-dialog, .new-doc-modal, .mandatory-modal {
   margin: auto;
@@ -1073,14 +1092,32 @@ form {
         background: #000;
         color: white;
         text-transform: uppercase;
-        font-size: 13px; }
+        font-size: 13px;
+        padding: 6px 18px; }
         .modal-dialog .modal-content .modal-footer button i, .new-doc-modal .modal-content .modal-footer button i, .mandatory-modal .modal-content .modal-footer button i {
-          margin-left: 3px; }
+          margin-left: 10px;
+          -webkit-animation: bounce 1.5s infinite;
+          -moz-animation: bounce 1.5s infinite;
+          -ms-animation: bounce 1.5s infinite;
+          -o-animation: bounce 1.5s infinite;
+          animation: bounce 1.5s infinite; }
 
 .new-doc-modal .modal-footer button {
   margin-top: 20px; }
 
 .mandatory-modal .modal-body .item-card {
   margin-top: -5px; }
+
+@-webkit-keyframes bounce {
+  0%,
+        20%,
+        50%,
+        80%,
+        100% {
+    -webkit-transform: translateX(0); }
+  40% {
+    -webkit-transform: translateX(-10px); }
+  60% {
+    -webkit-transform: translateX(5px); } }
 
 /*# sourceMappingURL=homePage.css.map */
