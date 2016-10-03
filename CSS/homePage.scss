@@ -829,7 +829,7 @@
                     width: 30px;
                     height: 30px;
                     border-radius: 50%;
-                    background: rgba(0, 100, 177, 0.25);
+                    background: rgba($blue, 0.25);
                     -webkit-transform-origin: 90% 50%;
                     transform-origin: 90% 50%;
                     -webkit-transform: scale(2);
@@ -839,6 +839,7 @@
                     -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
                     transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
                 }
+                
                 &:hover::before {
                     -webkit-transform: scale(15);
                     transform: scale(15);
