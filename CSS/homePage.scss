@@ -5,8 +5,6 @@
     $primary-font: 'Roboto',
     sans-serif;
     $item-type-width: 38px;
-    
-    
     * {
         font-family: $primary-font;
     }
@@ -772,6 +770,8 @@
     }
     
     .item-card {
+        position: relative;
+        z-index: 1;
         display: flex;
         display: -webkit-flex;
         align-items: center;
@@ -799,6 +799,9 @@
         }
         &:hover {
             cursor: pointer;
+            .item-name {
+                color: $primary-color;
+            }
         }
         @media only screen and (max-width: $bootstrap-md) {
             height: auto;
@@ -814,34 +817,61 @@
                 border: none;
                 margin: 10px 0px;
                 font-size: 14px;
+                overflow: hidden;
+                &::before {
+                    content: '';
+                    opacity: 0;
+                    z-index: -1;
+                    position: absolute;
+                    top: 50%;
+                    left: 83%;
+                    margin: -15px 0 0 0px;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: rgba(0, 100, 177, 0.25);
+                    -webkit-transform-origin: 90% 50%;
+                    transform-origin: 90% 50%;
+                    -webkit-transform: scale(2);
+                    transform: scale(2);
+                    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+                    transition: transform 0.4s, opacity 0.4s;
+                    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+                    transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+                }
+                &:hover::before {
+                    -webkit-transform: scale(15);
+                    transform: scale(15);
+                    opacity: 1;
+                }
                 &:hover {
-                    background-color: $primary-color;
+                    // background-color: $primary-color;
                     .item-name {
-                        color: white;
+                        // color: white;
                     }
-                    .item-label-wrapper {
-                        .item-xls {
-                            background-color: white;
-                            color: $green;
-                        }
-                        .item-pdf {
-                            background-color: white;
-                            color: $red;
-                        }
-                        .item-doc {
-                            background-color: white;
-                            color: $blue;
-                        }
-                        .item-ppt {
-                            background-color: white;
-                            color: $orange;
-                        }
-                        .item-link {
-                            img {
-                                -webkit-filter: saturate(0) brightness(255);
-                            }
-                        }
-                    }
+                    //     .item-label-wrapper {
+                    //         .item-xls {
+                    //             background-color: white;
+                    //             color: $green;
+                    //         }
+                    //         .item-pdf {
+                    //             background-color: white;
+                    //             color: $red;
+                    //         }
+                    //         .item-doc {
+                    //             background-color: white;
+                    //             color: $blue;
+                    //         }
+                    //         .item-ppt {
+                    //             background-color: white;
+                    //             color: $orange;
+                    //         }
+                    //         .item-link {
+                    //             img {
+                    //                 -webkit-filter: saturate(0) brightness(255);
+                    //             }
+                    //         }
+                    //     }
                 }
             }
         }
@@ -1003,7 +1033,7 @@
                     color: white;
                     text-transform: uppercase;
                     font-size: 13px;
-                    padding:6px 18px;
+                    padding: 6px 18px;
                     i {
                         margin-left: 10px;
                         @include animation(bounce 1.5s infinite);

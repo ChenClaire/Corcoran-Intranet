@@ -99,8 +99,7 @@
   text-transform: capitalize;
   text-decoration: none; }
   .item-name:hover {
-    text-decoration: none;
-    color: #000; }
+    text-decoration: none; }
 
 .top-header {
   width: 100%;
@@ -907,6 +906,8 @@ form {
       padding-right: 10px !important; }
 
 .item-card {
+  position: relative;
+  z-index: 1;
   display: flex;
   display: -webkit-flex;
   align-items: center;
@@ -929,6 +930,8 @@ form {
     display: inline-block; }
   .item-card:hover {
     cursor: pointer; }
+    .item-card:hover .item-name {
+      color: #000; }
   @media only screen and (max-width: 991px) {
     .item-card {
       height: auto;
@@ -943,25 +946,32 @@ form {
         padding: 24px;
         border: none;
         margin: 10px 0px;
-        font-size: 14px; }
-        .item-card.dark-item-card:hover {
-          background-color: #000; }
-          .item-card.dark-item-card:hover .item-name {
-            color: white; }
-          .item-card.dark-item-card:hover .item-label-wrapper .item-xls {
-            background-color: white;
-            color: #18a344; }
-          .item-card.dark-item-card:hover .item-label-wrapper .item-pdf {
-            background-color: white;
-            color: #df3d3d; }
-          .item-card.dark-item-card:hover .item-label-wrapper .item-doc {
-            background-color: white;
-            color: #0064b1; }
-          .item-card.dark-item-card:hover .item-label-wrapper .item-ppt {
-            background-color: white;
-            color: #F26522; }
-          .item-card.dark-item-card:hover .item-label-wrapper .item-link img {
-            -webkit-filter: saturate(0) brightness(255); } }
+        font-size: 14px;
+        overflow: hidden; }
+        .item-card.dark-item-card::before {
+          content: '';
+          opacity: 0;
+          z-index: -1;
+          position: absolute;
+          top: 50%;
+          left: 83%;
+          margin: -15px 0 0 0px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background: rgba(0, 100, 177, 0.25);
+          -webkit-transform-origin: 90% 50%;
+          transform-origin: 90% 50%;
+          -webkit-transform: scale(2);
+          transform: scale(2);
+          -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+          transition: transform 0.4s, opacity 0.4s;
+          -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1);
+          transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1); }
+        .item-card.dark-item-card:hover::before {
+          -webkit-transform: scale(15);
+          transform: scale(15);
+          opacity: 1; } }
 
 .resource-more-btn,
 .resource-less-btn {
