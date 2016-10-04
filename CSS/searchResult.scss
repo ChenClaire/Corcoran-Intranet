@@ -4,9 +4,6 @@
     @import 'mixins';
     $primary-font: 'Roboto',
     sans-serif;
-    
-
-    
     * {
         font-family: $primary-font;
     }
@@ -350,7 +347,8 @@
                     &.active {
                         background-color: $primary-color;
                         color: white;
-                        outline: none;@include animation(all 0.3s);
+                        outline: none;
+                        @include animation(all 0.3s);
                         &:after {
                             border-left: 20px solid $primary-color;
                             border-bottom: 26px solid transparent;

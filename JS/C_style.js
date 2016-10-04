@@ -1,6 +1,6 @@
 $('.multi-select-dropdown').multiselect();
 
-$(".search-input").focus();
+// $(".search-input").focus();
 
 $(".carousel").carousel({
     interval: false
@@ -10,6 +10,7 @@ $('.new-doc-modal').modal({
     backdrop: "static",
     show: true
 });
+
 
 $(".new-doc-modal .close-modal-btn").click(function() {
     $(".new-doc-modal").modal('hide');

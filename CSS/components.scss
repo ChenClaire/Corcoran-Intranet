@@ -1,11 +1,7 @@
+@import 'colors';
+@import 'breakpoints';
+@import 'mixins';
 $item-type-width: 38px;
-@mixin box-shadow($shadow) {
-    -webkit-box-shadow: $shadow;
-    -moz-box-shadow: $shadow;
-    -o-box-shadow: $shadow;
-    box-shadow: $shadow;
-}
-
 .container-fluid {
     margin: auto;
     max-width: 1440px;
@@ -48,6 +44,34 @@ $item-type-width: 38px;
         padding-left: 0px;
         width: 100%;
         text-align: center;
+    }
+    input {
+        margin-right: 10px;
+    }
+}
+
+.admin-button {
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    // vertical-align: middle;
+    display: inline-block;
+    // margin-right: 10px;
+    i {
+        font-size: 17px;
+        color: white;
+        @include animation(spinning 9s infinite linear);
+        -webkit-animation-play-state: paused;
+        /* Chrome, Safari, Opera */
+        animation-play-state: paused;
+    }
+    &:hover {
+        i {
+            -webkit-animation-play-state: running;
+            /* Chrome, Safari, Opera */
+            animation-play-state: running;
+        }
+        cursor: pointer;
     }
 }
 
@@ -164,8 +188,8 @@ $item-type-width: 38px;
 
 .mobile-search-dropdown {
     @media only screen and (min-width: $breakpoint-ipad-portrait) {
-            display: none;
-        }
+        display: none;
+    }
     .search-popup {
         position: fixed;
         display: none;
@@ -212,7 +236,7 @@ $item-type-width: 38px;
             position: relative;
             margin-top: -1px;
             .dropdown-trigger {
-                width:100%;
+                width: 100%;
                 position: relative;
                 .multiselect {
                     width: 100%;
@@ -352,4 +376,22 @@ form {
     padding: 0;
     position: absolute;
     width: 1px;
+}
+
+@-webkit-keyframes spinning {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(360deg));
+    }
+}
+
+@keyframes spinning {
+    0% {
+        @include transform(rotate(0deg));
+    }
+    100% {
+        @include transform(rotate(360deg));
+    }
 }
