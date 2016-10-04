@@ -959,7 +959,7 @@ form {
           width: 30px;
           height: 30px;
           border-radius: 50%;
-          background: rgba(0, 100, 177, 0.25);
+          background: rgba(0, 0, 0, 0.25);
           -webkit-transform-origin: 90% 50%;
           transform-origin: 90% 50%;
           -webkit-transform: scale(2);
